@@ -1,0 +1,21 @@
+{
+  "schema": "record-placement-fit-v1",
+  "stage": "fixed_final_trainfit_diagnostic",
+  "seed": 2026102159,
+  "data_seed": 2026102161,
+  "hidden_size": 64,
+  "native_size": 128,
+  "train_worlds": 32,
+  "eval_worlds_per_split": 128,
+  "updates": 1500,
+  "batch_worlds": 8,
+  "learning_rate": 0.001,
+  "threads": 2,
+  "max_wall_seconds": 900,
+  "device": "cuda",
+  "precision": "fp32",
+  "primary_metric": "free_running_supported_answer_recall",
+  "both_arm_trainfit_gate": 0.8,
+  "paid_compute_usd": 0,
+  "scope": "Action-learning trainfit diagnostic only; no joint language objective, best-checkpoint selection or architecture-win claim. Both arms receive identical typed encoding and query bytes; routing location alone differs."
+}

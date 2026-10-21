@@ -1,54 +1,85 @@
-# Conditional compute plan
+# Detailed conditional compute plan
 
-The small CPU demo/tests and local development pilots are distinct from a
-proposed rented H100 study. Staff costs are already covered; these are gross
-compute/research ceilings, not approved execution or measured resource needs.
-No paid launch follows from this document. Apply usable credits once and count
-all devices, storage, transfer, taxes, checkpoint/evaluation overhead, tuning,
-failed jobs and compute-attached services. Do not allocate paid agent/API work
-under these lines.
+This replaces the older broad allocation for future planning. It is not a
+provider quote, a measured H100 forecast, an executable training recipe, or
+permission to spend. Staff costs are already covered. Local preparation uses
+the existing RTX 5070 Ti Laptop GPU.
 
-| Compute/research allocation | Base ceiling |
+## What the compute would buy
+
+The primary question is whether integrating supported semantic state during
+initial learning improves useful generalization or complete cost over an equally
+informed stateful external workspace. Both learners start randomly. Their
+evidence, rules, intermediate feedback, labels and operation budgets must match.
+The larger models and data are the proposed experiment, not completed results.
+
+| Stage | Comparison | Runs | Parameters | Tokens per run |
+| --- | --- | ---: | ---: | ---: |
+| Discovery | 2 interfaces × 2 supervision conditions × 3 seeds | 12 | 125M | 2.5B |
+| Discovery | Same design | 12 | 350M | 7B |
+| Conditional scale | 2 recipes × 3 fresh seeds | 6 | approximately 1B | up to 20B |
+| Optional references | 1 Transformer × 2 supervision conditions × 3 seeds at each size | 12 | 125M / 350M | 2.5B / 7B |
+
+Token counts refer to the future shared tokenizer, which still needs selection.
+They are not interchangeable with byte-token counts from local pilots. The
+approximately 1B stage is conditional on useful learning, stability, meaningful
+remaining uncertainty and measured affordability. A larger single-seed run
+cannot replace replicated confirmation.
+
+| Allocation | USD |
 | --- | ---: |
-| Qualification and equal-recipe tuning | $2,000 |
-| 125M/350M discovery | $4,000 |
-| Conditional roughly 1B main comparison | $8,000 |
-| Adversarial/intervention/continued initial-learning evaluation | $2,000 |
-| Contingency and compute-attached services | $2,000 |
-| Base total | $18,000 |
-| Optional replication or justified scale | $2,000 |
-| Maximum planning ceiling | $20,000 |
+| Profiling and equally budgeted recipe searches | 500 |
+| Primary discovery, including supporting GPU work | 3,500 |
+| Conditional approximately 1B comparison, including supporting GPU work | 12,600 |
+| Optional Transformer references | 1,750 |
+| Additional CPU verification, storage and I/O | 600 |
+| Failed-job and compute reserve | 1,050 |
+| Maximum | 20,000 |
 
-Before choosing instance counts or run counts, measure representative runtime,
-peak memory, utilization, total token throughput and complete evaluation costs
-on the intended H100 stack. Existing local-device results do not predict that
-stack. The six roughly 1B runs and optional reference runs are not guaranteed
-to fit; remove optional work first, then reduce or omit scale according to the
-frozen decision rule. Replan the requested resources if measurements justify a
-smaller study. No existing script bypasses the paid-launch gate.
+The $18,000 option omits optional references and uses an $800 reserve. No paid
+agent API costs or staff costs appear in this ledger.
 
-The following **UNMEASURED H100 scenarios** use the rough training convention
-`C = 6 * N * D`, where N is parameters and D is training tokens, and an
-illustrative $4 per GPU-hour. The coefficient 6 is a FLOP accounting convention,
-not a TFLOP/s scenario. Effective rates of 50/100/200 TFLOP/s are hypothetical;
-no advertised peak or measured H100 rate is asserted. Core FLOP costs omit
-nontraining overhead and are not rental quotes or all-in budgets.
+## Reproduce the arithmetic
 
-| Illustrative scope | Core FLOPs | 50 TFLOP/s | 100 TFLOP/s | 200 TFLOP/s |
-| --- | ---: | ---: | ---: | ---: |
-| Primary 24 discovery + 6 conditional roughly 1B runs | 9.189e20 | $20,420 | $10,210 | $5,105 |
-| Same scope + 12 optional Transformer references | 1.01835e21 | $22,630 | $11,315 | $5,657.50 |
+```console
+python tools/check_compute_plan_v2.py --config configs/structured_pretraining_compute_v2.json --output artifacts/compute-plan.json
+python -m pytest tests/test_compute_plan_v2.py -q
+```
 
-These figures show why a planning ceiling cannot promise every tier. The
-per-run parameter/token schedule and actual activation/optimizer memory still
-need freezing before a paid experiment; aggregate FLOP illustrations alone are
-not an executable manifest. One H100 versus multi-H100 selection must follow
-measurement, not this arithmetic.
+The convention is nominal core training work `6 × parameters × tokens`.
+Assume $4.50 per GPU-hour and add a 40% supporting GPU-work allowance once for
+validation, checkpointing and recovery. Qualification, extra services and the
+reserve are separate. Effective throughput must be measured for our actual
+implementation. Advertised chip peak throughput is not a substitute.
 
-Paid launch requires a fixed scientific comparison and data split, valid
-correctness/safety/control checks, an independently reviewed exact runnable
-recipe, representative runtime/memory measurements, an all-in spend manifest
-and explicit owner authorization. An acknowledged spend record is required by
-the research workflow. This candidate does not grant authorization. Existing
-CUDA scripts are deliberately qualified only for the local laptop device;
-H100 enablement and admission remain future work.
+| Assumed effective core rate | Full 42-run forecast, including reserve | Base 30-run forecast, including reserve |
+| --- | ---: | ---: |
+| 50 nominal TF/s | $37,792.25 | $34,061.50 |
+| 100 nominal TF/s | $19,971.13 | $17,980.75 |
+| 200 nominal TF/s | $11,060.56 | $9,940.38 |
+
+These are sensitivity scenarios. At 100 nominal TF/s there is almost no
+unallocated headroom beyond the stated reserve. Price, throughput, memory,
+semantic-operation overhead and actual token accounting can change the scope.
+The current full plan has not been measured on H100. Multiple devices shorten
+wall time only if they improve execution; every device-hour is billed.
+
+If a future throughput measurement already includes checkpointing, checking and
+evaluation, do not add the same 40% costs again. Count idle allocations, taxes,
+failed work, communication and storage exactly once in the final manifest.
+
+## Conditions before paid execution
+
+1. Qualify the actual learned internal and strong external interfaces. A tiny
+   action-learning pilot is an implementation check, not the funded language study.
+2. Freeze data, tokenizer, training objectives, equal tuning opportunities,
+   confirmation metrics and all failure reporting.
+3. Qualify the intended H100 precision and numerical path; measure complete
+   representative throughput and peak memory.
+4. Produce an independently checked all-in run manifest. Remove optional
+   references first; reduce or defer the larger stage before weakening controls
+   or replication. Document any change before confirmation.
+5. Obtain explicit owner authorization for the bounded paid run.
+
+Nothing in the estimator can start a job. A formally valid kernel, a working
+trainer, semantic correctness and useful capability remain separate claims.

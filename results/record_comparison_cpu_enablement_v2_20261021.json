@@ -1,0 +1,310 @@
+{
+  "controls": {
+    "composition": {
+      "always_abstain_supported_recall": 0.0,
+      "always_abstain_task_exact": 0.375,
+      "exact_unary_planner_supported_recall": 1.0,
+      "exact_unary_planner_task_exact": 1.0,
+      "planner_note": "Deterministic oracle_trajectory executes declared-rule BFS proposals through the same kernel and budget. This is a symbolic ceiling, not a learned comparator.",
+      "supported_worlds": 5,
+      "worlds": 8
+    },
+    "iid": {
+      "always_abstain_supported_recall": 0.0,
+      "always_abstain_task_exact": 0.375,
+      "exact_unary_planner_supported_recall": 1.0,
+      "exact_unary_planner_task_exact": 1.0,
+      "planner_note": "Deterministic oracle_trajectory executes declared-rule BFS proposals through the same kernel and budget. This is a symbolic ceiling, not a learned comparator.",
+      "supported_worlds": 5,
+      "worlds": 8
+    },
+    "paraphrase": {
+      "always_abstain_supported_recall": 0.0,
+      "always_abstain_task_exact": 0.375,
+      "exact_unary_planner_supported_recall": 1.0,
+      "exact_unary_planner_task_exact": 1.0,
+      "planner_note": "Deterministic oracle_trajectory executes declared-rule BFS proposals through the same kernel and budget. This is a symbolic ceiling, not a learned comparator.",
+      "supported_worlds": 5,
+      "worlds": 8
+    },
+    "train": {
+      "always_abstain_supported_recall": 0.0,
+      "always_abstain_task_exact": 0.375,
+      "exact_unary_planner_supported_recall": 1.0,
+      "exact_unary_planner_task_exact": 1.0,
+      "planner_note": "Deterministic oracle_trajectory executes declared-rule BFS proposals through the same kernel and budget. This is a symbolic ceiling, not a learned comparator.",
+      "supported_worlds": 15,
+      "worlds": 24
+    }
+  },
+  "dataset_manifest_sha256": "b8777508e1afc1c9f855e96c0b8aa92b40e0912935ef248e1588ebfac99d76a0",
+  "differences": [
+    "Internal receives query bytes + full finite typed state projected before SSM.",
+    "External receives full canonical JSON observation plus repeated identical question every operation and retains SSM state; all duplicate question bytes charged.",
+    "Same allocated tensors/initial values; external semantic projection is inactive (zero task gradient).",
+    "Input sequence length, active parameter count, token work, and parsing burden differ.",
+    "Both use identical fixed action grammar, raw unmasked heads, labels and four-operation budget.",
+    "Generated record IDs and current release epochs are filled by the common grammar adapter; pointers/rule/op are learned.",
+    "Oracle trajectories contain accepted operations only; rejected-operation feedback is exposed at inference but not trained.",
+    "No generic text/tool-syntax generation, from-scratch language pretraining, architecture win, or full8/L0-L4 claim."
+  ],
+  "feature_size": 274,
+  "preregistered": {
+    "config": {
+      "batch_worlds": 4,
+      "data_seed": 2026102143,
+      "device": "cpu",
+      "eval_worlds_per_split": 8,
+      "hidden_size": 32,
+      "learning_rate": 0.001,
+      "max_wall_seconds": 180,
+      "native_size": 64,
+      "optimizer": "Adam; no gradient clipping; initial supervised joint action training only",
+      "paid_compute_usd": 0,
+      "pre_gpu_protocol_change": "Before any run: v2 randomizes causal evidence IDs, fixes two-fact count across support strata, and repeats identical question after full external observation; duplicated bytes charged.",
+      "precision": "fp32",
+      "primary_metric": "free_running_supported_answer_recall",
+      "schema": "record-comparison-v2",
+      "secondary_metrics": [
+        "task_exact",
+        "abstention_exact",
+        "invalid_operation_rate",
+        "query_wrong_release_count",
+        "input_tokens",
+        "wall_seconds"
+      ],
+      "seed": 2026102141,
+      "split_policy": "Disjoint semantic-world signatures; IID and unseen question template and depth-3 composition held out. Train chains have depth 1 or 2. No validation-selected checkpoint.",
+      "success_criterion": "Both random-initialized neural arms train with finite loss/gradients and complete held-out free-running evaluation through the real RECORD kernel; no minimum capability claim.",
+      "threads": 2,
+      "train_worlds": 24,
+      "updates": 12
+    },
+    "config_sha256": "7e67d09d8eb61f805118d7e7f35524ce365888ea549f67b0784e04f2e1b372e5",
+    "sources": {
+      "device": "cpu",
+      "dtype": "torch.float32",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+      "python": "3.12.14",
+      "source_sha256": {
+        "src/controlled_lm/invariant_ssm.py": "261a44e222302831d047965489eb58043cdc5834488febc1761ed2b838a5c0ee",
+        "src/controlled_lm/normalized_typed_language_model.py": "becdc29461cbafdd94f199232328a7b9ddaf76148edee2258122f97574e1607b",
+        "src/controlled_lm/parallel_ssm.py": "ca2b22b90a54bd07062689c5bd7521a065a00d96c70b86539e13dc253dddc85a",
+        "src/controlled_lm/record_learning_comparison.py": "8b22c18c5aac6df8b45995e4030364c54d19cb1d088932988c8d0c7e39b1ef2b",
+        "src/controlled_lm/semantic_interface_comparison.py": "e70df211b1f72c7fd6fb33c62e516ebd50a6c08c09c7a3462322cace856a6c77",
+        "src/controlled_lm/supported_state.py": "82b9d66981f548d607bb42f748e53b5e3d246e2120e90afccc5501e47f2fe1c9",
+        "tools/train_record_comparison.py": "86559bad7a06cc2ff240c66cb1fc1f746ef0d9624a942369e91d2c4e563dbd41"
+      },
+      "torch": "2.14.1+cpu",
+      "torch_cuda": null
+    }
+  },
+  "private_run_directory": "runs\\record-comparison-cpu-v2-20261021",
+  "result_gate": "Finite fresh training and full free-running evaluations completed for both arms; capability and strong-baseline adequacy require inspecting fit and held-out metrics.",
+  "scope": "neural-to-RECORD action-learning enablement; no joint language objective",
+  "seeds": [
+    {
+      "arms": {
+        "external": {
+          "active_task_parameters": 17300,
+          "allocated_parameters": 26068,
+          "checkpoint_file": "seed-2026102141-external.pt",
+          "checkpoint_sha256": "2928cb6cb75eb3c33e3bc058b62e6ffe5b759bad00a3b3145e3723ed95c0541b",
+          "cpu_tensor_peak_bytes": null,
+          "evaluation_wall_seconds": 0.5309999999881256,
+          "final_state_sha256": "aeeee12e288946ccee2be46852c85f01c1228301fd80d71aca18d7c2c237fc5f",
+          "initial_state_sha256": "991f49685591091744f780497f1545b31c7cbd8619ad91d40e75d8589cbe49c6",
+          "metrics": {
+            "composition": {
+              "abstention_exact": 0.0,
+              "input_tokens": 37988,
+              "invalid_operation_rate": 1.0,
+              "operations": 32,
+              "query_wrong_release_count": 0,
+              "supported_answer_recall": 0.0,
+              "supported_answers_correct": 0,
+              "supported_worlds": 5,
+              "task_exact": 0.0,
+              "unsupported_worlds": 3,
+              "worlds": 8
+            },
+            "iid": {
+              "abstention_exact": 0.0,
+              "input_tokens": 37992,
+              "invalid_operation_rate": 1.0,
+              "operations": 32,
+              "query_wrong_release_count": 0,
+              "supported_answer_recall": 0.0,
+              "supported_answers_correct": 0,
+              "supported_worlds": 5,
+              "task_exact": 0.0,
+              "unsupported_worlds": 3,
+              "worlds": 8
+            },
+            "paraphrase": {
+              "abstention_exact": 0.0,
+              "input_tokens": 39568,
+              "invalid_operation_rate": 1.0,
+              "operations": 32,
+              "query_wrong_release_count": 0,
+              "supported_answer_recall": 0.0,
+              "supported_answers_correct": 0,
+              "supported_worlds": 5,
+              "task_exact": 0.0,
+              "unsupported_worlds": 3,
+              "worlds": 8
+            },
+            "train": {
+              "abstention_exact": 0.0,
+              "input_tokens": 113948,
+              "invalid_operation_rate": 1.0,
+              "operations": 96,
+              "query_wrong_release_count": 0,
+              "supported_answer_recall": 0.0,
+              "supported_answers_correct": 0,
+              "supported_worlds": 15,
+              "task_exact": 0.0,
+              "unsupported_worlds": 9,
+              "worlds": 24
+            }
+          },
+          "peak_cuda_allocated_bytes": null,
+          "peak_cuda_reserved_bytes": null,
+          "training_input_tokens": 179807,
+          "training_wall_seconds": 0.4539999999979045
+        },
+        "internal": {
+          "active_task_parameters": 26068,
+          "allocated_parameters": 26068,
+          "checkpoint_file": "seed-2026102141-internal.pt",
+          "checkpoint_sha256": "b279a28a8389505944209549e69644dd7a1254a44c111ea6f2af874ec26d8355",
+          "cpu_tensor_peak_bytes": null,
+          "evaluation_wall_seconds": 0.1409999999741558,
+          "final_state_sha256": "ce1f97294f71ceae3e5b25e78bef3c0a74eef446622849dc097810873a6a2786",
+          "initial_state_sha256": "991f49685591091744f780497f1545b31c7cbd8619ad91d40e75d8589cbe49c6",
+          "metrics": {
+            "composition": {
+              "abstention_exact": 0.0,
+              "input_tokens": 352,
+              "invalid_operation_rate": 1.0,
+              "operations": 32,
+              "query_wrong_release_count": 0,
+              "supported_answer_recall": 0.0,
+              "supported_answers_correct": 0,
+              "supported_worlds": 5,
+              "task_exact": 0.0,
+              "unsupported_worlds": 3,
+              "worlds": 8
+            },
+            "iid": {
+              "abstention_exact": 0.0,
+              "input_tokens": 352,
+              "invalid_operation_rate": 1.0,
+              "operations": 32,
+              "query_wrong_release_count": 0,
+              "supported_answer_recall": 0.0,
+              "supported_answers_correct": 0,
+              "supported_worlds": 5,
+              "task_exact": 0.0,
+              "unsupported_worlds": 3,
+              "worlds": 8
+            },
+            "paraphrase": {
+              "abstention_exact": 0.0,
+              "input_tokens": 1152,
+              "invalid_operation_rate": 1.0,
+              "operations": 32,
+              "query_wrong_release_count": 0,
+              "supported_answer_recall": 0.0,
+              "supported_answers_correct": 0,
+              "supported_worlds": 5,
+              "task_exact": 0.0,
+              "unsupported_worlds": 3,
+              "worlds": 8
+            },
+            "train": {
+              "abstention_exact": 0.0,
+              "input_tokens": 1056,
+              "invalid_operation_rate": 1.0,
+              "operations": 96,
+              "query_wrong_release_count": 0,
+              "supported_answer_recall": 0.0,
+              "supported_answers_correct": 0,
+              "supported_worlds": 15,
+              "task_exact": 0.0,
+              "unsupported_worlds": 9,
+              "worlds": 24
+            }
+          },
+          "peak_cuda_allocated_bytes": null,
+          "peak_cuda_reserved_bytes": null,
+          "training_input_tokens": 1584,
+          "training_wall_seconds": 0.09400000001187436
+        }
+      },
+      "paired_differences": {
+        "composition": {
+          "note": "Within one seed and task stratum only; multiplicity/seed uncertainty unadjusted. No architecture claim.",
+          "primary_supported_answer_recall": {
+            "internal_minus_external": 0.0,
+            "world_bootstrap_95_interval": [
+              0.0,
+              0.0
+            ],
+            "worlds": 5
+          },
+          "secondary_task_exact": {
+            "internal_minus_external": 0.0,
+            "world_bootstrap_95_interval": [
+              0.0,
+              0.0
+            ],
+            "worlds": 8
+          }
+        },
+        "iid": {
+          "note": "Within one seed and task stratum only; multiplicity/seed uncertainty unadjusted. No architecture claim.",
+          "primary_supported_answer_recall": {
+            "internal_minus_external": 0.0,
+            "world_bootstrap_95_interval": [
+              0.0,
+              0.0
+            ],
+            "worlds": 5
+          },
+          "secondary_task_exact": {
+            "internal_minus_external": 0.0,
+            "world_bootstrap_95_interval": [
+              0.0,
+              0.0
+            ],
+            "worlds": 8
+          }
+        },
+        "paraphrase": {
+          "note": "Within one seed and task stratum only; multiplicity/seed uncertainty unadjusted. No architecture claim.",
+          "primary_supported_answer_recall": {
+            "internal_minus_external": 0.0,
+            "world_bootstrap_95_interval": [
+              0.0,
+              0.0
+            ],
+            "worlds": 5
+          },
+          "secondary_task_exact": {
+            "internal_minus_external": 0.0,
+            "world_bootstrap_95_interval": [
+              0.0,
+              0.0
+            ],
+            "worlds": 8
+          }
+        }
+      },
+      "seed": 2026102141
+    }
+  ],
+  "status": "enablement_passed",
+  "total_wall_seconds": 1.3589999999967404
+}

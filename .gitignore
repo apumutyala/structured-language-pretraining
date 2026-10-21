@@ -16,3 +16,5 @@ results/language_pilot_extraction.json
 results/*_checkpoints/
 results/*_checkpoints_*/
 artifacts/
+
+runs/

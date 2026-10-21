@@ -1,0 +1,21 @@
+{
+  "schema": "record-placement-fit-v1",
+  "stage": "cuda_resource_qualification_only",
+  "seed": 2026102159,
+  "data_seed": 2026102161,
+  "hidden_size": 64,
+  "native_size": 128,
+  "train_worlds": 32,
+  "eval_worlds_per_split": 8,
+  "updates": 8,
+  "batch_worlds": 8,
+  "learning_rate": 0.001,
+  "threads": 2,
+  "max_wall_seconds": 180,
+  "device": "cuda",
+  "precision": "fp32",
+  "primary_metric": "free_running_supported_answer_recall",
+  "both_arm_trainfit_gate": 0.8,
+  "paid_compute_usd": 0,
+  "scope": "Eight-update GPU runtime/memory qualification only; not the registered fit diagnostic or a replacement seed."
+}

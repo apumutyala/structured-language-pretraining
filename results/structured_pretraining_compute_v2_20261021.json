@@ -1,0 +1,237 @@
+{
+  "status": "unmeasured_scenarios_not_spend_admission",
+  "launch_authorized": false,
+  "scenarios": [
+    {
+      "assumed_effective_nominal_tflops": 50.0,
+      "stages": [
+        {
+          "name": "primary_125m",
+          "runs": 12,
+          "nominal_6ND": 22500000000000000000,
+          "optional": false,
+          "core_gpu_hours": 125.0,
+          "core_usd": 562.5,
+          "training_and_support_usd": 787.5
+        },
+        {
+          "name": "primary_350m",
+          "runs": 12,
+          "nominal_6ND": 176400000000000000000,
+          "optional": false,
+          "core_gpu_hours": 980.0,
+          "core_usd": 4410.0,
+          "training_and_support_usd": 6174.0
+        },
+        {
+          "name": "conditional_1b",
+          "runs": 6,
+          "nominal_6ND": 720000000000000000000,
+          "optional": false,
+          "core_gpu_hours": 4000.0,
+          "core_usd": 18000.0,
+          "training_and_support_usd": 25200.0
+        },
+        {
+          "name": "optional_transformer_125m",
+          "runs": 6,
+          "nominal_6ND": 11250000000000000000,
+          "optional": true,
+          "core_gpu_hours": 62.5,
+          "core_usd": 281.25,
+          "training_and_support_usd": 393.75
+        },
+        {
+          "name": "optional_transformer_350m",
+          "runs": 6,
+          "nominal_6ND": 88200000000000000000,
+          "optional": true,
+          "core_gpu_hours": 490.0,
+          "core_usd": 2205.0,
+          "training_and_support_usd": 3087.0
+        }
+      ],
+      "scopes": [
+        {
+          "scope": "full_conditional_42",
+          "runs": 42,
+          "gpu_training_and_support_usd": 35642.25,
+          "fixed_services_and_qualification_usd": 1100.0,
+          "reserve_usd": 1050.0,
+          "total_forecast_usd": 37792.25,
+          "ceiling_usd": 20000.0,
+          "headroom_usd": -17792.25,
+          "fits_arithmetic_only": false
+        },
+        {
+          "scope": "base_conditional_30",
+          "runs": 30,
+          "gpu_training_and_support_usd": 32161.5,
+          "fixed_services_and_qualification_usd": 1100.0,
+          "reserve_usd": 800.0,
+          "total_forecast_usd": 34061.5,
+          "ceiling_usd": 18000.0,
+          "headroom_usd": -16061.5,
+          "fits_arithmetic_only": false
+        }
+      ]
+    },
+    {
+      "assumed_effective_nominal_tflops": 100.0,
+      "stages": [
+        {
+          "name": "primary_125m",
+          "runs": 12,
+          "nominal_6ND": 22500000000000000000,
+          "optional": false,
+          "core_gpu_hours": 62.5,
+          "core_usd": 281.25,
+          "training_and_support_usd": 393.75
+        },
+        {
+          "name": "primary_350m",
+          "runs": 12,
+          "nominal_6ND": 176400000000000000000,
+          "optional": false,
+          "core_gpu_hours": 490.0,
+          "core_usd": 2205.0,
+          "training_and_support_usd": 3087.0
+        },
+        {
+          "name": "conditional_1b",
+          "runs": 6,
+          "nominal_6ND": 720000000000000000000,
+          "optional": false,
+          "core_gpu_hours": 2000.0,
+          "core_usd": 9000.0,
+          "training_and_support_usd": 12600.0
+        },
+        {
+          "name": "optional_transformer_125m",
+          "runs": 6,
+          "nominal_6ND": 11250000000000000000,
+          "optional": true,
+          "core_gpu_hours": 31.25,
+          "core_usd": 140.625,
+          "training_and_support_usd": 196.875
+        },
+        {
+          "name": "optional_transformer_350m",
+          "runs": 6,
+          "nominal_6ND": 88200000000000000000,
+          "optional": true,
+          "core_gpu_hours": 245.0,
+          "core_usd": 1102.5,
+          "training_and_support_usd": 1543.5
+        }
+      ],
+      "scopes": [
+        {
+          "scope": "full_conditional_42",
+          "runs": 42,
+          "gpu_training_and_support_usd": 17821.125,
+          "fixed_services_and_qualification_usd": 1100.0,
+          "reserve_usd": 1050.0,
+          "total_forecast_usd": 19971.125,
+          "ceiling_usd": 20000.0,
+          "headroom_usd": 28.875,
+          "fits_arithmetic_only": true
+        },
+        {
+          "scope": "base_conditional_30",
+          "runs": 30,
+          "gpu_training_and_support_usd": 16080.75,
+          "fixed_services_and_qualification_usd": 1100.0,
+          "reserve_usd": 800.0,
+          "total_forecast_usd": 17980.75,
+          "ceiling_usd": 18000.0,
+          "headroom_usd": 19.25,
+          "fits_arithmetic_only": true
+        }
+      ]
+    },
+    {
+      "assumed_effective_nominal_tflops": 200.0,
+      "stages": [
+        {
+          "name": "primary_125m",
+          "runs": 12,
+          "nominal_6ND": 22500000000000000000,
+          "optional": false,
+          "core_gpu_hours": 31.25,
+          "core_usd": 140.625,
+          "training_and_support_usd": 196.875
+        },
+        {
+          "name": "primary_350m",
+          "runs": 12,
+          "nominal_6ND": 176400000000000000000,
+          "optional": false,
+          "core_gpu_hours": 245.0,
+          "core_usd": 1102.5,
+          "training_and_support_usd": 1543.5
+        },
+        {
+          "name": "conditional_1b",
+          "runs": 6,
+          "nominal_6ND": 720000000000000000000,
+          "optional": false,
+          "core_gpu_hours": 1000.0,
+          "core_usd": 4500.0,
+          "training_and_support_usd": 6300.0
+        },
+        {
+          "name": "optional_transformer_125m",
+          "runs": 6,
+          "nominal_6ND": 11250000000000000000,
+          "optional": true,
+          "core_gpu_hours": 15.625,
+          "core_usd": 70.3125,
+          "training_and_support_usd": 98.4375
+        },
+        {
+          "name": "optional_transformer_350m",
+          "runs": 6,
+          "nominal_6ND": 88200000000000000000,
+          "optional": true,
+          "core_gpu_hours": 122.5,
+          "core_usd": 551.25,
+          "training_and_support_usd": 771.75
+        }
+      ],
+      "scopes": [
+        {
+          "scope": "full_conditional_42",
+          "runs": 42,
+          "gpu_training_and_support_usd": 8910.5625,
+          "fixed_services_and_qualification_usd": 1100.0,
+          "reserve_usd": 1050.0,
+          "total_forecast_usd": 11060.5625,
+          "ceiling_usd": 20000.0,
+          "headroom_usd": 8939.4375,
+          "fits_arithmetic_only": true
+        },
+        {
+          "scope": "base_conditional_30",
+          "runs": 30,
+          "gpu_training_and_support_usd": 8040.375,
+          "fixed_services_and_qualification_usd": 1100.0,
+          "reserve_usd": 800.0,
+          "total_forecast_usd": 9940.375,
+          "ceiling_usd": 18000.0,
+          "headroom_usd": 8059.625,
+          "fits_arithmetic_only": true
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No H100 throughput, memory, tokenizer or full-path implementation is qualified by this calculation.",
+    "The approximately 1B stage remains conditional even when arithmetic fits.",
+    "GPU-hours sum across all devices; concurrent execution changes wall time, not this bill.",
+    "Rate and price are assumptions, not hardware peak performance or a provider quote.",
+    "Measured integrated semantic-path costs, equal tuning and every failure must inform the paid manifest.",
+    "Preserve controls and replication when reducing optional scale; do not silently change a frozen study."
+  ],
+  "config_sha256": "788088cdbf1981cb5172befbe216ccafe9372c8d0251954b2157c1dd2a114f8b"
+}

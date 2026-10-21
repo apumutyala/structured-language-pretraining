@@ -1,0 +1,27 @@
+{
+  "arm": "external",
+  "checkpoint_sha256": "a7f787a36e628a5543facdbd1f1529a537c0c33775c3842eac4159e8988207fc",
+  "device": "cpu",
+  "different_world_indices": [],
+  "dtype": "fp32",
+  "exact_action_feedback_replay": true,
+  "metrics": {
+    "abstention_exact": 0.0,
+    "input_tokens": 607478,
+    "invalid_operation_rate": 1.0,
+    "operations": 512,
+    "query_wrong_release_count": 0,
+    "supported_answer_recall": 0.0,
+    "supported_answers_correct": 0,
+    "supported_worlds": 77,
+    "task_exact": 0.0,
+    "unsupported_worlds": 51,
+    "worlds": 128
+  },
+  "note": "CPU replay of CUDA weights may differ by floating-point association near decision boundaries; report differences rather than replacing evidence.",
+  "seed": 2026102141,
+  "split": "iid",
+  "tensor_sha256": "2e07d103f3c30ea642bdeef6815b549f1d6971f037fb375bd9de195a66638899",
+  "wall_seconds": 0.625,
+  "worlds": 128
+}

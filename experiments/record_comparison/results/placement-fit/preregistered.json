@@ -1,0 +1,28 @@
+{
+  "added_source_sha256": {
+    "src/controlled_lm/record_placement_diagnostic.py": "93267e5571bc7917b83ea98feb1e47ea8d7772b6ad42665f00f19441f4408385",
+    "tools/train_record_placement_diagnostic.py": "10fb754775a0135364d55cf9aa34ac90dc88b1d40e46ca79f939102eae8dc905"
+  },
+  "config": {
+    "batch_worlds": 8,
+    "both_arm_trainfit_gate": 0.8,
+    "data_seed": 2026102161,
+    "device": "cuda",
+    "eval_worlds_per_split": 128,
+    "hidden_size": 64,
+    "learning_rate": 0.001,
+    "max_wall_seconds": 900,
+    "native_size": 128,
+    "paid_compute_usd": 0,
+    "precision": "fp32",
+    "primary_metric": "free_running_supported_answer_recall",
+    "schema": "record-placement-fit-v1",
+    "scope": "Action-learning trainfit diagnostic only; no joint language objective, best-checkpoint selection or architecture-win claim. Both arms receive identical typed encoding and query bytes; routing location alone differs.",
+    "seed": 2026102159,
+    "stage": "fixed_final_trainfit_diagnostic",
+    "threads": 2,
+    "train_worlds": 32,
+    "updates": 1500
+  },
+  "config_sha256": "adee5e30c9f36b40f5f307a465414c63a115bf34d366e7972f8c031f73b90d1f"
+}
