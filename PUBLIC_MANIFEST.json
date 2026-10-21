@@ -26,7 +26,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "39fcfdecd47b59e9d16a4ddb447cbeaa76e1f5ce10e682c5988d5e01645f304b"
+      "sha256": "9d7ebf32a95b18782e99328dbd66ff7a7fb4d2d5780e5ba3cfa2fdc8460f108d"
     },
     {
       "path": "configs/language_scale_learning_dev_20261021.json",
@@ -59,6 +59,10 @@
     {
       "path": "docs/experiments.md",
       "sha256": "bd8922cf97629c3777109514a6aad1a372d58dec1e54819c826e55a948cd5e05"
+    },
+    {
+      "path": "docs/prior-work.md",
+      "sha256": "a7e02a04e90553fce50853c021f0f2f610533343e3c320d39bab6e95b50d8162"
     },
     {
       "path": "docs/record-contract.md",

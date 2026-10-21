@@ -84,6 +84,7 @@ not protection against hostile Python code.
 - [CPU, data, optional training and Lean reproduction](docs/reproduction.md)
 - [Conditional compute plan](docs/compute-plan.md)
 - [Results and source-bound evidence](docs/results.md)
+- [Relevant predecessor and what we learned](docs/prior-work.md)
 
 The H100 study is a proposed larger experiment, not the runtime cost of this
 small reviewer demo. Existing CUDA scripts intentionally admit only the local
