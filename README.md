@@ -14,16 +14,16 @@ joint supervision of byte prediction and typed claims is part of pretraining.
 | Component | Implemented | Tested / proved | Still proposed |
 | --- | --- | --- | --- |
 | Byte language model | Selective SSM/GRU, shared evidence projection, internal/output-only/none routing | Small CPU forward/backward checks; local development training receipts | Useful broad language and robust held-out reasoning |
-| RMS stability variant | Parameter-free normalization before FFNs and both heads | CPU checks and audited one-seed 1,000-update local stability screen | Architecture benefit and broader usefulness unestablished |
-| Exact RECORD kernel | Host facts, finite declared rules, checked derivations, revocation, policy-aware deterministic release | Bounded adversarial CPU tests and AI-assisted independent source review | Mechanized proof and trained integration with the language model |
-| Same-information interfaces | Detached structured view and canonical JSON view; shared checked operations and feedback | CPU roundtrip/adversarial tests | A trained strong external-workspace baseline, encoding/cost matching |
-| Three-bit workflow reference | Python memory checker, Lean specifications and persistent Lean adapter | Lean induction results for its declared workflow semantics; bounded historical differential evidence | Python-to-Lean refinement, transport authentication and RECORD proof |
+| RMS stability variant | Parameter-free normalization before FFNs and both heads | CPU checks and audited one-seed, three-arm, 1,000-update RTX 5070 Ti training run | Architecture benefit and broader usefulness unestablished |
+| Exact RECORD kernel | Host facts, finite declared rules, checked derivations, revocation, policy-aware deterministic release | Adversarial tests; new abstract Lean model with 23 theorems and 994 matching runtime fixtures | Python refinement, host isolation and trained language integration |
+| Same-information interfaces | Structured view and canonical JSON view; shared checked operations and feedback | New action learner: three paired GPU seeds, 400 updates per arm; fit gate failed | Useful strong external comparator, encoding/cost matching and joint language training |
+| Three-bit workflow reference | Python memory checker, Lean specifications and persistent Lean adapter | Lean induction results for its declared workflow semantics; bounded historical differential evidence | Python-to-Lean refinement and transport authentication |
 
-The RECORD interface and the language model's existing finite evidence lane
-are separate implementations. This release does not claim that the new RECORD
-state is already integrated into the trained recurrent model. The workflow
-Lean theorems cover a different state machine and do not transfer to either
-Python model or RECORD code.
+The RECORD interface is now connected to a small, randomly initialized neural
+action learner. It is still separate from the 8.7M language model's existing
+evidence lane. This is not yet the trained joint language comparison. The new
+Lean specification and executable differential checks also do not prove universal
+equivalence to Python. [New local evidence and limitations](docs/record-local-evidence.md).
 
 ```mermaid
 flowchart LR
@@ -36,11 +36,11 @@ flowchart LR
   M --> U[Uncertified prose]
 ```
 
-The new RECORD state and the trained model's existing evidence lane remain
-separate; this diagram shows the intended trust contract, not completed RECORD
-integration. [Architecture details](docs/architecture.md) distinguish them.
+The diagram shows the intended language-model contract. RECORD integration is
+currently demonstrated only in the smaller action learner, with poor usefulness.
+[Architecture details](docs/architecture.md) describe the original language lane.
 
-## Run the CPU evidence
+## Reproduce checks without a GPU
 
 With Python 3.12 and the dependencies installed:
 
@@ -57,6 +57,13 @@ requires package downloads. Exact tested versions are recorded in the runtime
 receipt; dependency availability on every platform is not claimed.
 
 ## What the pilot showed
+
+The training evidence is **not CPU-only**. The historical 8.7M normalized
+language pilot used the local RTX 5070 Ti. The new RECORD action-learning
+comparison also used that GPU: six complete 400-update runs in 227.125 seconds.
+All seeds are retained. Both interfaces failed useful learning qualification;
+no architecture win follows. See [new GPU results](docs/record-local-evidence.md)
+for positive-answer denominators, raw outputs, environment and commands.
 
 The historical unnormalized local 1,000-update development pilot ended at
 2.4695, 2.1741 and **9199.6580 bits per UTF-8 byte** for none, internal and
@@ -87,14 +94,16 @@ not protection against hostile Python code.
 - [Relevant predecessor and what we learned](docs/prior-work.md)
 
 The H100 study is a proposed larger experiment, not the runtime cost of this
-small reviewer demo. Existing CUDA scripts intentionally admit only the local
-qualified device; an H100 recipe and measured memory/throughput qualification
-are not implemented here. No rental, paid execution or automatic GPU workflow
+small reviewer demo. The reported CUDA runs were measured on the local laptop;
+the new action-learning scripts check CUDA availability but do not enforce a
+particular GPU name. An H100 language-training recipe and measured memory/throughput
+qualification are not implemented here. No rental, paid execution or automatic GPU workflow
 is enabled. CI runs only when manually requested, with read-only repository
 permissions.
 
-`PROVENANCE.json` records exact copied source bytes and the two declared source
-transformations. `PUBLIC_MANIFEST.json` lists relative paths and SHA-256 digests
+`PROVENANCE.json` records the original release's copied source bytes and two
+declared transformations. New experiment receipts bind their executed source,
+configuration, data and checkpoints by hash. `PUBLIC_MANIFEST.json` lists relative paths and SHA-256 digests
 of the candidate files; it excludes itself to avoid a circular digest. Derived
 receipts declare their original report digest and are never described as the
 immutable original. No corpus bodies or checkpoints are committed. Project

@@ -1,0 +1,301 @@
+{
+  "arms": {
+    "internal": {
+      "active_task_parameters": 68500,
+      "allocated_parameters": 68500,
+      "checkpoint_file": "seed-2026102159-internal.pt",
+      "checkpoint_sha256": "aecf8f90c5ee0a3ac228d56fa2a1f5adac5b2cb4e8442eb6c86dfeb93c6a2be7",
+      "cpu_tensor_peak_bytes": null,
+      "evaluation_wall_seconds": 0.046999999991385266,
+      "final_state_sha256": "074dcd343ec996fa1668cdb52eea864c07b2aafada964837c75466902e93a764",
+      "initial_state_sha256": "67ec8826e420d5262654dec001c16e1f5711f24767e4e996bd1b8cdfea7c9eae",
+      "metrics": {
+        "composition": {
+          "abstention_exact": 1.0,
+          "input_tokens": 88,
+          "invalid_operation_rate": 0.0,
+          "operations": 8,
+          "query_wrong_release_count": 0,
+          "supported_answer_recall": 0.0,
+          "supported_answers_correct": 0,
+          "supported_worlds": 5,
+          "task_exact": 0.375,
+          "unsupported_worlds": 3,
+          "worlds": 8
+        },
+        "iid": {
+          "abstention_exact": 1.0,
+          "input_tokens": 88,
+          "invalid_operation_rate": 0.0,
+          "operations": 8,
+          "query_wrong_release_count": 0,
+          "supported_answer_recall": 0.0,
+          "supported_answers_correct": 0,
+          "supported_worlds": 5,
+          "task_exact": 0.375,
+          "unsupported_worlds": 3,
+          "worlds": 8
+        },
+        "paraphrase": {
+          "abstention_exact": 1.0,
+          "input_tokens": 288,
+          "invalid_operation_rate": 0.0,
+          "operations": 8,
+          "query_wrong_release_count": 0,
+          "supported_answer_recall": 0.0,
+          "supported_answers_correct": 0,
+          "supported_worlds": 5,
+          "task_exact": 0.375,
+          "unsupported_worlds": 3,
+          "worlds": 8
+        },
+        "train": {
+          "abstention_exact": 1.0,
+          "input_tokens": 352,
+          "invalid_operation_rate": 0.0,
+          "operations": 32,
+          "query_wrong_release_count": 0,
+          "supported_answer_recall": 0.0,
+          "supported_answers_correct": 0,
+          "supported_worlds": 19,
+          "task_exact": 0.40625,
+          "unsupported_worlds": 13,
+          "worlds": 32
+        }
+      },
+      "peak_cuda_allocated_bytes": null,
+      "peak_cuda_reserved_bytes": null,
+      "training_input_tokens": 264,
+      "training_peak_cuda_allocated_bytes": null,
+      "training_wall_seconds": 0.01600000000325963
+    },
+    "typed_readout": {
+      "active_task_parameters": 68500,
+      "allocated_parameters": 68500,
+      "checkpoint_file": "seed-2026102159-typed_readout.pt",
+      "checkpoint_sha256": "c153ebdc1e9faaa741b8d0bf3886a7f71de1a08c3c9a5e60cb43833b06306dd1",
+      "cpu_tensor_peak_bytes": null,
+      "evaluation_wall_seconds": 0.07800000000861473,
+      "final_state_sha256": "055d612316571211c5c9c3a61ed2e0583669e1ba2d8ac02dba7c5c16a5a0bdc7",
+      "initial_state_sha256": "67ec8826e420d5262654dec001c16e1f5711f24767e4e996bd1b8cdfea7c9eae",
+      "metrics": {
+        "composition": {
+          "abstention_exact": 1.0,
+          "input_tokens": 121,
+          "invalid_operation_rate": 0.36363636363636365,
+          "operations": 11,
+          "query_wrong_release_count": 0,
+          "supported_answer_recall": 0.0,
+          "supported_answers_correct": 0,
+          "supported_worlds": 5,
+          "task_exact": 0.375,
+          "unsupported_worlds": 3,
+          "worlds": 8
+        },
+        "iid": {
+          "abstention_exact": 1.0,
+          "input_tokens": 88,
+          "invalid_operation_rate": 0.0,
+          "operations": 8,
+          "query_wrong_release_count": 0,
+          "supported_answer_recall": 0.0,
+          "supported_answers_correct": 0,
+          "supported_worlds": 5,
+          "task_exact": 0.375,
+          "unsupported_worlds": 3,
+          "worlds": 8
+        },
+        "paraphrase": {
+          "abstention_exact": 1.0,
+          "input_tokens": 288,
+          "invalid_operation_rate": 0.0,
+          "operations": 8,
+          "query_wrong_release_count": 0,
+          "supported_answer_recall": 0.0,
+          "supported_answers_correct": 0,
+          "supported_worlds": 5,
+          "task_exact": 0.375,
+          "unsupported_worlds": 3,
+          "worlds": 8
+        },
+        "train": {
+          "abstention_exact": 0.9230769230769231,
+          "input_tokens": 451,
+          "invalid_operation_rate": 0.2682926829268293,
+          "operations": 41,
+          "query_wrong_release_count": 0,
+          "supported_answer_recall": 0.0,
+          "supported_answers_correct": 0,
+          "supported_worlds": 19,
+          "task_exact": 0.375,
+          "unsupported_worlds": 13,
+          "worlds": 32
+        }
+      },
+      "peak_cuda_allocated_bytes": null,
+      "peak_cuda_reserved_bytes": null,
+      "training_input_tokens": 264,
+      "training_peak_cuda_allocated_bytes": null,
+      "training_wall_seconds": 0.0159999999741558
+    }
+  },
+  "both_arm_trainfit_gate": {
+    "note": "Fixed final checkpoint only; fit gate is diagnostic, not an architecture or held-out-success gate.",
+    "pass": false,
+    "threshold": 0.8
+  },
+  "controls": {
+    "composition": {
+      "always_abstain_supported_recall": 0.0,
+      "always_abstain_task_exact": 0.375,
+      "exact_planner_supported_recall": 1.0,
+      "exact_planner_task_exact": 1.0,
+      "supported_worlds": 5,
+      "worlds": 8
+    },
+    "iid": {
+      "always_abstain_supported_recall": 0.0,
+      "always_abstain_task_exact": 0.375,
+      "exact_planner_supported_recall": 1.0,
+      "exact_planner_task_exact": 1.0,
+      "supported_worlds": 5,
+      "worlds": 8
+    },
+    "paraphrase": {
+      "always_abstain_supported_recall": 0.0,
+      "always_abstain_task_exact": 0.375,
+      "exact_planner_supported_recall": 1.0,
+      "exact_planner_task_exact": 1.0,
+      "supported_worlds": 5,
+      "worlds": 8
+    },
+    "train": {
+      "always_abstain_supported_recall": 0.0,
+      "always_abstain_task_exact": 0.40625,
+      "exact_planner_supported_recall": 1.0,
+      "exact_planner_task_exact": 1.0,
+      "supported_worlds": 19,
+      "worlds": 32
+    }
+  },
+  "dataset_manifest_sha256": "fe972ccac4f872ffad6c6ca03ac7cca30fe8d378005dc79d49bccb77b5b28796",
+  "environment": {
+    "device": "cpu",
+    "dtype": "torch.float32",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+    "python": "3.12.14",
+    "source_sha256": {
+      "src/controlled_lm/invariant_ssm.py": "261a44e222302831d047965489eb58043cdc5834488febc1761ed2b838a5c0ee",
+      "src/controlled_lm/normalized_typed_language_model.py": "becdc29461cbafdd94f199232328a7b9ddaf76148edee2258122f97574e1607b",
+      "src/controlled_lm/parallel_ssm.py": "ca2b22b90a54bd07062689c5bd7521a065a00d96c70b86539e13dc253dddc85a",
+      "src/controlled_lm/record_learning_comparison.py": "8b22c18c5aac6df8b45995e4030364c54d19cb1d088932988c8d0c7e39b1ef2b",
+      "src/controlled_lm/record_placement_diagnostic.py": "93267e5571bc7917b83ea98feb1e47ea8d7772b6ad42665f00f19441f4408385",
+      "src/controlled_lm/semantic_interface_comparison.py": "e70df211b1f72c7fd6fb33c62e516ebd50a6c08c09c7a3462322cace856a6c77",
+      "src/controlled_lm/supported_state.py": "82b9d66981f548d607bb42f748e53b5e3d246e2120e90afccc5501e47f2fe1c9",
+      "tools/train_record_comparison.py": "86559bad7a06cc2ff240c66cb1fc1f746ef0d9624a942369e91d2c4e563dbd41",
+      "tools/train_record_placement_diagnostic.py": "10fb754775a0135364d55cf9aa34ac90dc88b1d40e46ca79f939102eae8dc905"
+    },
+    "torch": "2.14.1+cpu",
+    "torch_cuda": null
+  },
+  "feature_size": 274,
+  "intervention": "Same typed workspace/query bytes/active tensors; workspace projection added before SSM vs immediately before final RMS/SwiGLU.",
+  "limitations": [
+    "One fresh seed; 32-world train-fit diagnostic, not a broad comparison.",
+    "No byte-language objective or generic tool-call syntax learning.",
+    "Both active capacity and logical information match; gradient exposure and semantic influence on recurrent state intentionally differ.",
+    "Internal projection repeats at every query token; readout projection is added once. Token work matches but arithmetic work differs slightly.",
+    "No claims about full8/L0-L4, absolute hallucination freedom, general external model strength, or architecture superiority."
+  ],
+  "paired_differences": {
+    "composition": {
+      "note": "Within one seed and task stratum only; multiplicity/seed uncertainty unadjusted. No architecture claim.",
+      "primary_supported_answer_recall": {
+        "internal_minus_typed_readout": 0.0,
+        "world_bootstrap_95_interval": [
+          0.0,
+          0.0
+        ],
+        "worlds": 5
+      },
+      "secondary_task_exact": {
+        "internal_minus_typed_readout": 0.0,
+        "world_bootstrap_95_interval": [
+          0.0,
+          0.0
+        ],
+        "worlds": 8
+      }
+    },
+    "iid": {
+      "note": "Within one seed and task stratum only; multiplicity/seed uncertainty unadjusted. No architecture claim.",
+      "primary_supported_answer_recall": {
+        "internal_minus_typed_readout": 0.0,
+        "world_bootstrap_95_interval": [
+          0.0,
+          0.0
+        ],
+        "worlds": 5
+      },
+      "secondary_task_exact": {
+        "internal_minus_typed_readout": 0.0,
+        "world_bootstrap_95_interval": [
+          0.0,
+          0.0
+        ],
+        "worlds": 8
+      }
+    },
+    "paraphrase": {
+      "note": "Within one seed and task stratum only; multiplicity/seed uncertainty unadjusted. No architecture claim.",
+      "primary_supported_answer_recall": {
+        "internal_minus_typed_readout": 0.0,
+        "world_bootstrap_95_interval": [
+          0.0,
+          0.0
+        ],
+        "worlds": 5
+      },
+      "secondary_task_exact": {
+        "internal_minus_typed_readout": 0.0,
+        "world_bootstrap_95_interval": [
+          0.0,
+          0.0
+        ],
+        "worlds": 8
+      }
+    }
+  },
+  "preregistered": {
+    "added_source_sha256": {
+      "src/controlled_lm/record_placement_diagnostic.py": "93267e5571bc7917b83ea98feb1e47ea8d7772b6ad42665f00f19441f4408385",
+      "tools/train_record_placement_diagnostic.py": "10fb754775a0135364d55cf9aa34ac90dc88b1d40e46ca79f939102eae8dc905"
+    },
+    "config": {
+      "batch_worlds": 8,
+      "both_arm_trainfit_gate": 0.8,
+      "data_seed": 2026102161,
+      "device": "cpu",
+      "eval_worlds_per_split": 8,
+      "hidden_size": 64,
+      "learning_rate": 0.001,
+      "max_wall_seconds": 120,
+      "native_size": 128,
+      "paid_compute_usd": 0,
+      "precision": "fp32",
+      "primary_metric": "free_running_supported_answer_recall",
+      "schema": "record-placement-fit-v1",
+      "scope": "One-update CPU plumbing qualification; not the registered fit diagnostic or a replacement seed.",
+      "seed": 2026102159,
+      "stage": "cpu_enablement_only",
+      "threads": 2,
+      "train_worlds": 32,
+      "updates": 1
+    },
+    "config_sha256": "3ce3ceb224646f956c87bcde859f2e5bae74aee25b92e811eeb2190036e9ec86"
+  },
+  "scope": "One-update CPU plumbing qualification; not the registered fit diagnostic or a replacement seed.",
+  "status": "finite_execution_complete",
+  "total_wall_seconds": 1.2969999999913853
+}

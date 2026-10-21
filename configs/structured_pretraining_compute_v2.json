@@ -1,0 +1,19 @@
+{
+  "status": "unmeasured_planning_only",
+  "total_usd": 20000,
+  "usd_per_gpu_hour": 4.5,
+  "effective_nominal_tflops_scenarios": [50, 100, 200],
+  "supporting_gpu_fraction": 0.4,
+  "token_unit": "future shared tokenizer, not byte tokens; not yet selected",
+  "stages": [
+    {"name": "primary_125m", "parameters": 125000000, "tokens_per_run": 2500000000, "interfaces": 2, "conditions": 2, "seeds": 3, "optional": false},
+    {"name": "primary_350m", "parameters": 350000000, "tokens_per_run": 7000000000, "interfaces": 2, "conditions": 2, "seeds": 3, "optional": false},
+    {"name": "conditional_1b", "parameters": 1000000000, "tokens_per_run": 20000000000, "interfaces": 2, "conditions": 1, "seeds": 3, "optional": false},
+    {"name": "optional_transformer_125m", "parameters": 125000000, "tokens_per_run": 2500000000, "interfaces": 1, "conditions": 2, "seeds": 3, "optional": true},
+    {"name": "optional_transformer_350m", "parameters": 350000000, "tokens_per_run": 7000000000, "interfaces": 1, "conditions": 2, "seeds": 3, "optional": true}
+  ],
+  "allocations_usd": {"qualification_and_equal_tuning": 500, "primary_discovery": 3500, "conditional_1b": 12600, "optional_references": 1750, "additional_services": 600, "reserve": 1050},
+  "base_18000": {"omit_optional_references": true, "reserve_usd": 800},
+  "measurement_boundary": "Effective rate here covers core training. The 40% supporting allowance is added once. A future measured end-to-end rate already including those costs must not receive this multiplier again.",
+  "launch_authorized": false
+}

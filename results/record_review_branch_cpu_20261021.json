@@ -1,0 +1,17 @@
+{
+  "command": "python tools/check_cpu.py",
+  "passed": 239,
+  "skipped": 2,
+  "pytest_seconds": 9.65,
+  "skip_reasons": [
+    "Default checkout has no Lean installation for supported-state runtime test",
+    "Default checkout has no Lean installation for older workflow runtime test"
+  ],
+  "separate_actual_Lean_check": {
+    "command": "SUPPORTED_STATE_LEAN=<installed Lean4.8 executable> python tools/check_supported_state_lean.py --output artifacts/public-supported-proof-check.json",
+    "theorems": 23,
+    "fixtures": 994,
+    "passed": true
+  },
+  "scope": "CPU portability/correctness. No training or GPU performance conclusion from this command."
+}

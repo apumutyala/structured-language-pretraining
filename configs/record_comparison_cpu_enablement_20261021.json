@@ -1,0 +1,23 @@
+{
+  "schema": "record-comparison-v2",
+  "seed": 2026102141,
+  "data_seed": 2026102143,
+  "hidden_size": 32,
+  "native_size": 64,
+  "train_worlds": 24,
+  "eval_worlds_per_split": 8,
+  "updates": 12,
+  "batch_worlds": 4,
+  "learning_rate": 0.001,
+  "threads": 2,
+  "max_wall_seconds": 180,
+  "device": "cpu",
+  "precision": "fp32",
+  "primary_metric": "free_running_supported_answer_recall",
+  "secondary_metrics": ["task_exact", "abstention_exact", "invalid_operation_rate", "query_wrong_release_count", "input_tokens", "wall_seconds"],
+  "pre_gpu_protocol_change": "Before any run: v2 randomizes causal evidence IDs, fixes two-fact count across support strata, and repeats identical question after full external observation; duplicated bytes charged.",
+  "success_criterion": "Both random-initialized neural arms train with finite loss/gradients and complete held-out free-running evaluation through the real RECORD kernel; no minimum capability claim.",
+  "split_policy": "Disjoint semantic-world signatures; IID and unseen question template and depth-3 composition held out. Train chains have depth 1 or 2. No validation-selected checkpoint.",
+  "optimizer": "Adam; no gradient clipping; initial supervised joint action training only",
+  "paid_compute_usd": 0
+}

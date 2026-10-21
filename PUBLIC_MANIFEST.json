@@ -2,7 +2,7 @@
   "files": [
     {
       "path": ".gitattributes",
-      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+      "sha256": "3f5e8490998bc5563b34d678a192e4c30bf4d756475c7f698ae04e81796903b6"
     },
     {
       "path": ".github/workflows/manual-cpu.yml",
@@ -10,7 +10,7 @@
     },
     {
       "path": ".gitignore",
-      "sha256": "02d93d598214a5a91620667b3ea65ebc3757c17cf4ed57c5c72ef7051bb56cfe"
+      "sha256": "4f8cb85ba8d3287a09f303455cd515b0ae017b4b6fda83d40084ad1ab96e1367"
     },
     {
       "path": "LICENSE",
@@ -26,7 +26,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "9d7ebf32a95b18782e99328dbd66ff7a7fb4d2d5780e5ba3cfa2fdc8460f108d"
+      "sha256": "ebd6bbbad672675419cab0edd324387cd7a097b25620305067c097c841797605"
     },
     {
       "path": "configs/language_scale_learning_dev_20261021.json",
@@ -45,6 +45,38 @@
       "sha256": "497e33996549c090a0780e1eba3a8cfa84ca88e6ec4da5d973136420e4fa9a94"
     },
     {
+      "path": "configs/record_comparison_cpu_enablement_20261021.json",
+      "sha256": "7192af300d2548875599352ed973d513d964da93186d58b6ba6c89197f2c461a"
+    },
+    {
+      "path": "configs/record_comparison_cuda_1600_20261021.json",
+      "sha256": "d556f4de9d505debef436ecaf022d1f8f6e778cb239499ca98d23e24701197a5"
+    },
+    {
+      "path": "configs/record_comparison_cuda_paired_20261021.json",
+      "sha256": "8caaddc2a9d2a8ab95959341861bb426570e5f6b62c6f5c84af266046da789af"
+    },
+    {
+      "path": "configs/record_comparison_cuda_qualification_20261021.json",
+      "sha256": "82837f2a9c88c1a4526ae057c34f7651a91b961c37f726826083d6cef910d570"
+    },
+    {
+      "path": "configs/record_placement_cpu_qualification_20261021.json",
+      "sha256": "8a506b2aec3476f8a1596f87ec72ef50fa3042a340efb03d1681099860ef3537"
+    },
+    {
+      "path": "configs/record_placement_cuda_qualification_20261021.json",
+      "sha256": "2e8e9edd82a214dd6336d5ee7ce6330b09dc308187ff29278ef38a6d000d763e"
+    },
+    {
+      "path": "configs/record_placement_fit_20261021.json",
+      "sha256": "c9ac955722cdf5cb3a6d7a59bd255efaaf7946c12de5073a568b431c7727946d"
+    },
+    {
+      "path": "configs/structured_pretraining_compute_v2.json",
+      "sha256": "788088cdbf1981cb5172befbe216ccafe9372c8d0251954b2157c1dd2a114f8b"
+    },
+    {
       "path": "data/source-spec.json",
       "sha256": "a844cdc0aba5a895f6f113b1a0dd5daf40a7bb656289cba885191de6f360661b"
     },
@@ -53,8 +85,16 @@
       "sha256": "7ea9f80a3766dec285d14036cb8ab0f9c1972695e6dfc5549cb063dde0078376"
     },
     {
+      "path": "docs/compute-plan-v1.md",
+      "sha256": "f81bffdb04f8a68bd2264d534a4050f03ff6e7ec02834c78fa5e782d76541a22"
+    },
+    {
+      "path": "docs/compute-plan-v2.md",
+      "sha256": "f6a140b83eb56c98ac56968b16c175f3b5774299854c3bf2718f2025377d4d07"
+    },
+    {
       "path": "docs/compute-plan.md",
-      "sha256": "70ba7ac69944269bd73fbe66147c058e8072bf5ef671d5e5524b3d68250052e5"
+      "sha256": "f6a140b83eb56c98ac56968b16c175f3b5774299854c3bf2718f2025377d4d07"
     },
     {
       "path": "docs/experiments.md",
@@ -67,6 +107,14 @@
     {
       "path": "docs/record-contract.md",
       "sha256": "0e4c20daa3afa862ae152dc619c646f99bb18f7e7733054e812992b47b7bac47"
+    },
+    {
+      "path": "docs/record-local-evidence.md",
+      "sha256": "26cdbf62e9ed882a666ebc84b06d571442c980d1f467d016b5184051e6bde8ee"
+    },
+    {
+      "path": "docs/record_retention_diagnostic.md",
+      "sha256": "be4111cd6806fcdba5ce73fe220c5de5ae00a8a630aa2e0a4fb8d8016577210b"
     },
     {
       "path": "docs/reproduction.md",
@@ -83,6 +131,54 @@
     {
       "path": "environment/requirements-data.txt",
       "sha256": "c62c677e9e1498bf07c495540db8461e55e2f4e72577b3252bebd1a6d8ec76f7"
+    },
+    {
+      "path": "experiments/record_comparison/PLACEMENT_PROTOCOL.md",
+      "sha256": "dfcf5e8f89b82ae887ff36737d5d2b69f9d7b504402c5e5044cd3ea571153aae"
+    },
+    {
+      "path": "experiments/record_comparison/PROTOCOL.md",
+      "sha256": "37f148a17f634a219d38507ff0a45976b89627f8d47ec14b32570dcfa8a30b84"
+    },
+    {
+      "path": "experiments/record_comparison/results/placement-fit/environment.json",
+      "sha256": "aa1e305a457ee773926340dddb56319abd533f3362d1865f6ce72cb225265704"
+    },
+    {
+      "path": "experiments/record_comparison/results/placement-fit/preregistered.json",
+      "sha256": "80306673c4c9430952c7b1d11f5a7f126232b6a73dac5a018a9aec30df852da2"
+    },
+    {
+      "path": "experiments/record_comparison/results/placement-fit/report.json",
+      "sha256": "e5162ff8d38fd69c0772b57cb120b056e80703928f56561d067cdf5ae2b3242c"
+    },
+    {
+      "path": "experiments/record_comparison/results/placement-fit/world_manifest.json",
+      "sha256": "7595ee95714af7a6f875455a23e3eae867dee8fc1e7e35f8ac7f0570579cdf00"
+    },
+    {
+      "path": "experiments/record_comparison/results/v2-1600/preregistered.json",
+      "sha256": "99bc88a95122cf409e36d3da254433f9f3e81f6a3b79b979b97c11bf99105936"
+    },
+    {
+      "path": "experiments/record_comparison/results/v2-1600/report.json",
+      "sha256": "465c0d8eea18a23938164cb3fcd32a0cf9dcb0facadcfc3709433071ef4fdba8"
+    },
+    {
+      "path": "experiments/record_comparison/results/v2-1600/world_manifest.json",
+      "sha256": "9118c3099dc825d3bc6ee86a40d24fa66e6359ee86c365c9559ae9cddab6fc03"
+    },
+    {
+      "path": "experiments/record_comparison/results/v2/preregistered.json",
+      "sha256": "3fd0723cf958bf58ac7c6d44acf97912688ad8c13d804ba06121d942b940b8a8"
+    },
+    {
+      "path": "experiments/record_comparison/results/v2/report.json",
+      "sha256": "cde6b9265c2f5e694f807bb874e6b1a691c32b5e2f3f254ed5b201f2eaab55d8"
+    },
+    {
+      "path": "experiments/record_comparison/results/v2/world_manifest.json",
+      "sha256": "9118c3099dc825d3bc6ee86a40d24fa66e6359ee86c365c9559ae9cddab6fc03"
     },
     {
       "path": "proofs/certified_memory/README.md",
@@ -103,6 +199,22 @@
     {
       "path": "proofs/certified_memory/WorkflowKernelCli.lean",
       "sha256": "f8a440faa0ceabf12e23d6935f2b0f94a97e68a7bf55be69d5017d2dd1e669b4"
+    },
+    {
+      "path": "proofs/supported_state/README.md",
+      "sha256": "57cb886e669c6f62c73d5fd25ae55fb84f938b90018fd327c142c549d2871f43"
+    },
+    {
+      "path": "proofs/supported_state/SupportedState.lean",
+      "sha256": "bcbb85cfd15b8d90743045942dcdb586b1a701839a25663f6bcc894e4991059e"
+    },
+    {
+      "path": "proofs/supported_state/SupportedStateCli.lean",
+      "sha256": "261b67555ff39b2f5c0f9e82dd28637a2a16b3930432d7410e6ce6acc4664eb3"
+    },
+    {
+      "path": "proofs/supported_state/check_receipt.json",
+      "sha256": "b5f7c20b32b4c0445218d0806f9ea328d788bda07862bd28802a321f8308c2e9"
     },
     {
       "path": "pyproject.toml",
@@ -145,12 +257,56 @@
       "sha256": "232c394f8879585c2563be11b173c8eb88d4ce8395e4e0220487555f0f7c5491"
     },
     {
+      "path": "results/record_comparison_cpu_enablement_v2_20261021.json",
+      "sha256": "7bb693758ee0b508c73ee57325a6ea61e3a70dd19e7b1fc1d5f3e205e2234abd"
+    },
+    {
+      "path": "results/record_gpu_external_cpu_replay_20261021.json",
+      "sha256": "20955baf1fda3dd5f0cb8b103cb8d64f674a76d1a5b245e7128e3d6734bea395"
+    },
+    {
+      "path": "results/record_gpu_independent_audit_20261021.json",
+      "sha256": "12f2cbd3be0dc27557c3b6de291ee120be73a30936b243d3f6a346ef294fdee6"
+    },
+    {
+      "path": "results/record_gpu_third_seed_internal_cpu_replay_20261021.json",
+      "sha256": "d31fd41209160a6a8f905df364653b7632912540e97cb6d3c542069f05f616ec"
+    },
+    {
+      "path": "results/record_placement_cpu_qualification_20261021.json",
+      "sha256": "0282f40fc30693acc543ba8b1b9f0f57338f61e7299c7f8e6058634751048128"
+    },
+    {
+      "path": "results/record_placement_gpu_independent_audit_20261021.json",
+      "sha256": "fb84ebe961c9946096c16b1126b7b991918518ad034899ce4382355c04328bbb"
+    },
+    {
+      "path": "results/record_retention_20261021.json",
+      "sha256": "ae4bc83e3285ae00df5f3b1008d8a9a030d3a29b76ee863d6647b9e8a4f4074a"
+    },
+    {
+      "path": "results/record_review_branch_cpu_20261021.json",
+      "sha256": "dc896ef2af3bc02ee73066fadae855da303be8f9fcb1c1f4645ab291092d7946"
+    },
+    {
+      "path": "results/record_training_budget_comparison_20261021.json",
+      "sha256": "5f2cf9fe4fba07b4b3a48c64cc943a5eb0da022d0a3b32dc7e5542287788604f"
+    },
+    {
       "path": "results/semantic_interface_comparison_review_20261021.derived.json",
       "sha256": "48ad3d24ae638412b5d27fadcbc32711f1db8ea0f696145659d5b2caf4cfe20f"
     },
     {
+      "path": "results/structured_pretraining_compute_v2_20261021.json",
+      "sha256": "579dcc8468754e027704a0d6328a032ce15cac95a4a98372e091d50471788014"
+    },
+    {
       "path": "results/supported_state_independent_review_20261021.derived.json",
       "sha256": "9f478528b8b610ec6d74c8b2d0d8ec740e1d064e3f4a5aab77eac14d470c14bc"
+    },
+    {
+      "path": "results/supported_state_lean_root_check_20261021.json",
+      "sha256": "d5f0ce4998932cc24cda6aa60cac4cf7e4388e9bd020e4a80beffac0b724092d"
     },
     {
       "path": "results/workflow_kernel_differential_20261021.derived.json",
@@ -201,6 +357,14 @@
       "sha256": "d7a9a96c138f3f6c7a0a7b0ee0e9bd448738bb0719a4d89b992145534bd0e139"
     },
     {
+      "path": "src/controlled_lm/record_learning_comparison.py",
+      "sha256": "8b22c18c5aac6df8b45995e4030364c54d19cb1d088932988c8d0c7e39b1ef2b"
+    },
+    {
+      "path": "src/controlled_lm/record_placement_diagnostic.py",
+      "sha256": "93267e5571bc7917b83ea98feb1e47ea8d7772b6ad42665f00f19441f4408385"
+    },
+    {
       "path": "src/controlled_lm/semantic_interface_comparison.py",
       "sha256": "e70df211b1f72c7fd6fb33c62e516ebd50a6c08c09c7a3462322cace856a6c77"
     },
@@ -229,6 +393,14 @@
       "sha256": "f079c7e1fa2ce0c037306de04295e9dd8a585a3afe783a239c548351befc7aa8"
     },
     {
+      "path": "tests/test_compare_record_training_budgets.py",
+      "sha256": "8d6114fac0ee7b83fa9e1436d8cb52b4fd64f8be0f57ac0c7357068e01b54a72"
+    },
+    {
+      "path": "tests/test_compute_plan_v2.py",
+      "sha256": "f0c1476b2a8423a7394c81d326d37b6c5eecb824ca06cc0a048bad0e101cfe51"
+    },
+    {
       "path": "tests/test_language_pilot_data.py",
       "sha256": "cda12ef1643ea5dddc2db7d46599ea0ded2402535eb0d848696234d3fc1342fd"
     },
@@ -245,12 +417,32 @@
       "sha256": "1b83d8ea0ca2fe702399485be611bd965fdf6333656729936a6540a16bf6c4c0"
     },
     {
+      "path": "tests/test_record_comparison_independent_review.py",
+      "sha256": "2440ac8b0874be8c031770631653769f87c99f82bed47e6f55149214cbebaae0"
+    },
+    {
+      "path": "tests/test_record_learning_comparison.py",
+      "sha256": "40baa538d7fa8f26ab666d4957676e22a253815d7aab0215123a888a203eb603"
+    },
+    {
+      "path": "tests/test_record_placement_diagnostic.py",
+      "sha256": "dcfc5f2cb02afa542d5c8e4286d5353c0aa129d5aa9031f8a939f7df30ece23e"
+    },
+    {
+      "path": "tests/test_record_placement_review.py",
+      "sha256": "2ad4a24f2610d9a2349155548d3e6d983cb4bc8417dac0d022f335f7569c04d9"
+    },
+    {
       "path": "tests/test_semantic_interface_comparison.py",
       "sha256": "074b9934d3ca970d2e30b230fec3e443c174a44a6b27c785b716924b8ed02f61"
     },
     {
       "path": "tests/test_supported_state.py",
       "sha256": "ba12da638ddf1923ffcabeaa6a21783a5adfd56a41e470fd849f8f3b6048a6c5"
+    },
+    {
+      "path": "tests/test_supported_state_lean.py",
+      "sha256": "bab3e75c2ff8df33ef43a14f4077e716363cf8d60e2911baea29a6fa6e87e858"
     },
     {
       "path": "tests/test_supported_state_review.py",
@@ -265,16 +457,32 @@
       "sha256": "880e360e7d461e168e84b26c0d5210d20c2e0fb1c7e8e14f57e79572585c135e"
     },
     {
+      "path": "tools/analyze_record_comparison.py",
+      "sha256": "e84eee6572fb05e2ae55aa33312bd6c05c357ac32b73bcb4c30d2c83c21e4a11"
+    },
+    {
       "path": "tools/build_lean.py",
       "sha256": "7b533e4b108f2c48023b7a088b68f63f31e3962d47d5a89afc4e813c3ed7a306"
+    },
+    {
+      "path": "tools/check_compute_plan_v2.py",
+      "sha256": "ff47f2711198f66ca051a8960a8a939c31be23c6a249761f575281b68059b863"
     },
     {
       "path": "tools/check_cpu.py",
       "sha256": "daba970dbfba5f4f9cd9bc1e9f30e5a142b3cc3d6e634e563bf031c469af2d06"
     },
     {
+      "path": "tools/check_supported_state_lean.py",
+      "sha256": "fe4fdb52b290e5d1baf842010c2a557731b356eb1b910af4a5b7f788f0765a69"
+    },
+    {
       "path": "tools/check_workflow_kernel_lean.py",
       "sha256": "cb33b901728c66c7e99bc110396ee58d8aea674de15b7e3a735cfdba4929ed1a"
+    },
+    {
+      "path": "tools/compare_record_training_budgets.py",
+      "sha256": "25ceef30a8c4683896fb2da22a9c206e8f972bfecc31f7f554be1928431943c6"
     },
     {
       "path": "tools/demo_language_model.py",
@@ -293,8 +501,16 @@
       "sha256": "3ed0d12445eb18550550b6d8b9716e7a149c647da4141070d5b67d1d5f2820bb"
     },
     {
+      "path": "tools/measure_record_retention.py",
+      "sha256": "48de8e39153847a77214235d3a1917534f421432e8e95e6b22979eb8f5fb210b"
+    },
+    {
       "path": "tools/qualify_language_gpu.py",
       "sha256": "6b51f0ac79f6ea6d71dd37be19f71b97b7a56fc3ced14fa240e33d865558ce0d"
+    },
+    {
+      "path": "tools/replay_record_comparison.py",
+      "sha256": "6676124ddc50949d32e4ce3bba60eac01adec3fb9f3cad4ed00c61f79037b616"
     },
     {
       "path": "tools/train_language_pilot.py",
@@ -305,8 +521,17 @@
       "sha256": "86e84c9ffe7aa25c9543155cb93adcd5b684d1436eba8445e4b11095d7236f59"
     },
     {
+      "path": "tools/train_record_comparison.py",
+      "sha256": "86559bad7a06cc2ff240c66cb1fc1f746ef0d9624a942369e91d2c4e563dbd41"
+    },
+    {
+      "path": "tools/train_record_placement_diagnostic.py",
+      "sha256": "10fb754775a0135364d55cf9aa34ac90dc88b1d40e46ca79f939102eae8dc905"
+    },
+    {
       "path": "tools/verify_language_extraction.py",
       "sha256": "378e3e3be435a6a0f8987d6fa3ea885f20485ebc7842fe487facd712349a08b5"
     }
-  ]
+  ],
+  "scope": "Current review-branch source, documentation and selected exact raw results. Excludes this manifest, ignored local checkpoints and run directories."
 }

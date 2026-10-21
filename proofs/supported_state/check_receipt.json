@@ -1,0 +1,133 @@
+{
+  "lean_version": "Lean (version 4.8.0, x86_64-w64-windows-gnu, commit df668f00e6c0, Release)",
+  "fresh_private_imports": true,
+  "compiles": [
+    {
+      "source": "proofs/supported_state/SupportedState.lean",
+      "exit_code": 0,
+      "seconds": 0.578254799998831
+    },
+    {
+      "source": "proofs/supported_state/SupportedStateCli.lean",
+      "exit_code": 0,
+      "seconds": 0.28502119999029674
+    }
+  ],
+  "axioms": {
+    "initial_invariant": [],
+    "initial_consistent": [],
+    "revise_invariant": [
+      "propext",
+      "Quot.sound"
+    ],
+    "revision_only_evidence": [
+      "propext",
+      "Quot.sound"
+    ],
+    "revise_consistent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "stepOK_sound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "checked_step_invariant": [
+      "propext",
+      "Quot.sound"
+    ],
+    "checked_step_consistent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "accepted_premises_preexist": [
+      "propext",
+      "Quot.sound"
+    ],
+    "rejected_no_mutation": [
+      "propext"
+    ],
+    "proposer_preserves_authority": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "policy_preserves_invariant": [],
+    "evolution_invariant": [
+      "propext",
+      "Quot.sound"
+    ],
+    "evolution_consistent": [
+      "propext",
+      "Quot.sound"
+    ],
+    "release_checks_current": [
+      "propext",
+      "Quot.sound"
+    ],
+    "release_supported": [
+      "propext",
+      "Quot.sound"
+    ],
+    "released_claim_registered": [
+      "propext",
+      "Quot.sound"
+    ],
+    "old_evidence_certificate_rejected": [
+      "propext",
+      "Quot.sound"
+    ],
+    "old_policy_certificate_rejected": [
+      "propext",
+      "Quot.sound"
+    ],
+    "support_has_evidence_root": [
+      "propext"
+    ],
+    "supported_semantically_sound": [],
+    "release_semantically_sound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "support_does_not_imply_external_truth": [
+      "propext"
+    ]
+  },
+  "passed": true,
+  "scope": "abstract supported-record model; bounded projection comparison, not refinement",
+  "fields": [
+    "accepted",
+    "evidence_epoch",
+    "policy_epoch",
+    "record_count",
+    "claim_mask",
+    "current_release_mask",
+    "old_certificate_accepted"
+  ],
+  "fixtures": 994,
+  "groups": {
+    "S": 972,
+    "R": 14,
+    "J": 8
+  },
+  "fixture_sha256": "e1095812bb1efce9a7e06dc9f520b7e01998d153ec44643b8285273d9777ee13",
+  "mismatches": [],
+  "formal_only_payload_rejections": 2,
+  "malformed_adapter_rejections": 18,
+  "independent_single_rule_oracle_contexts": 972,
+  "satisfying_worlds_checked": 1756,
+  "zero_model_contexts": 127,
+  "lean_execution_seconds": 0.3096559999976307,
+  "sha256": {
+    "proofs/supported_state/SupportedState.lean": "bcbb85cfd15b8d90743045942dcdb586b1a701839a25663f6bcc894e4991059e",
+    "proofs/supported_state/SupportedStateCli.lean": "261b67555ff39b2f5c0f9e82dd28637a2a16b3930432d7410e6ce6acc4664eb3",
+    "src/controlled_lm/supported_state.py": "82b9d66981f548d607bb42f748e53b5e3d246e2120e90afccc5501e47f2fe1c9",
+    "tools/check_supported_state_lean.py": "fe4fdb52b290e5d1baf842010c2a557731b356eb1b910af4a5b7f788f0765a69"
+  },
+  "limitations": [
+    "No Python-to-Lean refinement theorem or all-input runtime proof.",
+    "Comparison projects acceptance, epochs, record count, claim/release masks and stale release.",
+    "No proof of host authentication, channel isolation, model existence or external truth.",
+    "No neural training, learned RECORD mechanism, behavioral alignment or grant qualification claim."
+  ]
+}

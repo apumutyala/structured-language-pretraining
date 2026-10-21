@@ -1,0 +1,28 @@
+{
+  "compute_capability": [
+    12,
+    0
+  ],
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+  "dtype": "torch.float32",
+  "free_vram_before_bytes": 11578376192,
+  "nvidia_smi": "NVIDIA GeForce RTX 5070 Ti Laptop GPU, 610.88, 12227 MiB, 138 MiB",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+  "python": "3.12.14",
+  "source_sha256": {
+    "src/controlled_lm/invariant_ssm.py": "261a44e222302831d047965489eb58043cdc5834488febc1761ed2b838a5c0ee",
+    "src/controlled_lm/normalized_typed_language_model.py": "becdc29461cbafdd94f199232328a7b9ddaf76148edee2258122f97574e1607b",
+    "src/controlled_lm/parallel_ssm.py": "ca2b22b90a54bd07062689c5bd7521a065a00d96c70b86539e13dc253dddc85a",
+    "src/controlled_lm/record_learning_comparison.py": "8b22c18c5aac6df8b45995e4030364c54d19cb1d088932988c8d0c7e39b1ef2b",
+    "src/controlled_lm/record_placement_diagnostic.py": "93267e5571bc7917b83ea98feb1e47ea8d7772b6ad42665f00f19441f4408385",
+    "src/controlled_lm/semantic_interface_comparison.py": "e70df211b1f72c7fd6fb33c62e516ebd50a6c08c09c7a3462322cace856a6c77",
+    "src/controlled_lm/supported_state.py": "82b9d66981f548d607bb42f748e53b5e3d246e2120e90afccc5501e47f2fe1c9",
+    "tools/train_record_comparison.py": "86559bad7a06cc2ff240c66cb1fc1f746ef0d9624a942369e91d2c4e563dbd41",
+    "tools/train_record_placement_diagnostic.py": "10fb754775a0135364d55cf9aa34ac90dc88b1d40e46ca79f939102eae8dc905"
+  },
+  "torch": "2.14.1+cu130",
+  "torch_cuda": "13.0",
+  "total_vram_bytes": 12820480000
+}
