@@ -1,0 +1,118 @@
+{
+  "started_utc": "2026-10-21T19:33:46+00:00",
+  "tag": "main",
+  "base_config": "configs/normalized_language_local_20261021.json",
+  "base_config_sha256": "497e33996549c090a0780e1eba3a8cfa84ca88e6ec4da5d973136420e4fa9a94",
+  "device": "cuda",
+  "python": "3.12.14",
+  "argv": [
+    "--tag",
+    "main",
+    "--seeds",
+    "10",
+    "--keep-going"
+  ],
+  "git_head": "07a45cd976ba549b681efca22d73601df098aa94",
+  "replicates": [
+    {
+      "replicate": 0,
+      "seed": 2026102131,
+      "data_seed": 2026102133,
+      "action": "trained",
+      "returncode": 0,
+      "invocation_seconds": 218.987,
+      "status": "complete"
+    },
+    {
+      "replicate": 1,
+      "seed": 2026102231,
+      "data_seed": 2026102233,
+      "action": "trained",
+      "returncode": 0,
+      "invocation_seconds": 213.402,
+      "status": "complete"
+    },
+    {
+      "replicate": 2,
+      "seed": 2026102331,
+      "data_seed": 2026102333,
+      "action": "trained",
+      "returncode": 0,
+      "invocation_seconds": 193.553,
+      "status": "complete"
+    },
+    {
+      "replicate": 3,
+      "seed": 2026102431,
+      "data_seed": 2026102433,
+      "action": "trained",
+      "returncode": 0,
+      "invocation_seconds": 192.045,
+      "status": "complete"
+    },
+    {
+      "replicate": 4,
+      "seed": 2026102531,
+      "data_seed": 2026102533,
+      "action": "trained",
+      "returncode": 0,
+      "invocation_seconds": 193.146,
+      "status": "complete"
+    },
+    {
+      "replicate": 5,
+      "seed": 2026102631,
+      "data_seed": 2026102633,
+      "action": "trained",
+      "returncode": 0,
+      "invocation_seconds": 198.621,
+      "status": "complete"
+    },
+    {
+      "replicate": 6,
+      "seed": 2026102731,
+      "data_seed": 2026102733,
+      "action": "trained",
+      "returncode": 0,
+      "invocation_seconds": 199.794,
+      "status": "complete"
+    },
+    {
+      "replicate": 7,
+      "seed": 2026102831,
+      "data_seed": 2026102833,
+      "action": "trained",
+      "returncode": 0,
+      "invocation_seconds": 191.129,
+      "status": "complete"
+    },
+    {
+      "replicate": 8,
+      "seed": 2026102931,
+      "data_seed": 2026102933,
+      "action": "trained",
+      "returncode": 0,
+      "invocation_seconds": 192.676,
+      "status": "complete"
+    },
+    {
+      "replicate": 9,
+      "seed": 2026103031,
+      "data_seed": 2026103033,
+      "action": "trained",
+      "returncode": 0,
+      "invocation_seconds": 195.22,
+      "status": "complete"
+    },
+    {
+      "replicate": 10,
+      "seed": 2026103131,
+      "data_seed": 2026103133,
+      "action": "trained",
+      "returncode": 0,
+      "invocation_seconds": 201.56,
+      "status": "complete"
+    }
+  ],
+  "finished_utc": "2026-10-21T20:10:16+00:00"
+}
