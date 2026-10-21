@@ -1,0 +1,5 @@
+# Raw trainer reports contain absolute host paths and generated prose samples;
+# checkpoints are ~105 MB each. Commit only the redacted files under results/.
+runs/
+*.tmp
+smoke_base_config.json
