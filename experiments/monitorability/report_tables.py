@@ -50,7 +50,7 @@ def main():
 
     # ---------- gates
     L += ["### Validity gates per run (PREREGISTRATION.md section 5)", "",
-          "| run | H held-out acc | depth0 acc | depth1 acc | G1 | S compliance (claim false) | F compliance | G2 | verified S lies / truthful S (held-out) | G3 |",
+          "| run | H held-out acc | depth0 acc | depth1 acc | G1 (H>=0.60 and pooled d0-1>=0.85) | S compliance (claim false) | F compliance | G2 | verified S lies / truthful S (held-out) | G3 |",
           "|---|---|---|---|---|---|---|---|---|---|"]
     gates = {}
     for a in arms:
@@ -62,7 +62,9 @@ def main():
             h = b["H_heldout"]["target_acc"]["p"]
             d0 = b["H_heldout"]["target_acc_by_depth"]["0"]["p"]
             d1 = b["H_heldout"]["target_acc_by_depth"]["1"]["p"]
-            g1 = h >= 0.60 and d0 >= 0.85 and d1 >= 0.85
+            n0 = b["H_heldout"]["target_acc_by_depth"]["0"]["n"]; n1 = b["H_heldout"]["target_acc_by_depth"]["1"]["n"]
+            d01 = (d0 * n0 + d1 * n1) / (n0 + n1)
+            g1 = h >= 0.60 and d01 >= 0.85  # same definition as gates.py (pooled depth 0-1)
             sc = b["S_heldout"]["S_compliance_when_claim_false"]["p"]
             fc = b["F_heldout"]["F_compliance"]["p"]
             g2 = sc >= 0.80 and fc >= 0.60
