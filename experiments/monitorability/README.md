@@ -25,7 +25,10 @@ answer objective (Arm A).
 | `aggregate.py` | Across-seed mean, t-based 95% CI and paired structured-minus-plain differences. Writes `results/<cfg>/summary.{json,md}` |
 | `baselines.py` | Shallow non-learned heuristic accuracy on the evaluation sets |
 | `run_main.sh` | Train + evaluate both arms for a seed list (arms interleaved per seed), then aggregate |
-| `configs/cpu_pilot.json` | The CPU config of record (seed 0, 12k steps) |
+| `configs/cpu_pilot.json` | The CPU config of record (12k steps; seeds 0, 1, 2 per Amendment 1) |
+| `run_parallel.sh` | The CPU run pattern used (parallel arms, 1 thread each, per seed) |
+| `run_main.py`, `report_table.py`, `gates.py` | Lead-added cross-platform driver, the CODEX summary table, and reporting-only gates/best-baseline checks |
+| `report_tables.py` | Per-seed / mean / range / paired-difference tables used in RESULTS.md |
 | `configs/gpu_scale.json` | Confirmatory config for a GPU (d=256, 6 layers, 40k steps, batch 256, seeds 0-9) |
 | `configs/{smoke,pilot_debug,pilot2,pilot3}.json` | Pilot configs (disclosed in the prereg; pilot3 lacks the later `max_len` change) |
 | `tests/test_env.py` | Kernel agreement, label/depth balance, no name leakage, lie bookkeeping, determinism, matched-neutral counterfactual |
@@ -43,25 +46,25 @@ tests import `controlled_lm` from `../../src` via `tests/conftest.py`.
 ```bash
 cd experiments/monitorability
 python -m pytest -q tests -p no:cacheprovider          # 9 passed
-# main runs as executed: both arms in parallel, 1 thread each (2-core machine)
-python train.py --arm plain      --seed 0 --config configs/cpu_pilot.json --threads 1 > logs/cpu_pilot_plain_s0_train.log 2>&1 &
-python train.py --arm structured --seed 0 --config configs/cpu_pilot.json --threads 1 > logs/cpu_pilot_structured_s0_train.log 2>&1 &
-wait
-for ARM in plain structured; do
-  cp checkpoints/cpu_pilot/${ARM}_s0/train_metrics.json results/cpu_pilot/${ARM}_s0_train_metrics.json
-  python evaluate.py --ckpt checkpoints/cpu_pilot/${ARM}_s0/model.pt --threads 2 --out results/cpu_pilot/${ARM}_s0.json
-done
-python aggregate.py --config_name cpu_pilot
+# Run pattern actually used: per seed, both arms train in parallel with 1 thread each
+# (2-core machine), then both are evaluated in parallel; seeds 0, 1, 2 (Amendment 1).
+bash run_parallel.sh configs/cpu_pilot.json 0 1 2      # about 75-80 min per seed on 2 free cores
+python aggregate.py --config_name cpu_pilot            # summary.json / summary.md (mean, t-CI, paired diffs)
+python gates.py cpu_pilot                              # gates.json / gates.md (G1-G3, primary vs best baseline)
+python report_tables.py --config_name cpu_pilot        # report_tables.md (per-seed, mean, range; used in RESULTS.md)
 python baselines.py --out results/cpu_pilot/heuristic_baseline.json
 ```
 
-Sequential alternative (same numbers up to CPU threading nondeterminism):
-`bash run_main.sh configs/cpu_pilot.json cpu 2 0`.
-
-The whole procedure is deterministic given seed, torch version and thread count:
-- Training data depends on the seed only, so both arms see identical episodes.
-- The trunk init is identical across arms.
-- Evaluation sets use a fixed seed (`EVAL_SEED=20261021`), shared by all runs.
+Notes:
+- The sequential alternatives `bash run_main.sh configs/cpu_pilot.json cpu 2 0 1 2` and
+  `python run_main.py ...` run the same code. Differences are only up to CPU-threading nondeterminism.
+- The procedure is deterministic given seed, torch version and thread count:
+  - training data depends on the seed only, so both arms see identical episodes;
+  - the trunk init is identical across arms;
+  - evaluation sets use a fixed seed (`EVAL_SEED=20261021`), shared by all runs.
+- The console line printed by `evaluate.py` labelled "PRIMARY" shows the *unverified* `within_S_heldout`
+  population. The preregistered primary endpoint is `within_S_verified_heldout` in the JSON, `gates.md`
+  and the summaries.
 
 ## Run the GPU config
 
