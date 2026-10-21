@@ -1,0 +1,308 @@
+{
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": ".github/workflows/manual-cpu.yml",
+      "sha256": "0acc295aa7eea4b8e7c7d3138a73b0f2724b21511832a74c64fa6f841d8330eb"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "02d93d598214a5a91620667b3ea65ebc3757c17cf4ed57c5c72ef7051bb56cfe"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "45fc4f095794fa08903cf14bee9ffafbcb0a258359509b19d97b48b96e62b1c5"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "15cafc37a752497132197f45525cd3f7039ae823615cfe371bcd3dc4d7ccb6e1"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "88841cf19fd3cf18bab7df977a796d08a382d381786aa5a2c7d1b8f331ef3c46"
+    },
+    {
+      "path": "README.md",
+      "sha256": "39fcfdecd47b59e9d16a4ddb447cbeaa76e1f5ce10e682c5988d5e01645f304b"
+    },
+    {
+      "path": "configs/language_scale_learning_dev_20261021.json",
+      "sha256": "b661fb3e09b1482cbdabd5c98106bff645fc2cb7e50195c9f38c63cb93194b45"
+    },
+    {
+      "path": "configs/normalized_language_cpu_enablement_20261021.json",
+      "sha256": "74864c577cbe89b5d9f37e394b53585b54b4b8639309c53a55931de7396c2531"
+    },
+    {
+      "path": "configs/normalized_language_cuda_qualification_20261021.json",
+      "sha256": "ee130b065cde24ce275f8054e7e8131edbeaa8d49b891da92f87c7e6519acd95"
+    },
+    {
+      "path": "configs/normalized_language_local_20261021.json",
+      "sha256": "497e33996549c090a0780e1eba3a8cfa84ca88e6ec4da5d973136420e4fa9a94"
+    },
+    {
+      "path": "data/source-spec.json",
+      "sha256": "a844cdc0aba5a895f6f113b1a0dd5daf40a7bb656289cba885191de6f360661b"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "7ea9f80a3766dec285d14036cb8ab0f9c1972695e6dfc5549cb063dde0078376"
+    },
+    {
+      "path": "docs/compute-plan.md",
+      "sha256": "70ba7ac69944269bd73fbe66147c058e8072bf5ef671d5e5524b3d68250052e5"
+    },
+    {
+      "path": "docs/experiments.md",
+      "sha256": "bd8922cf97629c3777109514a6aad1a372d58dec1e54819c826e55a948cd5e05"
+    },
+    {
+      "path": "docs/record-contract.md",
+      "sha256": "0e4c20daa3afa862ae152dc619c646f99bb18f7e7733054e812992b47b7bac47"
+    },
+    {
+      "path": "docs/reproduction.md",
+      "sha256": "85e183e5f7f400d48c4ba74621733d1ca53ebf7b0bae449a18f8436ba0990ce4"
+    },
+    {
+      "path": "docs/results.md",
+      "sha256": "d9228b271435f7ababe84e639bc56f62c3cfb3ba79a75a89545e27220c782d80"
+    },
+    {
+      "path": "environment/requirements-cpu.txt",
+      "sha256": "40a251700bd5cadde174cfcf73231f6bf2661dda4d52a78e536ad85386565ec4"
+    },
+    {
+      "path": "environment/requirements-data.txt",
+      "sha256": "c62c677e9e1498bf07c495540db8461e55e2f4e72577b3252bebd1a6d8ec76f7"
+    },
+    {
+      "path": "proofs/certified_memory/README.md",
+      "sha256": "ee58860d04d6252f5a144169c55940958e0423014deebf55934fe33cc9b02c2e"
+    },
+    {
+      "path": "proofs/certified_memory/SoundMemory.lean",
+      "sha256": "33cf95aab9e733287c3514278ab1f2ae865493ae4ef99dc1f296199c744d812b"
+    },
+    {
+      "path": "proofs/certified_memory/SoundMemoryReview.lean",
+      "sha256": "5cc064bc9a76f6f4f3a13aeb937a74575801748256f1ec5a85e8ea04af74a547"
+    },
+    {
+      "path": "proofs/certified_memory/WorkflowKernel.lean",
+      "sha256": "8b8ee7718edb5186efdbb81b62a5a3d20d84f1acfc00d4207cbc41c4d959f7a3"
+    },
+    {
+      "path": "proofs/certified_memory/WorkflowKernelCli.lean",
+      "sha256": "f8a440faa0ceabf12e23d6935f2b0f94a97e68a7bf55be69d5017d2dd1e669b4"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "9798670e3a3b221e95112c5150b21cdf43020350b21728906c2444dea42dbe7c"
+    },
+    {
+      "path": "results/language_scale_learning_1000_dev_20261021.derived.json",
+      "sha256": "e61868cddc5fdc505fecfbd921c5791d9808a3cad0ade12d7ed1766b3ccc92cd"
+    },
+    {
+      "path": "results/normalized_language_cpu_enablement_20261021.derived.json",
+      "sha256": "d3e2c0df401bef8d5cc4e05909df80e43e1f12f992736c281ae36f77884c80aa"
+    },
+    {
+      "path": "results/normalized_language_cuda_qualification_20261021.derived.json",
+      "sha256": "c6a445bab641c26ec1370e0aadb1d393be52b2ae6f13b5caf9420bd98c322ccb"
+    },
+    {
+      "path": "results/normalized_language_local_20261021.derived.json",
+      "sha256": "284ae2974a386e51ab9ebcf895e7351b42372f8cfc69338d3ddfcb5e3be31b1e"
+    },
+    {
+      "path": "results/normalized_language_local_audit_20261021.derived.json",
+      "sha256": "724997b57e9fb43d25ac428602a1cfcd3c9f87184e01d1571b00c8b5110d24d7"
+    },
+    {
+      "path": "results/public_candidate_runtime_recheck.derived.json",
+      "sha256": "f920e2616fce061fc79955c8a0f304a9386bf80a32fa04b24d0d63093249792b"
+    },
+    {
+      "path": "results/public_content_screen.json",
+      "sha256": "044683efdf6ff1cd896b619108fa213b9bd3374bd169e6c407579716a6f115a8"
+    },
+    {
+      "path": "results/public_cpu_verification.json",
+      "sha256": "e9ff4edf7630135b078e08f4504992fd5ac24b4297c34bacc9d06fe6fd5ec7f4"
+    },
+    {
+      "path": "results/public_lean_recheck.derived.json",
+      "sha256": "232c394f8879585c2563be11b173c8eb88d4ce8395e4e0220487555f0f7c5491"
+    },
+    {
+      "path": "results/semantic_interface_comparison_review_20261021.derived.json",
+      "sha256": "48ad3d24ae638412b5d27fadcbc32711f1db8ea0f696145659d5b2caf4cfe20f"
+    },
+    {
+      "path": "results/supported_state_independent_review_20261021.derived.json",
+      "sha256": "9f478528b8b610ec6d74c8b2d0d8ec740e1d064e3f4a5aab77eac14d470c14bc"
+    },
+    {
+      "path": "results/workflow_kernel_differential_20261021.derived.json",
+      "sha256": "c12087a54a1bb3c79bbbaa361ac122beb4b59a4fbacde8e17aab22fce25dfae4"
+    },
+    {
+      "path": "src/controlled_lm/__init__.py",
+      "sha256": "727567570c2632e88b6de56477b50a085f0d6cc4750a1e1fe69e7f55ef5b1ca9"
+    },
+    {
+      "path": "src/controlled_lm/certified_memory.py",
+      "sha256": "f06356d8b9f169f45fc520bd7f05a67e2ecea89bb9b7f2847bab935dce06812f"
+    },
+    {
+      "path": "src/controlled_lm/evidence_decoder.py",
+      "sha256": "7a7cee2839704d39ac48dc1b32e345437d9d48965ed74fcedfeb15f0881d876d"
+    },
+    {
+      "path": "src/controlled_lm/invariant_ssm.py",
+      "sha256": "261a44e222302831d047965489eb58043cdc5834488febc1761ed2b838a5c0ee"
+    },
+    {
+      "path": "src/controlled_lm/language_pilot_data.py",
+      "sha256": "7e62e86d9166aea6fe16488343e8ef8ee9e99582d9f9b1a4f36c4b8062400d61"
+    },
+    {
+      "path": "src/controlled_lm/language_state_interventions.py",
+      "sha256": "c1527c67a85eb8afe59ac0399f10b31ff427d65498ac693d706fcfa21f1b10ca"
+    },
+    {
+      "path": "src/controlled_lm/lean_workflow_backend.py",
+      "sha256": "a892fe2723867daf9c599d593df71e4b0f514e8a6d8efba2ef54401cf81b5a74"
+    },
+    {
+      "path": "src/controlled_lm/normalized_typed_language_model.py",
+      "sha256": "becdc29461cbafdd94f199232328a7b9ddaf76148edee2258122f97574e1607b"
+    },
+    {
+      "path": "src/controlled_lm/parallel_semantic.py",
+      "sha256": "9a6f45c18c378d262704d8662e1a8b0c372fbd9d662296cdd0ec52a168283ad5"
+    },
+    {
+      "path": "src/controlled_lm/parallel_ssm.py",
+      "sha256": "ca2b22b90a54bd07062689c5bd7521a065a00d96c70b86539e13dc253dddc85a"
+    },
+    {
+      "path": "src/controlled_lm/policy.py",
+      "sha256": "d7a9a96c138f3f6c7a0a7b0ee0e9bd448738bb0719a4d89b992145534bd0e139"
+    },
+    {
+      "path": "src/controlled_lm/semantic_interface_comparison.py",
+      "sha256": "e70df211b1f72c7fd6fb33c62e516ebd50a6c08c09c7a3462322cace856a6c77"
+    },
+    {
+      "path": "src/controlled_lm/semantic_transitions.py",
+      "sha256": "abb5bbb2512f5f3320802c49636a4908d810094efe163f020057b113736688f0"
+    },
+    {
+      "path": "src/controlled_lm/structured_decision.py",
+      "sha256": "991254a929b4329c1bd864de95f5c00f41209e6d9e412d130d3730214c988ad1"
+    },
+    {
+      "path": "src/controlled_lm/supported_state.py",
+      "sha256": "82b9d66981f548d607bb42f748e53b5e3d246e2120e90afccc5501e47f2fe1c9"
+    },
+    {
+      "path": "src/controlled_lm/typed_evidence_lane.py",
+      "sha256": "ce99fb7a6a954ee668eaa868e20ac1c6ac60ef0fe0757dcf9c6e11ac6fde0fbc"
+    },
+    {
+      "path": "src/controlled_lm/typed_language_model.py",
+      "sha256": "49301bcc3c4504570ad8be300bf30930e6551962d490f8b1bde185a41626c2ac"
+    },
+    {
+      "path": "tests/test_certified_memory.py",
+      "sha256": "f079c7e1fa2ce0c037306de04295e9dd8a585a3afe783a239c548351befc7aa8"
+    },
+    {
+      "path": "tests/test_language_pilot_data.py",
+      "sha256": "cda12ef1643ea5dddc2db7d46599ea0ded2402535eb0d848696234d3fc1342fd"
+    },
+    {
+      "path": "tests/test_language_state_interventions.py",
+      "sha256": "12d2419b28ff16401422601df2be851564b12ee7a95b53fed2d87cabcbda3c13"
+    },
+    {
+      "path": "tests/test_normalized_typed_language_model.py",
+      "sha256": "9fdb76d2be21f690828fa16afc88808cbf6008352f770ede49d7b64385e40a17"
+    },
+    {
+      "path": "tests/test_parallel_ssm.py",
+      "sha256": "1b83d8ea0ca2fe702399485be611bd965fdf6333656729936a6540a16bf6c4c0"
+    },
+    {
+      "path": "tests/test_semantic_interface_comparison.py",
+      "sha256": "074b9934d3ca970d2e30b230fec3e443c174a44a6b27c785b716924b8ed02f61"
+    },
+    {
+      "path": "tests/test_supported_state.py",
+      "sha256": "ba12da638ddf1923ffcabeaa6a21783a5adfd56a41e470fd849f8f3b6048a6c5"
+    },
+    {
+      "path": "tests/test_supported_state_review.py",
+      "sha256": "595af95cc27237ed96b01cdd62c219937c3faa79be17b435987e0566264b91a0"
+    },
+    {
+      "path": "tests/test_typed_language_model.py",
+      "sha256": "b699a07b18abe405d23da0938284bf96dfb8460b77613ce6ba07d984d17601d1"
+    },
+    {
+      "path": "tests/test_workflow_kernel_lean.py",
+      "sha256": "880e360e7d461e168e84b26c0d5210d20c2e0fb1c7e8e14f57e79572585c135e"
+    },
+    {
+      "path": "tools/build_lean.py",
+      "sha256": "7b533e4b108f2c48023b7a088b68f63f31e3962d47d5a89afc4e813c3ed7a306"
+    },
+    {
+      "path": "tools/check_cpu.py",
+      "sha256": "daba970dbfba5f4f9cd9bc1e9f30e5a142b3cc3d6e634e563bf031c469af2d06"
+    },
+    {
+      "path": "tools/check_workflow_kernel_lean.py",
+      "sha256": "cb33b901728c66c7e99bc110396ee58d8aea674de15b7e3a735cfdba4929ed1a"
+    },
+    {
+      "path": "tools/demo_language_model.py",
+      "sha256": "f25c6ad4f0654aeb896d9f0b5558c2da90318512a5d2ab5abdeea784051ec368"
+    },
+    {
+      "path": "tools/demo_supported_comparison.py",
+      "sha256": "0948873f1837438d0dcaeefbfe2b184bef460b7043e2ff0e93528a50c6aa74b0"
+    },
+    {
+      "path": "tools/download_language_source.py",
+      "sha256": "c2aa96e8010a2a647f3197778601d80c4f9f921f8fbd934e34ca4e10cf7d5b66"
+    },
+    {
+      "path": "tools/extract_language_pilot.py",
+      "sha256": "3ed0d12445eb18550550b6d8b9716e7a149c647da4141070d5b67d1d5f2820bb"
+    },
+    {
+      "path": "tools/qualify_language_gpu.py",
+      "sha256": "6b51f0ac79f6ea6d71dd37be19f71b97b7a56fc3ced14fa240e33d865558ce0d"
+    },
+    {
+      "path": "tools/train_language_pilot.py",
+      "sha256": "46258bd47ffef565e5ad3d23de521d3949aae240f4eb3ab0518233ac0e225216"
+    },
+    {
+      "path": "tools/train_normalized_language_pilot.py",
+      "sha256": "86e84c9ffe7aa25c9543155cb93adcd5b684d1436eba8445e4b11095d7236f59"
+    },
+    {
+      "path": "tools/verify_language_extraction.py",
+      "sha256": "378e3e3be435a6a0f8987d6fa3ea885f20485ebc7842fe487facd712349a08b5"
+    }
+  ]
+}

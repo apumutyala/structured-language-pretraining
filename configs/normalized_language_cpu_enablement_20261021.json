@@ -1,0 +1,50 @@
+{
+  "seed": 2026102131,
+  "data_seed": 2026102133,
+  "dev_seed": 2026102137,
+  "sample_seed": 2026102139,
+  "manifest": "results/language_pilot_extraction.json",
+  "hidden_size": 512,
+  "native_size": 1024,
+  "num_layers": 4,
+  "recurrent_kind": "ssm",
+  "ssm_backend": "parallel",
+  "projection_layout": "shared",
+  "recurrent_residual": true,
+  "semantic_modes": [
+    "none",
+    "internal",
+    "output_only"
+  ],
+  "precision": "fp32",
+  "ssm_gate_bias_range": [
+    0,
+    6
+  ],
+  "story_rows": 31,
+  "length": 128,
+  "updates": 1,
+  "learning_rate": 0.0003,
+  "world_answer_weight": 0.5,
+  "checkpoints": [
+    0,
+    1
+  ],
+  "dev_documents": 3,
+  "dev_world_batches": 1,
+  "sample_new_bytes": 0,
+  "prompts": [
+    "Once upon a time,",
+    "The little dog"
+  ],
+  "max_wall_seconds": 180,
+  "max_allocated_bytes": 8589934592,
+  "normalization_recipe": "parameter_free_ffn_pre_and_both_heads_scaled_rms_v2",
+  "normalization_epsilon": 1e-05,
+  "bound_source_sha256": {
+    "tools/train_language_pilot.py": "46258bd47ffef565e5ad3d23de521d3949aae240f4eb3ab0518233ac0e225216",
+    "src/controlled_lm/typed_language_model.py": "49301bcc3c4504570ad8be300bf30930e6551962d490f8b1bde185a41626c2ac",
+    "tools/qualify_language_gpu.py": "6b51f0ac79f6ea6d71dd37be19f71b97b7a56fc3ced14fa240e33d865558ce0d"
+  },
+  "pilot_stage": "cpu_enablement"
+}

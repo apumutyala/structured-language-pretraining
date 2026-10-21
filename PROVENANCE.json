@@ -1,0 +1,187 @@
+{
+  "schema": "public-candidate-provenance-v1",
+  "date": "2026-10-21",
+  "source_identity": "curated-current-source-snapshot",
+  "history_policy": "Fresh candidate; no previous Git history or remote copied.",
+  "exact_byte_source_copies": [
+    {
+      "path": "src/controlled_lm/__init__.py",
+      "sha256": "727567570c2632e88b6de56477b50a085f0d6cc4750a1e1fe69e7f55ef5b1ca9"
+    },
+    {
+      "path": "src/controlled_lm/typed_language_model.py",
+      "sha256": "49301bcc3c4504570ad8be300bf30930e6551962d490f8b1bde185a41626c2ac"
+    },
+    {
+      "path": "src/controlled_lm/normalized_typed_language_model.py",
+      "sha256": "becdc29461cbafdd94f199232328a7b9ddaf76148edee2258122f97574e1607b"
+    },
+    {
+      "path": "src/controlled_lm/language_pilot_data.py",
+      "sha256": "7e62e86d9166aea6fe16488343e8ef8ee9e99582d9f9b1a4f36c4b8062400d61"
+    },
+    {
+      "path": "src/controlled_lm/language_state_interventions.py",
+      "sha256": "c1527c67a85eb8afe59ac0399f10b31ff427d65498ac693d706fcfa21f1b10ca"
+    },
+    {
+      "path": "src/controlled_lm/invariant_ssm.py",
+      "sha256": "261a44e222302831d047965489eb58043cdc5834488febc1761ed2b838a5c0ee"
+    },
+    {
+      "path": "src/controlled_lm/parallel_ssm.py",
+      "sha256": "ca2b22b90a54bd07062689c5bd7521a065a00d96c70b86539e13dc253dddc85a"
+    },
+    {
+      "path": "src/controlled_lm/typed_evidence_lane.py",
+      "sha256": "ce99fb7a6a954ee668eaa868e20ac1c6ac60ef0fe0757dcf9c6e11ac6fde0fbc"
+    },
+    {
+      "path": "src/controlled_lm/evidence_decoder.py",
+      "sha256": "7a7cee2839704d39ac48dc1b32e345437d9d48965ed74fcedfeb15f0881d876d"
+    },
+    {
+      "path": "src/controlled_lm/policy.py",
+      "sha256": "d7a9a96c138f3f6c7a0a7b0ee0e9bd448738bb0719a4d89b992145534bd0e139"
+    },
+    {
+      "path": "src/controlled_lm/parallel_semantic.py",
+      "sha256": "9a6f45c18c378d262704d8662e1a8b0c372fbd9d662296cdd0ec52a168283ad5"
+    },
+    {
+      "path": "src/controlled_lm/semantic_transitions.py",
+      "sha256": "abb5bbb2512f5f3320802c49636a4908d810094efe163f020057b113736688f0"
+    },
+    {
+      "path": "src/controlled_lm/supported_state.py",
+      "sha256": "82b9d66981f548d607bb42f748e53b5e3d246e2120e90afccc5501e47f2fe1c9"
+    },
+    {
+      "path": "src/controlled_lm/semantic_interface_comparison.py",
+      "sha256": "e70df211b1f72c7fd6fb33c62e516ebd50a6c08c09c7a3462322cace856a6c77"
+    },
+    {
+      "path": "src/controlled_lm/certified_memory.py",
+      "sha256": "f06356d8b9f169f45fc520bd7f05a67e2ecea89bb9b7f2847bab935dce06812f"
+    },
+    {
+      "path": "src/controlled_lm/lean_workflow_backend.py",
+      "sha256": "a892fe2723867daf9c599d593df71e4b0f514e8a6d8efba2ef54401cf81b5a74"
+    },
+    {
+      "path": "tests/test_certified_memory.py",
+      "sha256": "f079c7e1fa2ce0c037306de04295e9dd8a585a3afe783a239c548351befc7aa8"
+    },
+    {
+      "path": "tests/test_supported_state.py",
+      "sha256": "ba12da638ddf1923ffcabeaa6a21783a5adfd56a41e470fd849f8f3b6048a6c5"
+    },
+    {
+      "path": "tests/test_supported_state_review.py",
+      "sha256": "595af95cc27237ed96b01cdd62c219937c3faa79be17b435987e0566264b91a0"
+    },
+    {
+      "path": "tests/test_semantic_interface_comparison.py",
+      "sha256": "074b9934d3ca970d2e30b230fec3e443c174a44a6b27c785b716924b8ed02f61"
+    },
+    {
+      "path": "tests/test_normalized_typed_language_model.py",
+      "sha256": "9fdb76d2be21f690828fa16afc88808cbf6008352f770ede49d7b64385e40a17"
+    },
+    {
+      "path": "tests/test_language_pilot_data.py",
+      "sha256": "cda12ef1643ea5dddc2db7d46599ea0ded2402535eb0d848696234d3fc1342fd"
+    },
+    {
+      "path": "tests/test_parallel_ssm.py",
+      "sha256": "1b83d8ea0ca2fe702399485be611bd965fdf6333656729936a6540a16bf6c4c0"
+    },
+    {
+      "path": "tests/test_language_state_interventions.py",
+      "sha256": "12d2419b28ff16401422601df2be851564b12ee7a95b53fed2d87cabcbda3c13"
+    },
+    {
+      "path": "tests/test_workflow_kernel_lean.py",
+      "sha256": "880e360e7d461e168e84b26c0d5210d20c2e0fb1c7e8e14f57e79572585c135e"
+    },
+    {
+      "path": "tools/train_language_pilot.py",
+      "sha256": "46258bd47ffef565e5ad3d23de521d3949aae240f4eb3ab0518233ac0e225216"
+    },
+    {
+      "path": "tools/train_normalized_language_pilot.py",
+      "sha256": "86e84c9ffe7aa25c9543155cb93adcd5b684d1436eba8445e4b11095d7236f59"
+    },
+    {
+      "path": "tools/qualify_language_gpu.py",
+      "sha256": "6b51f0ac79f6ea6d71dd37be19f71b97b7a56fc3ced14fa240e33d865558ce0d"
+    },
+    {
+      "path": "tools/extract_language_pilot.py",
+      "sha256": "3ed0d12445eb18550550b6d8b9716e7a149c647da4141070d5b67d1d5f2820bb"
+    },
+    {
+      "path": "tools/check_workflow_kernel_lean.py",
+      "sha256": "cb33b901728c66c7e99bc110396ee58d8aea674de15b7e3a735cfdba4929ed1a"
+    },
+    {
+      "path": "tools/demo_supported_comparison.py",
+      "sha256": "0948873f1837438d0dcaeefbfe2b184bef460b7043e2ff0e93528a50c6aa74b0"
+    },
+    {
+      "path": "configs/normalized_language_cpu_enablement_20261021.json",
+      "sha256": "74864c577cbe89b5d9f37e394b53585b54b4b8639309c53a55931de7396c2531"
+    },
+    {
+      "path": "configs/normalized_language_cuda_qualification_20261021.json",
+      "sha256": "ee130b065cde24ce275f8054e7e8131edbeaa8d49b891da92f87c7e6519acd95"
+    },
+    {
+      "path": "configs/normalized_language_local_20261021.json",
+      "sha256": "497e33996549c090a0780e1eba3a8cfa84ca88e6ec4da5d973136420e4fa9a94"
+    },
+    {
+      "path": "configs/language_scale_learning_dev_20261021.json",
+      "sha256": "b661fb3e09b1482cbdabd5c98106bff645fc2cb7e50195c9f38c63cb93194b45"
+    },
+    {
+      "path": "proofs/certified_memory/SoundMemory.lean",
+      "sha256": "33cf95aab9e733287c3514278ab1f2ae865493ae4ef99dc1f296199c744d812b"
+    },
+    {
+      "path": "proofs/certified_memory/SoundMemoryReview.lean",
+      "sha256": "5cc064bc9a76f6f4f3a13aeb937a74575801748256f1ec5a85e8ea04af74a547"
+    },
+    {
+      "path": "proofs/certified_memory/WorkflowKernel.lean",
+      "sha256": "8b8ee7718edb5186efdbb81b62a5a3d20d84f1acfc00d4207cbc41c4d959f7a3"
+    },
+    {
+      "path": "proofs/certified_memory/WorkflowKernelCli.lean",
+      "sha256": "f8a440faa0ceabf12e23d6935f2b0f94a97e68a7bf55be69d5017d2dd1e669b4"
+    }
+  ],
+  "declared_source_transformations": [
+    {
+      "path": "src/controlled_lm/structured_decision.py",
+      "kind": "narrow_excerpt",
+      "original_sha256": "5991e1db08c27b33d69c11f24492488ee6cdefe7f6b9289158204e829aeb23ec",
+      "exact_function_bytes_sha256": {
+        "_extra_state_tree": "4967541eb0b993ff5b82f6bb10d5e6bcd183acdb2a6fdb77582974d534da3cfb",
+        "canonical_state_dict_digest": "4cf7e17ff5cf4d173f63bc70d2ead9fc0a753b8b8d91632e701a97c416695c16"
+      },
+      "description": "Only the canonical digest and its _extra_state_tree helper; both function bytes retained exactly. Unrelated model imports/classes omitted."
+    },
+    {
+      "path": "tests/test_typed_language_model.py",
+      "kind": "cpu_nonoptimizing_subset",
+      "original_sha256": "f91193ddece12f6ee4536ba3d1739360c7fd1ab687eae108734680fd9be4795c",
+      "omitted_tests": [
+        "test_joint_byte_ce_and_claim_ce_reach_every_layer_and_all_relevant_heads"
+      ],
+      "description": "Optimizer-mutating test omitted; remaining small CPU forward/backward checks retained."
+    }
+  ],
+  "historical_replay_limit": "The three normalized wrapper BOUND_SOURCES files retain their original byte digests. The digest-only helper excerpt changes the broader public source ledger. Cross-platform extraction regenerates native manifest separators; historical full-report hashes are not reproduced by redacted summaries.",
+  "evidence_policy": "Derived reports declare their original digest and transformations; PUBLIC_MANIFEST.json binds published bytes separately."
+}

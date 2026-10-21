@@ -1,0 +1,18 @@
+{
+  "artifact_kind": "REDACTED_DERIVED_SUMMARY_NOT_ORIGINAL_RECEIPT",
+  "original_report_relative_id": "results/semantic_interface_comparison_review_20261021.json",
+  "original_report_sha256": "8894895fa75add49821f78ab346712e2bf7c24be6e2bc7d52a130a2fdbeb71a8",
+  "transformations": [
+    "Selected scope/outcome/coverage/provenance fields only; process logs, local paths and private context omitted."
+  ],
+  "summary": {
+    "verdict": "BOUNDED_GO",
+    "scope": "Runnable same-information interface plumbing only. This is not a trained strong external-workspace baseline, a model comparison, a Lean theorem or a deployment-security result.",
+    "reviewed_files_sha256": {
+      "src/controlled_lm/semantic_interface_comparison.py": "e70df211b1f72c7fd6fb33c62e516ebd50a6c08c09c7a3462322cace856a6c77",
+      "tests/test_semantic_interface_comparison.py": "074b9934d3ca970d2e30b230fec3e443c174a44a6b27c785b716924b8ed02f61",
+      "tools/demo_supported_comparison.py": "0948873f1837438d0dcaeefbfe2b184bef460b7043e2ff0e93528a50c6aa74b0"
+    },
+    "remaining_blockers_in_reviewed_scope": []
+  }
+}

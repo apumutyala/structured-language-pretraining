@@ -1,0 +1,34 @@
+{
+  "artifact_kind": "REDACTED_DERIVED_SUMMARY_NOT_ORIGINAL_RECEIPT",
+  "original_summary_relative_id": "results/public_candidate_runtime_recheck_20261021.json",
+  "original_summary_sha256": "ca082e509dfdd0aa60c8dbdcc35704f56ccdc9bc08e745e20998ef5b7467dbf8",
+  "original_raw_cpu_report_relative_id": "artifacts/public-cpu-enablement.json",
+  "original_raw_cpu_report_sha256": "29fa897632a765fdeab296f989a94abd1c8b3d88306b670afe1e930910488d6d",
+  "transformations": [
+    "Selected reproduction status, counts, runtime and provenance fields only.",
+    "Raw CPU report, checkpoint payloads, absolute host/compiler/environment paths and corpus bodies are excluded; the public derivative has separate bytes and a separate digest."
+  ],
+  "scope": "Local public-candidate reproduction; no fresh external dependency installation except isolated pyarrow26, no HTTP corpus acquisition",
+  "regeneration": {
+    "train_documents": 16849,
+    "dev_documents": 819,
+    "source_bodies_reused": true,
+    "both_split_hashes_match": true,
+    "official_test_model_evaluated": false
+  },
+  "cpu_enablement": {
+    "status": "complete",
+    "wall_seconds": 18.476540500007104,
+    "updates_per_arm": 1,
+    "parameters_per_arm": 8703788,
+    "sources_unchanged": true,
+    "data_unchanged": true
+  },
+  "no_gpu_job": true,
+  "paid_execution": false,
+  "limitations": [
+    "Preexisting hash-verified source data bodies were reused; HTTP acquisition was not exercised.",
+    "PyArrow 26.0.0 was installed in an isolated environment; no fresh full CPU dependency installation was performed.",
+    "The one-update-per-arm CPU run verifies this bounded public-source recipe, not model quality or an architecture advantage."
+  ]
+}

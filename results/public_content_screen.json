@@ -1,0 +1,28 @@
+{
+  "artifact_kind": "BOUNDED_PUBLIC_CANDIDATE_CONTENT_SCREEN",
+  "date": "2026-10-21",
+  "files_screened_before_this_receipt": 74,
+  "findings_by_category": {
+    "absolute_user_path": [],
+    "private_page_url": [],
+    "credential_or_signed_url": [],
+    "contact_email": [],
+    "named_funding_party": []
+  },
+  "excluded_local_artifact_directories": [
+    ".build",
+    ".git",
+    ".pytest_cache",
+    ".tools",
+    "__pycache__",
+    "artifacts"
+  ],
+  "binary_files_in_allowlist": 0,
+  "corpus_bodies_or_checkpoints_in_allowlist": 0,
+  "known_name_screen": "Bounded named-party patterns; names deliberately omitted from the report.",
+  "limitations": [
+    "Pattern screening is not a guarantee against all sensitive facts or secret formats.",
+    "Only the explicit export tree was scanned; private original history was neither imported nor altered.",
+    "Root publication owner must independently review final candidate contents and new history before publication."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "artifact_kind": "REDACTED_DERIVED_SUMMARY_NOT_ORIGINAL_RECEIPT",
+  "original_report_relative_id": "results/normalized_language_local_audit_20261021.json",
+  "original_report_sha256": "033704dd85e3e87ba5b7c8d3d52283d4e712ce104b1b26fbc8092f9265ddd52a",
+  "transformations": [
+    "Selected decision/provenance/lineage/checkpoint-count fields only.",
+    "Absolute paths, full checkpoint listings, host-specific metadata and raw receipts omitted."
+  ],
+  "review_type": "AI-assisted independent audit; not external peer review",
+  "summary": {
+    "decision": "PASS_LOCAL_NORMALIZED_STABILITY_SCREEN",
+    "scope": "Independent source/data/config, saved-state, optimizer-clock, prospective gate and stream-accounting audit. No optimizer step, GPU call or fresh model training by reviewer. Reported DEV metrics were checked for gates and provenance; no GPU inference metric replay was performed.",
+    "receipt_sha256": "7c60bcaf26ada79e1cb3d11f5a5f0afa2256d49891c23532e8912e6676024828",
+    "config_sha256": "497e33996549c090a0780e1eba3a8cfa84ca88e6ec4da5d973136420e4fa9a94",
+    "protocol_sha256": "fde792c268c8416e0e3a5a857efed31884e74fd5a706fa9758a2ec5c09425dad",
+    "preflight_sha256": "cb2f58febe10de118ba8bee0a0885b96ff4504296ee2165dd0e52f993c745eb5",
+    "all_sources_and_data_unchanged": true,
+    "from_random_initialization": true,
+    "inherited_or_resume_state": false,
+    "normalization_recipe": "parameter_free_ffn_pre_and_both_heads_scaled_rms_v2",
+    "normalization_epsilon": 1e-05,
+    "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "precision": "fp32",
+    "paired_initial_parameters_sha256": "b8b75220aba8c3d66ee5dbb71969e222e355077bda587762e777bf54d3ae4f31",
+    "cuda_qualification_initial_identity_matches": true,
+    "checkpoint_count": 15,
+    "conclusion": "All three normalized arms pass the fixed local story-learning/stability gates with finite saved model/Adam tensors and exact paired stream/accounting. This is a one-seed DEV local stability result, not a positive architecture comparison or semantic/control win.",
+    "reviewer_optimizer_updates": 0,
+    "reviewer_gpu_calls": 0,
+    "source_sha256": {
+      "tools/train_language_pilot.py": "46258bd47ffef565e5ad3d23de521d3949aae240f4eb3ab0518233ac0e225216",
+      "tools/qualify_language_gpu.py": "6b51f0ac79f6ea6d71dd37be19f71b97b7a56fc3ced14fa240e33d865558ce0d",
+      "src/controlled_lm/language_pilot_data.py": "7e62e86d9166aea6fe16488343e8ef8ee9e99582d9f9b1a4f36c4b8062400d61",
+      "src/controlled_lm/typed_language_model.py": "49301bcc3c4504570ad8be300bf30930e6551962d490f8b1bde185a41626c2ac",
+      "src/controlled_lm/typed_evidence_lane.py": "ce99fb7a6a954ee668eaa868e20ac1c6ac60ef0fe0757dcf9c6e11ac6fde0fbc",
+      "src/controlled_lm/parallel_semantic.py": "9a6f45c18c378d262704d8662e1a8b0c372fbd9d662296cdd0ec52a168283ad5",
+      "src/controlled_lm/semantic_transitions.py": "abb5bbb2512f5f3320802c49636a4908d810094efe163f020057b113736688f0",
+      "src/controlled_lm/invariant_ssm.py": "261a44e222302831d047965489eb58043cdc5834488febc1761ed2b838a5c0ee",
+      "src/controlled_lm/parallel_ssm.py": "ca2b22b90a54bd07062689c5bd7521a065a00d96c70b86539e13dc253dddc85a",
+      "src/controlled_lm/evidence_decoder.py": "7a7cee2839704d39ac48dc1b32e345437d9d48965ed74fcedfeb15f0881d876d",
+      "src/controlled_lm/policy.py": "d7a9a96c138f3f6c7a0a7b0ee0e9bd448738bb0719a4d89b992145534bd0e139",
+      "src/controlled_lm/structured_decision.py": "5991e1db08c27b33d69c11f24492488ee6cdefe7f6b9289158204e829aeb23ec",
+      "tools/train_normalized_language_pilot.py": "86e84c9ffe7aa25c9543155cb93adcd5b684d1436eba8445e4b11095d7236f59",
+      "src/controlled_lm/normalized_typed_language_model.py": "becdc29461cbafdd94f199232328a7b9ddaf76148edee2258122f97574e1607b"
+    }
+  }
+}

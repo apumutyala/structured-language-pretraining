@@ -1,0 +1,38 @@
+{
+  "artifact_kind": "PUBLIC_CANDIDATE_CHECK_RECEIPT",
+  "date": "2026-10-21",
+  "command": "python tools/check_cpu.py",
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "pytest": "9.1.1"
+  },
+  "working_directory": "public candidate root",
+  "selected_tests": {
+    "passed": 201,
+    "skipped": 1,
+    "seconds": 10.88,
+    "skip_reason": "Optional actual-Lean smoke; no candidate-default installation"
+  },
+  "demos": {
+    "same_information_roundtrip": true,
+    "fresh_language_forward": true
+  },
+  "extra_optional_lean_validation": {
+    "fresh_build": "Lean 4.8.0: all four exported modules compiled",
+    "workflow_tests_with_explicit_executable": {
+      "passed": 5,
+      "seconds": 1.5
+    }
+  },
+  "optimizer_updates": 0,
+  "gpu_execution": false,
+  "network_or_data_download": false,
+  "paid_execution": false,
+  "limitations": [
+    "CPU tests run using an existing CPU interpreter with PYTHONPATH explicitly pointing at exported src.",
+    "No clean package installation or data regeneration was performed.",
+    "Optional Lean executable was supplied from outside the candidate; binaries are not distributed."
+  ]
+}

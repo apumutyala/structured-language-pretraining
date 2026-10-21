@@ -1,0 +1,47 @@
+{
+  "dataset": "SimpleStories/SimpleStories",
+  "revision": "e63b8adc3b1a1bdc7cac5b500d150b71346b0628",
+  "license_declared_by_card": "MIT",
+  "source_acquisition": {
+    "dataset": "SimpleStories/SimpleStories",
+    "revision": "e63b8adc3b1a1bdc7cac5b500d150b71346b0628",
+    "license_declared_by_card": "MIT",
+    "paid_compute": false,
+    "test_policy": "test source for hash/group exclusion only; no text display, training or model evaluation",
+    "files": [
+      {
+        "name": "train-00000-of-00007.parquet",
+        "bytes": 238015938,
+        "sha256": "ca33531b99f3bebb4125e82f56017c223a4900331b55bcf7cde1b0f750d88fd4",
+        "url": "https://huggingface.co/datasets/SimpleStories/SimpleStories/resolve/e63b8adc3b1a1bdc7cac5b500d150b71346b0628/data/train-00000-of-00007.parquet?download=true"
+      },
+      {
+        "name": "test-00000-of-00001.parquet",
+        "bytes": 16838557,
+        "sha256": "24a513732fd6c1158e33a6130e3977749ae13d583948e5a2198ed53235e29bec",
+        "url": "https://huggingface.co/datasets/SimpleStories/SimpleStories/resolve/e63b8adc3b1a1bdc7cac5b500d150b71346b0628/data/test-00000-of-00001.parquet?download=true"
+      }
+    ],
+    "card": {
+      "url": "https://huggingface.co/datasets/SimpleStories/SimpleStories/raw/e63b8adc3b1a1bdc7cac5b500d150b71346b0628/README.md",
+      "sha256": "353d76519cce9881d95c64822e5afe647611596660bb850acfa5612324ed241e"
+    }
+  },
+  "expected_splits": {
+    "train": {
+      "documents": 16849,
+      "text_bytes": 20971349,
+      "file_bytes": 26952448,
+      "groups": 11127,
+      "sha256": "6719423cdfd5c49ecaff235f1eec33adcf11119bd5da80ca8d2b94e38f853860"
+    },
+    "dev": {
+      "documents": 819,
+      "text_bytes": 1048472,
+      "file_bytes": 1339284,
+      "groups": 532,
+      "sha256": "bb7cb481e0bf1b3b25aef640fe077b2b7225d4096a586450e2efdff9d1b18198"
+    }
+  },
+  "extraction_source_sha256": "3ed0d12445eb18550550b6d8b9716e7a149c647da4141070d5b67d1d5f2820bb"
+}

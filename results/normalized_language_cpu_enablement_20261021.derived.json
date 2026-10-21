@@ -1,0 +1,203 @@
+{
+  "artifact_kind": "REDACTED_DERIVED_SUMMARY_NOT_ORIGINAL_RECEIPT",
+  "original_report_relative_id": "results/normalized_language_cpu_enablement_20261021.json",
+  "original_report_sha256": "40ad60b0532415b30074faf22f1b887f3446f1672259954c644b3e999473a207",
+  "transformations": [
+    "Selected numerical status/runtime/metric fields only.",
+    "Absolute paths, checkpoint files, generated prose, prompts, configuration bodies and host-specific metadata omitted.",
+    "Original source ledger retained with relative separators normalized; this derived file has its own digest in PUBLIC_MANIFEST.json."
+  ],
+  "status": "complete",
+  "development_only": true,
+  "official_test_evaluated": false,
+  "from_random_initialization": true,
+  "device": "cpu",
+  "precision": "fp32",
+  "wall_seconds": 16.87288670000271,
+  "cumulative_invocation_wall_seconds": 16.87288670000271,
+  "peak_allocated_bytes": null,
+  "original_config_sha256": "74864c577cbe89b5d9f37e394b53585b54b4b8639309c53a55931de7396c2531",
+  "original_source_sha256": {
+    "tools/train_language_pilot.py": "46258bd47ffef565e5ad3d23de521d3949aae240f4eb3ab0518233ac0e225216",
+    "tools/qualify_language_gpu.py": "6b51f0ac79f6ea6d71dd37be19f71b97b7a56fc3ced14fa240e33d865558ce0d",
+    "src/controlled_lm/language_pilot_data.py": "7e62e86d9166aea6fe16488343e8ef8ee9e99582d9f9b1a4f36c4b8062400d61",
+    "src/controlled_lm/typed_language_model.py": "49301bcc3c4504570ad8be300bf30930e6551962d490f8b1bde185a41626c2ac",
+    "src/controlled_lm/typed_evidence_lane.py": "ce99fb7a6a954ee668eaa868e20ac1c6ac60ef0fe0757dcf9c6e11ac6fde0fbc",
+    "src/controlled_lm/parallel_semantic.py": "9a6f45c18c378d262704d8662e1a8b0c372fbd9d662296cdd0ec52a168283ad5",
+    "src/controlled_lm/semantic_transitions.py": "abb5bbb2512f5f3320802c49636a4908d810094efe163f020057b113736688f0",
+    "src/controlled_lm/invariant_ssm.py": "261a44e222302831d047965489eb58043cdc5834488febc1761ed2b838a5c0ee",
+    "src/controlled_lm/parallel_ssm.py": "ca2b22b90a54bd07062689c5bd7521a065a00d96c70b86539e13dc253dddc85a",
+    "src/controlled_lm/evidence_decoder.py": "7a7cee2839704d39ac48dc1b32e345437d9d48965ed74fcedfeb15f0881d876d",
+    "src/controlled_lm/policy.py": "d7a9a96c138f3f6c7a0a7b0ee0e9bd448738bb0719a4d89b992145534bd0e139",
+    "src/controlled_lm/structured_decision.py": "5991e1db08c27b33d69c11f24492488ee6cdefe7f6b9289158204e829aeb23ec",
+    "tools/train_normalized_language_pilot.py": "86e84c9ffe7aa25c9543155cb93adcd5b684d1436eba8445e4b11095d7236f59",
+    "src/controlled_lm/normalized_typed_language_model.py": "becdc29461cbafdd94f199232328a7b9ddaf76148edee2258122f97574e1607b"
+  },
+  "runs": [
+    {
+      "mode": "none",
+      "status": "complete",
+      "parameters": 8703788,
+      "initial_parameters_sha256": "7b6163d3df117c7cf164d00d2166b1c22064000c153ca1eab7ee1b3bf742788c",
+      "cumulative_updates": 1,
+      "cumulative_used_tokens": 4027,
+      "trained_batch_sha256": "5dc1fab8b30c2882fa60cb016775aa885cac11e563a653da65952d925e6afccf",
+      "curve": [
+        {
+          "step": 0,
+          "used_tokens": 0,
+          "utf8_byte_targets": 0,
+          "eos_targets": 0,
+          "story_tokens": 0,
+          "world_tokens": 0,
+          "batch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "checkpoint_sha256": "28b00d3821ce7dcaadb32441916948aa519665203d29f1afff9fbbcf3ae73da3",
+          "dev": {
+            "story_mean_nll": 5.731115976969401,
+            "story_bits_per_utf8_byte": 8.268798633982753,
+            "story_target_tokens": 768,
+            "story_byte_targets": 765,
+            "world_rows": 1,
+            "world_query_byte_accuracy": 0.0,
+            "world_raw41_accuracy": 0.0,
+            "grounded_requested_key_claim_accuracy": 0.0,
+            "grounded_nonabstention_coverage": 0.0,
+            "max_forbidden_probability": 0.0
+          }
+        },
+        {
+          "step": 1,
+          "used_tokens": 4027,
+          "utf8_byte_targets": 4019,
+          "eos_targets": 8,
+          "story_tokens": 3968,
+          "world_tokens": 59,
+          "batch_sha256": "5dc1fab8b30c2882fa60cb016775aa885cac11e563a653da65952d925e6afccf",
+          "checkpoint_sha256": "1ab63d91cbba4292bbd8689f449842e27fd439aa7e0933d6aa034cfc13e86c4f",
+          "dev": {
+            "story_mean_nll": 5.396657943725586,
+            "story_bits_per_utf8_byte": 7.784993662417687,
+            "story_target_tokens": 768,
+            "story_byte_targets": 765,
+            "world_rows": 1,
+            "world_query_byte_accuracy": 0.0,
+            "world_raw41_accuracy": 0.0,
+            "grounded_requested_key_claim_accuracy": 0.0,
+            "grounded_nonabstention_coverage": 0.0,
+            "max_forbidden_probability": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "mode": "internal",
+      "status": "complete",
+      "parameters": 8703788,
+      "initial_parameters_sha256": "7b6163d3df117c7cf164d00d2166b1c22064000c153ca1eab7ee1b3bf742788c",
+      "cumulative_updates": 1,
+      "cumulative_used_tokens": 4027,
+      "trained_batch_sha256": "5dc1fab8b30c2882fa60cb016775aa885cac11e563a653da65952d925e6afccf",
+      "curve": [
+        {
+          "step": 0,
+          "used_tokens": 0,
+          "utf8_byte_targets": 0,
+          "eos_targets": 0,
+          "story_tokens": 0,
+          "world_tokens": 0,
+          "batch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "checkpoint_sha256": "e24560d1740b555ca07a748ead668f2050f5383b5868d3ba767d2942e7b14c05",
+          "dev": {
+            "story_mean_nll": 5.731115976969401,
+            "story_bits_per_utf8_byte": 8.268798633982753,
+            "story_target_tokens": 768,
+            "story_byte_targets": 765,
+            "world_rows": 1,
+            "world_query_byte_accuracy": 0.0,
+            "world_raw41_accuracy": 0.0,
+            "grounded_requested_key_claim_accuracy": 0.0,
+            "grounded_nonabstention_coverage": 0.0,
+            "max_forbidden_probability": 0.0
+          }
+        },
+        {
+          "step": 1,
+          "used_tokens": 4027,
+          "utf8_byte_targets": 4019,
+          "eos_targets": 8,
+          "story_tokens": 3968,
+          "world_tokens": 59,
+          "batch_sha256": "5dc1fab8b30c2882fa60cb016775aa885cac11e563a653da65952d925e6afccf",
+          "checkpoint_sha256": "05a972fc1f2cf8c6e82654555f8786c67ed24e671dd7ca803ea522c3bbe6c62f",
+          "dev": {
+            "story_mean_nll": 5.395429929097493,
+            "story_bits_per_utf8_byte": 7.783218747505442,
+            "story_target_tokens": 768,
+            "story_byte_targets": 765,
+            "world_rows": 1,
+            "world_query_byte_accuracy": 0.0,
+            "world_raw41_accuracy": 0.0,
+            "grounded_requested_key_claim_accuracy": 0.0,
+            "grounded_nonabstention_coverage": 0.0,
+            "max_forbidden_probability": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "mode": "output_only",
+      "status": "complete",
+      "parameters": 8703788,
+      "initial_parameters_sha256": "7b6163d3df117c7cf164d00d2166b1c22064000c153ca1eab7ee1b3bf742788c",
+      "cumulative_updates": 1,
+      "cumulative_used_tokens": 4027,
+      "trained_batch_sha256": "5dc1fab8b30c2882fa60cb016775aa885cac11e563a653da65952d925e6afccf",
+      "curve": [
+        {
+          "step": 0,
+          "used_tokens": 0,
+          "utf8_byte_targets": 0,
+          "eos_targets": 0,
+          "story_tokens": 0,
+          "world_tokens": 0,
+          "batch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "checkpoint_sha256": "15c6111ff6a0f927054486af93161f75ea5d28e015222e5ca8df269f82858570",
+          "dev": {
+            "story_mean_nll": 5.731115976969401,
+            "story_bits_per_utf8_byte": 8.268798633982753,
+            "story_target_tokens": 768,
+            "story_byte_targets": 765,
+            "world_rows": 1,
+            "world_query_byte_accuracy": 0.0,
+            "world_raw41_accuracy": 0.0,
+            "grounded_requested_key_claim_accuracy": 0.0,
+            "grounded_nonabstention_coverage": 0.0,
+            "max_forbidden_probability": 0.0
+          }
+        },
+        {
+          "step": 1,
+          "used_tokens": 4027,
+          "utf8_byte_targets": 4019,
+          "eos_targets": 8,
+          "story_tokens": 3968,
+          "world_tokens": 59,
+          "batch_sha256": "5dc1fab8b30c2882fa60cb016775aa885cac11e563a653da65952d925e6afccf",
+          "checkpoint_sha256": "dd30a63ec69d141711483ae8ed2e2afecc9bc032cf1f268d5065342128338e7f",
+          "dev": {
+            "story_mean_nll": 5.39630921681722,
+            "story_bits_per_utf8_byte": 7.784452670194111,
+            "story_target_tokens": 768,
+            "story_byte_targets": 765,
+            "world_rows": 1,
+            "world_query_byte_accuracy": 0.0,
+            "world_raw41_accuracy": 0.0,
+            "grounded_requested_key_claim_accuracy": 0.0,
+            "grounded_nonabstention_coverage": 0.0,
+            "max_forbidden_probability": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}

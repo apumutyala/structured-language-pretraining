@@ -1,0 +1,26 @@
+{
+  "artifact_kind": "REDACTED_DERIVED_SUMMARY_NOT_ORIGINAL_RECEIPT",
+  "original_report_relative_id": "results/supported_state_independent_review_20261021.json",
+  "original_report_sha256": "a07aeb89e69dbf8d0cc591f8679380ea7be0f0aa0d39c5e53c8bf6aa1fda1723",
+  "transformations": [
+    "Selected scope/outcome/coverage/provenance fields only; process logs, local paths and private context omitted."
+  ],
+  "summary": {
+    "outcome": "passed_with_explicit_scope_limits",
+    "training_executed": false,
+    "gpu_executed": false,
+    "paid_compute": false,
+    "source_sha256": {
+      "src/controlled_lm/supported_state.py": "82b9d66981f548d607bb42f748e53b5e3d246e2120e90afccc5501e47f2fe1c9",
+      "tests/test_supported_state.py": "ba12da638ddf1923ffcabeaa6a21783a5adfd56a41e470fd849f8f3b6048a6c5",
+      "research/supported_state_contract_20261021.md": "a691015af4fd0de86027d6234acff294b28a5bb6bd6d489190816b76f4b576c2",
+      "src/controlled_lm/semantic_interface_comparison.py": "e70df211b1f72c7fd6fb33c62e516ebd50a6c08c09c7a3462322cace856a6c77",
+      "tests/test_semantic_interface_comparison.py": "074b9934d3ca970d2e30b230fec3e443c174a44a6b27c785b716924b8ed02f61",
+      "tests/test_supported_state_review.py": "595af95cc27237ed96b01cdd62c219937c3faa79be17b435987e0566264b91a0"
+    },
+    "validation": {
+      "public_scope_note": "Original review validation omitted here; rerun public CPU checks. Independent source review reported no blocking findings."
+    },
+    "blocking_findings": []
+  }
+}

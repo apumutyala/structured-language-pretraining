@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "structured-language-pretraining"
+version = "0.1.0"
+description = "From-random recurrent language research with exact typed evidence interfaces"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = ["torch>=2.6,<3", "numpy>=1.26,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+data = ["pyarrow==26.0.0"]
+proof = ["z3-solver>=4.13,<5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
