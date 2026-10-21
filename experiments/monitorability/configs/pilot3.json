@@ -1,0 +1,7 @@
+{
+ "name": "pilot3",
+ "model": {"d": 128, "layers": 4, "heads": 4, "mlp_mult": 4, "max_len": 160, "dropout": 0.0, "n_tied_heads": 0},
+ "train": {"steps": 1500, "batch": 32, "lr": 0.001, "warmup": 100, "min_lr_frac": 0.1,
+           "weight_decay": 0.01, "grad_clip": 1.0, "aux_weight": 0.3, "eval_every": 250, "val_n": 600},
+ "data": {"mix": [0.7, 0.15, 0.15], "n_extra_q": 0}
+}

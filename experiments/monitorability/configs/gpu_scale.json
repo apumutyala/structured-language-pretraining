@@ -1,0 +1,45 @@
+{
+ "name": "gpu_scale",
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "model": {
+  "d": 256,
+  "layers": 6,
+  "heads": 8,
+  "mlp_mult": 4,
+  "max_len": 160,
+  "dropout": 0.0,
+  "n_tied_heads": 0,
+  "identity_recall": false
+ },
+ "train": {
+  "steps": 40000,
+  "batch": 256,
+  "lr": 0.0005,
+  "warmup": 1000,
+  "min_lr_frac": 0.1,
+  "weight_decay": 0.01,
+  "grad_clip": 1.0,
+  "aux_weight": 0.3,
+  "eval_every": 2000,
+  "val_n": 1000
+ },
+ "data": {
+  "mix": [
+   0.7,
+   0.15,
+   0.15
+  ],
+  "n_extra_q": 0
+ }
+}
