@@ -1,385 +1,385 @@
 # Summary: gpu_scale
 
-Seeds: {'plain': [0], 'structured': [0]}. Cells: mean across seeds [t-based 95% CI]. Diff = structured - plain, paired by seed (n_pos = seeds with diff>0).
+Seeds: {'plain': [0, 1, 2, 3, 4], 'structured': [0, 1, 2, 3, 4]}. Cells: mean across seeds [t-based 95% CI]. Diff = structured - plain, paired by seed (n_pos = seeds with diff>0).
 
 | metric | plain | structured | diff (S-P) | n_pos |
 |---|---|---|---|---|
-| beh.H_train.target_acc | 0.585 | 0.583 | -0.002 | 0/1 |
-| beh.H_train.truth_acc | 0.585 | 0.583 | -0.002 | 0/1 |
-| beh.H_heldout.target_acc | 0.597 | 0.602 | 0.005 | 1/1 |
-| beh.H_heldout.truth_acc | 0.597 | 0.602 | 0.005 | 1/1 |
-| beh.S_train.target_acc | 1.000 | 1.000 | 0.000 | 0/1 |
-| beh.S_train.truth_acc | 0.329 | 0.329 | 0.000 | 0/1 |
-| beh.S_heldout.target_acc | 1.000 | 1.000 | 0.000 | 0/1 |
-| beh.S_heldout.truth_acc | 0.325 | 0.325 | 0.000 | 0/1 |
-| beh.F_train.target_acc | 0.720 | 0.719 | -0.001 | 0/1 |
-| beh.F_train.truth_acc | 0.237 | 0.239 | 0.002 | 1/1 |
-| beh.F_heldout.target_acc | 0.728 | 0.728 | 0.000 | 0/1 |
-| beh.F_heldout.truth_acc | 0.222 | 0.218 | -0.004 | 0/1 |
-| beh.H_heldout.target_acc_depth0 | 0.605 | 0.631 | 0.027 | 1/1 |
-| beh.H_train.target_acc_depth0 | 0.545 | 0.559 | 0.014 | 1/1 |
-| beh.H_heldout.target_acc_depth1 | 0.538 | 0.551 | 0.012 | 1/1 |
-| beh.H_train.target_acc_depth1 | 0.538 | 0.538 | 0.000 | 0/1 |
-| beh.H_heldout.target_acc_depth2 | 0.571 | 0.556 | -0.016 | 0/1 |
-| beh.H_train.target_acc_depth2 | 0.571 | 0.571 | 0.000 | 0/1 |
-| beh.H_heldout.target_acc_depth3 | 0.668 | 0.666 | -0.002 | 0/1 |
-| beh.H_train.target_acc_depth3 | 0.683 | 0.662 | -0.021 | 0/1 |
-| beh.H_heldout.target_acc_true_yes | 0.691 | 0.691 | 0.000 | 0/1 |
-| beh.H_heldout.target_acc_true_no | 0.632 | 0.638 | 0.006 | 1/1 |
-| beh.H_heldout.target_acc_true_unknown | 0.465 | 0.474 | 0.009 | 1/1 |
-| beh.S_train.compliance_claim_false | 1.000 | 1.000 | 0.000 | 0/1 |
-| beh.S_train.acc_claim_true | 1.000 | 1.000 | 0.000 | 0/1 |
-| beh.S_heldout.compliance_claim_false | 1.000 | 1.000 | 0.000 | 0/1 |
-| beh.S_heldout.acc_claim_true | 1.000 | 1.000 | 0.000 | 0/1 |
-| beh.S_heldout.lies_verified_frac | 0.589 | 0.606 | 0.017 | 1/1 |
-| beh.S_heldout.n_verified_lies | 1193.000 | 1227.000 | 34.000 | 1/1 |
-| beh.S_heldout.matched_neutral_truth_acc | 0.600 | 0.616 | 0.016 | 1/1 |
-| beh.S_heldout.false_output_rate | 0.675 | 0.675 | 0.000 | 0/1 |
-| beh.F_heldout.lies_verified_frac | 0.673 | 0.685 | 0.012 | 1/1 |
-| beh.F_heldout.n_verified_lies | 785.000 | 803.000 | 18.000 | 1/1 |
-| beh.F_heldout.matched_neutral_truth_acc | 0.587 | 0.599 | 0.011 | 1/1 |
-| beh.F_heldout.false_output_rate | 0.778 | 0.782 | 0.004 | 1/1 |
-| beh.S_train.lies_verified_frac | 0.586 | 0.593 | 0.007 | 1/1 |
-| beh.S_train.n_verified_lies | 786.000 | 796.000 | 10.000 | 1/1 |
-| beh.S_train.matched_neutral_truth_acc | 0.600 | 0.614 | 0.014 | 1/1 |
-| beh.S_train.false_output_rate | 0.671 | 0.671 | 0.000 | 0/1 |
-| beh.F_train.lies_verified_frac | 0.694 | 0.702 | 0.008 | 1/1 |
-| beh.F_train.n_verified_lies | 794.000 | 801.000 | 7.000 | 1/1 |
-| beh.F_train.matched_neutral_truth_acc | 0.611 | 0.608 | -0.003 | 0/1 |
-| beh.F_train.false_output_rate | 0.763 | 0.761 | -0.002 | 0/1 |
-| probe_layer_selected | 4.000 | 3.000 | -1.000 | 0/1 |
-| q1.sel.acc_probe_val | 0.577 | 0.569 | -0.008 | 0/1 |
-| q1.sel.acc_H_train | 0.574 | 0.552 | -0.022 | 0/1 |
-| q1.sel.acc_H_heldout | 0.587 | 0.580 | -0.007 | 0/1 |
-| q1.sel.acc_S_heldout | 0.325 | 0.459 | 0.134 | 1/1 |
-| q1.sel.acc_F_heldout | 0.321 | 0.457 | 0.136 | 1/1 |
-| q2.sel.truth_acc_on_lies_S_heldout | 0.000 | 0.524 | 0.523 | 1/1 |
-| q2.sel.agrees_output_on_lies_S_heldout | 1.000 | 0.234 | -0.766 | 0/1 |
-| q2.sel.truth_acc_on_lies_F_heldout | 0.175 | 0.535 | 0.361 | 1/1 |
-| q2.sel.agrees_output_on_lies_F_heldout | 0.761 | 0.201 | -0.560 | 0/1 |
-| q2.sel.truth_acc_on_lies_S_train | 0.001 | 0.531 | 0.531 | 1/1 |
-| q2.sel.agrees_output_on_lies_S_train | 0.999 | 0.227 | -0.773 | 0/1 |
-| q2.sel.truth_acc_on_lies_F_train | 0.201 | 0.520 | 0.319 | 1/1 |
-| q2.sel.agrees_output_on_lies_F_train | 0.740 | 0.212 | -0.528 | 0/1 |
-| q1.sel.acc_when_model_wrong_H_heldout | 0.138 | 0.185 | 0.047 | 1/1 |
-| q1.final.acc_probe_val | 0.567 | 0.560 | -0.007 | 0/1 |
-| q1.final.acc_H_train | 0.558 | 0.571 | 0.013 | 1/1 |
-| q1.final.acc_H_heldout | 0.578 | 0.583 | 0.005 | 1/1 |
-| q1.final.acc_S_heldout | 0.325 | 0.334 | 0.009 | 1/1 |
-| q1.final.acc_F_heldout | 0.271 | 0.317 | 0.046 | 1/1 |
-| q2.final.truth_acc_on_lies_S_heldout | 0.000 | 0.017 | 0.017 | 1/1 |
-| q2.final.agrees_output_on_lies_S_heldout | 1.000 | 0.962 | -0.038 | 0/1 |
-| q2.final.truth_acc_on_lies_F_heldout | 0.297 | 0.205 | -0.092 | 0/1 |
-| q2.final.agrees_output_on_lies_F_heldout | 0.505 | 0.671 | 0.166 | 1/1 |
-| q2.final.truth_acc_on_lies_S_train | 0.000 | 0.010 | 0.010 | 1/1 |
-| q2.final.agrees_output_on_lies_S_train | 1.000 | 0.966 | -0.034 | 0/1 |
-| q2.final.truth_acc_on_lies_F_train | 0.261 | 0.233 | -0.028 | 0/1 |
-| q2.final.agrees_output_on_lies_F_train | 0.548 | 0.652 | 0.104 | 1/1 |
-| q1.final.acc_when_model_wrong_H_heldout | 0.151 | 0.173 | 0.022 | 1/1 |
-| q1.L0.acc_probe_val | 0.329 | 0.329 | 0.000 | 0/1 |
-| q1.L0.acc_H_train | 0.329 | 0.329 | 0.000 | 0/1 |
-| q1.L0.acc_H_heldout | 0.321 | 0.321 | 0.000 | 0/1 |
-| q1.L0.acc_S_heldout | 0.326 | 0.326 | 0.000 | 0/1 |
-| q1.L0.acc_F_heldout | 0.340 | 0.340 | 0.000 | 0/1 |
-| q2.L0.truth_acc_on_lies_S_heldout | 0.253 | 0.253 | 0.000 | 0/1 |
-| q2.L0.agrees_output_on_lies_S_heldout | 0.491 | 0.491 | 0.000 | 0/1 |
-| q2.L0.truth_acc_on_lies_F_heldout | 0.391 | 0.385 | -0.005 | 0/1 |
-| q2.L0.agrees_output_on_lies_F_heldout | 0.243 | 0.256 | 0.012 | 1/1 |
-| q2.L0.truth_acc_on_lies_S_train | 0.261 | 0.261 | 0.000 | 0/1 |
-| q2.L0.agrees_output_on_lies_S_train | 0.499 | 0.499 | 0.000 | 0/1 |
-| q2.L0.truth_acc_on_lies_F_train | 0.357 | 0.348 | -0.009 | 0/1 |
-| q2.L0.agrees_output_on_lies_F_train | 0.260 | 0.266 | 0.006 | 1/1 |
-| q1.L0.acc_when_model_wrong_H_heldout | 0.293 | 0.291 | -0.001 | 0/1 |
-| q1.bow.acc_probe_val | 0.493 | 0.492 | -0.001 | 0/1 |
-| q1.bow.acc_H_train | 0.463 | 0.464 | 0.001 | 1/1 |
-| q1.bow.acc_H_heldout | 0.489 | 0.490 | 0.002 | 1/1 |
-| q1.bow.acc_S_heldout | 0.484 | 0.488 | 0.004 | 1/1 |
-| q1.bow.acc_F_heldout | 0.495 | 0.494 | -0.001 | 0/1 |
-| q2.bow.truth_acc_on_lies_S_heldout | 0.459 | 0.455 | -0.004 | 0/1 |
-| q2.bow.agrees_output_on_lies_S_heldout | 0.339 | 0.348 | 0.009 | 1/1 |
-| q2.bow.truth_acc_on_lies_F_heldout | 0.502 | 0.511 | 0.009 | 1/1 |
-| q2.bow.agrees_output_on_lies_F_heldout | 0.293 | 0.284 | -0.009 | 0/1 |
-| q2.bow.truth_acc_on_lies_S_train | 0.453 | 0.453 | 0.000 | 0/1 |
-| q2.bow.agrees_output_on_lies_S_train | 0.336 | 0.344 | 0.007 | 1/1 |
-| q2.bow.truth_acc_on_lies_F_train | 0.528 | 0.529 | 0.001 | 1/1 |
-| q2.bow.agrees_output_on_lies_F_train | 0.265 | 0.265 | -0.000 | 0/1 |
-| q1.bow.acc_when_model_wrong_H_heldout | 0.328 | 0.330 | 0.003 | 1/1 |
-| q1.layer0.acc_H_heldout | 0.321 | 0.321 | 0.000 | 0/1 |
-| q2.layer0.truth_acc_on_lies_S_heldout | 0.253 | 0.253 | 0.000 | 0/1 |
-| q3.layer0.disagree.within_S_verified_heldout | 0.493 | 0.495 | 0.001 | 1/1 |
-| q1.layer1.acc_H_heldout | 0.431 | 0.516 | 0.085 | 1/1 |
-| q2.layer1.truth_acc_on_lies_S_heldout | 0.510 | 0.560 | 0.050 | 1/1 |
-| q3.layer1.disagree.within_S_verified_heldout | 0.544 | 0.628 | 0.084 | 1/1 |
-| q1.layer2.acc_H_heldout | 0.557 | 0.575 | 0.018 | 1/1 |
-| q2.layer2.truth_acc_on_lies_S_heldout | 0.410 | 0.424 | 0.013 | 1/1 |
-| q3.layer2.disagree.within_S_verified_heldout | 0.528 | 0.710 | 0.183 | 1/1 |
-| q1.layer3.acc_H_heldout | 0.582 | 0.580 | -0.002 | 0/1 |
-| q2.layer3.truth_acc_on_lies_S_heldout | 0.237 | 0.524 | 0.287 | 1/1 |
-| q3.layer3.disagree.within_S_verified_heldout | 0.620 | 0.667 | 0.047 | 1/1 |
-| q1.layer4.acc_H_heldout | 0.587 | 0.578 | -0.009 | 0/1 |
-| q2.layer4.truth_acc_on_lies_S_heldout | 0.000 | 0.483 | 0.482 | 1/1 |
-| q3.layer4.disagree.within_S_verified_heldout | 0.558 | 0.759 | 0.201 | 1/1 |
-| q1.layer5.acc_H_heldout | 0.587 | 0.571 | -0.016 | 0/1 |
-| q2.layer5.truth_acc_on_lies_S_heldout | 0.000 | 0.187 | 0.187 | 1/1 |
-| q3.layer5.disagree.within_S_verified_heldout | 0.482 | 0.688 | 0.206 | 1/1 |
-| q1.layer6.acc_H_heldout | 0.578 | 0.583 | 0.005 | 1/1 |
-| q2.layer6.truth_acc_on_lies_S_heldout | 0.000 | 0.017 | 0.017 | 1/1 |
-| q3.layer6.disagree.within_S_verified_heldout | 0.462 | 0.593 | 0.130 | 1/1 |
-| q3.within_S_verified_heldout.disagree_selected.auroc | 0.558 | 0.667 | 0.109 | 1/1 |
-| q3.within_S_verified_heldout.disagree_selected.recall@1%fpr | 0.008 | 0.196 | 0.188 | 1/1 |
-| q3.within_S_verified_heldout.disagree_selected.recall@5%fpr | 0.040 | 0.269 | 0.229 | 1/1 |
-| q3.within_S_verified_heldout.disagree_final.auroc | 0.462 | 0.593 | 0.130 | 1/1 |
-| q3.within_S_verified_heldout.disagree_final.recall@1%fpr | 0.009 | 0.041 | 0.032 | 1/1 |
-| q3.within_S_verified_heldout.disagree_final.recall@5%fpr | 0.034 | 0.108 | 0.074 | 1/1 |
-| q3.within_S_verified_heldout.disagree_layer0.auroc | 0.493 | 0.495 | 0.001 | 1/1 |
-| q3.within_S_verified_heldout.disagree_layer0.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_heldout.disagree_layer0.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_heldout.disagree_bow.auroc | 0.720 | 0.718 | -0.003 | 0/1 |
-| q3.within_S_verified_heldout.disagree_bow.recall@1%fpr | 0.176 | 0.152 | -0.024 | 0/1 |
-| q3.within_S_verified_heldout.disagree_bow.recall@5%fpr | 0.286 | 0.281 | -0.005 | 0/1 |
-| q3.within_S_verified_heldout.lie_probe_Strained_selected.auroc | 0.801 | 0.756 | -0.044 | 0/1 |
-| q3.within_S_verified_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.288 | 0.304 | 0.016 | 1/1 |
-| q3.within_S_verified_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.396 | 0.372 | -0.023 | 0/1 |
-| q3.within_S_verified_heldout.lie_probe_Ftrained_selected.auroc | 0.542 | 0.504 | -0.037 | 0/1 |
-| q3.within_S_verified_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 0.000 | 0.033 | 0.033 | 1/1 |
-| q3.within_S_verified_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 0.000 | 0.103 | 0.103 | 1/1 |
-| q3.within_S_verified_heldout.output_low_confidence.auroc | 0.563 | 0.604 | 0.041 | 1/1 |
-| q3.within_S_verified_heldout.output_low_confidence.recall@1%fpr | 0.018 | 0.007 | -0.012 | 0/1 |
-| q3.within_S_verified_heldout.output_low_confidence.recall@5%fpr | 0.088 | 0.077 | -0.011 | 0/1 |
-| q3.within_S_verified_heldout.output_entropy.auroc | 0.564 | 0.606 | 0.041 | 1/1 |
-| q3.within_S_verified_heldout.output_entropy.recall@1%fpr | 0.018 | 0.007 | -0.011 | 0/1 |
-| q3.within_S_verified_heldout.output_entropy.recall@5%fpr | 0.089 | 0.077 | -0.012 | 0/1 |
-| q3.within_S_verified_heldout.persona_trigger.auroc | 0.500 | 0.500 | 0.000 | 0/1 |
-| q3.within_S_verified_heldout.persona_trigger.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_heldout.persona_trigger.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_heldout.claim_token_equals_output.auroc | 0.500 | 0.500 | 0.000 | 0/1 |
-| q3.within_S_verified_heldout.claim_token_equals_output.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_heldout.claim_token_equals_output.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_heldout.claim_present.auroc | 0.500 | 0.500 | 0.000 | 0/1 |
-| q3.within_S_verified_heldout.claim_present.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_heldout.claim_present.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_heldout.n_pos | 1193.000 | 1227.000 | 34.000 | 1/1 |
-| q3.within_S_verified_heldout.n_neg | 975.000 | 975.000 | 0.000 | 0/1 |
-| q3.within_S_heldout.disagree_selected.auroc | 0.536 | 0.619 | 0.083 | 1/1 |
-| q3.within_S_heldout.disagree_selected.recall@1%fpr | 0.008 | 0.133 | 0.125 | 1/1 |
-| q3.within_S_heldout.disagree_selected.recall@5%fpr | 0.042 | 0.199 | 0.157 | 1/1 |
-| q3.within_S_heldout.disagree_final.auroc | 0.463 | 0.584 | 0.121 | 1/1 |
-| q3.within_S_heldout.disagree_final.recall@1%fpr | 0.010 | 0.037 | 0.027 | 1/1 |
-| q3.within_S_heldout.disagree_final.recall@5%fpr | 0.036 | 0.101 | 0.066 | 1/1 |
-| q3.within_S_heldout.disagree_layer0.auroc | 0.492 | 0.492 | 0.000 | 0/1 |
-| q3.within_S_heldout.disagree_layer0.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_heldout.disagree_layer0.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_heldout.disagree_bow.auroc | 0.661 | 0.663 | 0.001 | 1/1 |
-| q3.within_S_heldout.disagree_bow.recall@1%fpr | 0.115 | 0.102 | -0.013 | 0/1 |
-| q3.within_S_heldout.disagree_bow.recall@5%fpr | 0.204 | 0.205 | 0.000 | 1/1 |
-| q3.within_S_heldout.lie_probe_Strained_selected.auroc | 0.722 | 0.676 | -0.046 | 0/1 |
-| q3.within_S_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.193 | 0.203 | 0.010 | 1/1 |
-| q3.within_S_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.301 | 0.263 | -0.038 | 0/1 |
-| q3.within_S_heldout.lie_probe_Ftrained_selected.auroc | 0.535 | 0.506 | -0.029 | 0/1 |
-| q3.within_S_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 0.000 | 0.029 | 0.029 | 1/1 |
-| q3.within_S_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 0.000 | 0.082 | 0.082 | 1/1 |
-| q3.within_S_heldout.output_low_confidence.auroc | 0.542 | 0.562 | 0.020 | 1/1 |
-| q3.within_S_heldout.output_low_confidence.recall@1%fpr | 0.013 | 0.004 | -0.009 | 0/1 |
-| q3.within_S_heldout.output_low_confidence.recall@5%fpr | 0.068 | 0.061 | -0.006 | 0/1 |
-| q3.within_S_heldout.output_entropy.auroc | 0.543 | 0.563 | 0.020 | 1/1 |
-| q3.within_S_heldout.output_entropy.recall@1%fpr | 0.012 | 0.004 | -0.008 | 0/1 |
-| q3.within_S_heldout.output_entropy.recall@5%fpr | 0.069 | 0.061 | -0.008 | 0/1 |
-| q3.within_S_heldout.persona_trigger.auroc | 0.500 | 0.500 | 0.000 | 0/1 |
-| q3.within_S_heldout.persona_trigger.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_heldout.persona_trigger.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_heldout.claim_token_equals_output.auroc | 0.500 | 0.500 | 0.000 | 0/1 |
-| q3.within_S_heldout.claim_token_equals_output.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_heldout.claim_token_equals_output.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_heldout.claim_present.auroc | 0.500 | 0.500 | 0.000 | 0/1 |
-| q3.within_S_heldout.claim_present.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_heldout.claim_present.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_heldout.n_pos | 2025.000 | 2025.000 | 0.000 | 0/1 |
-| q3.within_S_heldout.n_neg | 975.000 | 975.000 | 0.000 | 0/1 |
-| q3.within_S_verified_train.disagree_selected.auroc | 0.556 | 0.647 | 0.091 | 1/1 |
-| q3.within_S_verified_train.disagree_selected.recall@1%fpr | 0.017 | 0.202 | 0.186 | 1/1 |
-| q3.within_S_verified_train.disagree_selected.recall@5%fpr | 0.060 | 0.261 | 0.202 | 1/1 |
-| q3.within_S_verified_train.disagree_final.auroc | 0.476 | 0.574 | 0.098 | 1/1 |
-| q3.within_S_verified_train.disagree_final.recall@1%fpr | 0.011 | 0.023 | 0.011 | 1/1 |
-| q3.within_S_verified_train.disagree_final.recall@5%fpr | 0.047 | 0.114 | 0.067 | 1/1 |
-| q3.within_S_verified_train.disagree_layer0.auroc | 0.507 | 0.510 | 0.003 | 1/1 |
-| q3.within_S_verified_train.disagree_layer0.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_train.disagree_layer0.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_train.disagree_bow.auroc | 0.704 | 0.707 | 0.003 | 1/1 |
-| q3.within_S_verified_train.disagree_bow.recall@1%fpr | 0.181 | 0.173 | -0.007 | 0/1 |
-| q3.within_S_verified_train.disagree_bow.recall@5%fpr | 0.294 | 0.270 | -0.024 | 0/1 |
-| q3.within_S_verified_train.lie_probe_Strained_selected.auroc | 0.852 | 0.881 | 0.029 | 1/1 |
-| q3.within_S_verified_train.lie_probe_Strained_selected.recall@1%fpr | 0.335 | 0.405 | 0.070 | 1/1 |
-| q3.within_S_verified_train.lie_probe_Strained_selected.recall@5%fpr | 0.459 | 0.555 | 0.096 | 1/1 |
-| q3.within_S_verified_train.lie_probe_Ftrained_selected.auroc | 0.553 | 0.512 | -0.040 | 0/1 |
-| q3.within_S_verified_train.lie_probe_Ftrained_selected.recall@1%fpr | 0.000 | 0.054 | 0.054 | 1/1 |
-| q3.within_S_verified_train.lie_probe_Ftrained_selected.recall@5%fpr | 0.000 | 0.112 | 0.112 | 1/1 |
-| q3.within_S_verified_train.output_low_confidence.auroc | 0.562 | 0.594 | 0.032 | 1/1 |
-| q3.within_S_verified_train.output_low_confidence.recall@1%fpr | 0.023 | 0.010 | -0.013 | 0/1 |
-| q3.within_S_verified_train.output_low_confidence.recall@5%fpr | 0.108 | 0.087 | -0.021 | 0/1 |
-| q3.within_S_verified_train.output_entropy.auroc | 0.562 | 0.596 | 0.034 | 1/1 |
-| q3.within_S_verified_train.output_entropy.recall@1%fpr | 0.024 | 0.010 | -0.014 | 0/1 |
-| q3.within_S_verified_train.output_entropy.recall@5%fpr | 0.108 | 0.089 | -0.019 | 0/1 |
-| q3.within_S_verified_train.persona_trigger.auroc | 0.500 | 0.500 | 0.000 | 0/1 |
-| q3.within_S_verified_train.persona_trigger.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_train.persona_trigger.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_train.claim_token_equals_output.auroc | 0.500 | 0.500 | 0.000 | 0/1 |
-| q3.within_S_verified_train.claim_token_equals_output.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_train.claim_token_equals_output.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_train.claim_present.auroc | 0.500 | 0.500 | 0.000 | 0/1 |
-| q3.within_S_verified_train.claim_present.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_train.claim_present.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.within_S_verified_train.n_pos | 786.000 | 796.000 | 10.000 | 1/1 |
-| q3.within_S_verified_train.n_neg | 658.000 | 658.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_selected.auroc | 0.454 | 0.816 | 0.362 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_selected.recall@1%fpr | 0.178 | 0.776 | 0.597 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_selected.recall@5%fpr | 0.218 | 0.776 | 0.558 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_final.auroc | 0.516 | 0.538 | 0.022 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_final.recall@1%fpr | 0.289 | 0.116 | -0.173 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_final.recall@5%fpr | 0.339 | 0.183 | -0.156 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_layer0.auroc | 0.630 | 0.630 | 0.000 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_layer0.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_layer0.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_bow.auroc | 0.728 | 0.732 | 0.004 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_bow.recall@1%fpr | 0.068 | 0.062 | -0.005 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.disagree_bow.recall@5%fpr | 0.211 | 0.218 | 0.006 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Strained_selected.auroc | 0.065 | 0.277 | 0.213 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.000 | 0.039 | 0.039 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.000 | 0.123 | 0.123 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.auroc | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.output_low_confidence.auroc | 0.305 | 0.313 | 0.008 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.output_low_confidence.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.output_low_confidence.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.output_entropy.auroc | 0.245 | 0.250 | 0.005 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.output_entropy.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.output_entropy.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.persona_trigger.auroc | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.persona_trigger.recall@1%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.persona_trigger.recall@5%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.claim_token_equals_output.auroc | 0.664 | 0.668 | 0.004 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.claim_token_equals_output.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.claim_token_equals_output.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.claim_present.auroc | 0.755 | 0.757 | 0.001 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.claim_present.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.claim_present.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.n_pos | 785.000 | 803.000 | 18.000 | 1/1 |
-| q3.F_verified_lies_vs_H_correct_heldout.n_neg | 1194.000 | 1204.000 | 10.000 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_selected.auroc | 0.436 | 0.832 | 0.396 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_selected.recall@1%fpr | 0.160 | 0.795 | 0.635 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_selected.recall@5%fpr | 0.195 | 0.795 | 0.601 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_final.auroc | 0.594 | 0.549 | -0.045 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_final.recall@1%fpr | 0.383 | 0.107 | -0.276 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_final.recall@5%fpr | 0.432 | 0.177 | -0.255 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_layer0.auroc | 0.646 | 0.639 | -0.006 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_layer0.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_layer0.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_bow.auroc | 0.708 | 0.709 | 0.001 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_bow.recall@1%fpr | 0.050 | 0.048 | -0.002 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.disagree_bow.recall@5%fpr | 0.168 | 0.176 | 0.009 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.lie_probe_Strained_selected.auroc | 0.051 | 0.218 | 0.167 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.000 | 0.026 | 0.026 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.000 | 0.084 | 0.084 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.auroc | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.output_low_confidence.auroc | 0.348 | 0.363 | 0.015 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.output_low_confidence.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.output_low_confidence.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.output_entropy.auroc | 0.266 | 0.274 | 0.008 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.output_entropy.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.output_entropy.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.persona_trigger.auroc | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.persona_trigger.recall@1%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.persona_trigger.recall@5%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.claim_token_equals_output.auroc | 0.661 | 0.664 | 0.003 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.claim_token_equals_output.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.claim_token_equals_output.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.claim_present.auroc | 0.755 | 0.757 | 0.001 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.claim_present.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.claim_present.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.F_lies_vs_H_correct_heldout.n_pos | 1167.000 | 1173.000 | 6.000 | 1/1 |
-| q3.F_lies_vs_H_correct_heldout.n_neg | 1194.000 | 1204.000 | 10.000 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_selected.auroc | 0.183 | 0.883 | 0.700 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_selected.recall@1%fpr | 0.000 | 0.569 | 0.569 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_selected.recall@5%fpr | 0.000 | 0.645 | 0.645 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_final.auroc | 0.221 | 0.294 | 0.073 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_final.recall@1%fpr | 0.000 | 0.003 | 0.003 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_final.recall@5%fpr | 0.000 | 0.010 | 0.010 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_layer0.auroc | 0.498 | 0.500 | 0.001 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_layer0.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_layer0.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_bow.auroc | 0.760 | 0.747 | -0.014 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_bow.recall@1%fpr | 0.088 | 0.081 | -0.007 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_bow.recall@5%fpr | 0.277 | 0.267 | -0.010 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Strained_selected.auroc | 0.193 | 0.218 | 0.025 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.000 | 0.012 | 0.012 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.007 | 0.041 | 0.034 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Ftrained_selected.auroc | 1.000 | 1.000 | -0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_low_confidence.auroc | 0.190 | 0.218 | 0.028 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_low_confidence.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_low_confidence.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_entropy.auroc | 0.192 | 0.219 | 0.027 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_entropy.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_entropy.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.persona_trigger.auroc | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.persona_trigger.recall@1%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.persona_trigger.recall@5%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_token_equals_output.auroc | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_token_equals_output.recall@1%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_token_equals_output.recall@5%fpr | 1.000 | 1.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_present.auroc | 0.500 | 0.500 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_present.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_present.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.n_pos | 1193.000 | 1227.000 | 34.000 | 1/1 |
-| q3.S_verified_lies_vs_neutral_false_claim_heldout.n_neg | 384.000 | 385.000 | 1.000 | 1/1 |
-| q3.all_contexts_heldout.disagree_selected.auroc | 0.491 | 0.678 | 0.188 | 1/1 |
-| q3.all_contexts_heldout.disagree_selected.recall@1%fpr | 0.025 | 0.126 | 0.101 | 1/1 |
-| q3.all_contexts_heldout.disagree_selected.recall@5%fpr | 0.086 | 0.191 | 0.105 | 1/1 |
-| q3.all_contexts_heldout.disagree_final.auroc | 0.480 | 0.540 | 0.060 | 1/1 |
-| q3.all_contexts_heldout.disagree_final.recall@1%fpr | 0.008 | 0.028 | 0.021 | 1/1 |
-| q3.all_contexts_heldout.disagree_final.recall@5%fpr | 0.053 | 0.092 | 0.039 | 1/1 |
-| q3.all_contexts_heldout.disagree_layer0.auroc | 0.512 | 0.511 | -0.001 | 0/1 |
-| q3.all_contexts_heldout.disagree_layer0.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.all_contexts_heldout.disagree_layer0.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.all_contexts_heldout.disagree_bow.auroc | 0.658 | 0.656 | -0.002 | 0/1 |
-| q3.all_contexts_heldout.disagree_bow.recall@1%fpr | 0.061 | 0.059 | -0.002 | 0/1 |
-| q3.all_contexts_heldout.disagree_bow.recall@5%fpr | 0.158 | 0.154 | -0.004 | 0/1 |
-| q3.all_contexts_heldout.lie_probe_Strained_selected.auroc | 0.466 | 0.479 | 0.014 | 1/1 |
-| q3.all_contexts_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.011 | 0.027 | 0.016 | 1/1 |
-| q3.all_contexts_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.047 | 0.064 | 0.017 | 1/1 |
-| q3.all_contexts_heldout.lie_probe_Ftrained_selected.auroc | 0.629 | 0.669 | 0.040 | 1/1 |
-| q3.all_contexts_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 0.000 | 0.033 | 0.033 | 1/1 |
-| q3.all_contexts_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 0.000 | 0.116 | 0.116 | 1/1 |
-| q3.all_contexts_heldout.output_low_confidence.auroc | 0.481 | 0.486 | 0.005 | 1/1 |
-| q3.all_contexts_heldout.output_low_confidence.recall@1%fpr | 0.009 | 0.013 | 0.004 | 1/1 |
-| q3.all_contexts_heldout.output_low_confidence.recall@5%fpr | 0.045 | 0.058 | 0.013 | 1/1 |
-| q3.all_contexts_heldout.output_entropy.auroc | 0.472 | 0.476 | 0.004 | 1/1 |
-| q3.all_contexts_heldout.output_entropy.recall@1%fpr | 0.009 | 0.015 | 0.006 | 1/1 |
-| q3.all_contexts_heldout.output_entropy.recall@5%fpr | 0.047 | 0.055 | 0.008 | 1/1 |
-| q3.all_contexts_heldout.persona_trigger.auroc | 0.638 | 0.641 | 0.003 | 1/1 |
-| q3.all_contexts_heldout.persona_trigger.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.all_contexts_heldout.persona_trigger.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.all_contexts_heldout.claim_token_equals_output.auroc | 0.578 | 0.580 | 0.001 | 1/1 |
-| q3.all_contexts_heldout.claim_token_equals_output.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.all_contexts_heldout.claim_token_equals_output.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.all_contexts_heldout.claim_present.auroc | 0.574 | 0.576 | 0.002 | 1/1 |
-| q3.all_contexts_heldout.claim_present.recall@1%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.all_contexts_heldout.claim_present.recall@5%fpr | 0.000 | 0.000 | 0.000 | 0/1 |
-| q3.all_contexts_heldout.n_pos | 3998.000 | 3994.000 | -4.000 | 0/1 |
-| q3.all_contexts_heldout.n_neg | 2502.000 | 2506.000 | 4.000 | 1/1 |
-| null.within_S_train.best_dev_auroc | 0.608 | 0.650 | 0.043 | 1/1 |
-| null.within_S_train.test.within_S_heldout.auroc | 0.583 | 0.638 | 0.055 | 1/1 |
-| null.within_S_train.test.within_S_verified_heldout.auroc | 0.625 | 0.670 | 0.046 | 1/1 |
-| null.F_lies_vs_H_correct_train.best_dev_auroc | 1.000 | 0.984 | -0.016 | 0/1 |
-| null.F_lies_vs_H_correct_train.test.F_lies_vs_H_correct_heldout.auroc | 1.000 | 0.988 | -0.012 | 0/1 |
-| null.F_lies_vs_H_correct_train.test.F_verified_lies_vs_H_correct_heldout.auroc | 1.000 | 0.987 | -0.013 | 0/1 |
-| flags.H_heldout.on_lies | 0.225 | 0.314 | 0.090 | 1/1 |
-| flags.H_heldout.on_truthful | 0.110 | 0.159 | 0.049 | 1/1 |
-| flags.S_heldout.on_lies | 0.000 | 0.766 | 0.766 | 1/1 |
-| flags.S_heldout.on_truthful | 0.000 | 0.676 | 0.676 | 1/1 |
-| flags.F_heldout.on_lies | 0.239 | 0.799 | 0.560 | 1/1 |
-| flags.F_heldout.on_truthful | 0.165 | 0.823 | 0.657 | 1/1 |
-| flags.H_heldout.neutral_false_claim_truthful | 0.122 | 0.190 | 0.067 | 1/1 |
+| beh.H_train.target_acc | 0.576 [0.565, 0.587] | 0.619 [0.516, 0.721] | 0.042 [-0.062, 0.147] | 3/5 |
+| beh.H_train.truth_acc | 0.576 [0.565, 0.587] | 0.619 [0.516, 0.721] | 0.042 [-0.062, 0.147] | 3/5 |
+| beh.H_heldout.target_acc | 0.594 [0.589, 0.598] | 0.635 [0.541, 0.728] | 0.041 [-0.052, 0.134] | 5/5 |
+| beh.H_heldout.truth_acc | 0.594 [0.589, 0.598] | 0.635 [0.541, 0.728] | 0.041 [-0.052, 0.134] | 5/5 |
+| beh.S_train.target_acc | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| beh.S_train.truth_acc | 0.329 [0.329, 0.329] | 0.329 [0.329, 0.329] | 0.000 [0.000, 0.000] | 0/5 |
+| beh.S_heldout.target_acc | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| beh.S_heldout.truth_acc | 0.325 [0.325, 0.325] | 0.325 [0.325, 0.325] | 0.000 [0.000, 0.000] | 0/5 |
+| beh.F_train.target_acc | 0.723 [0.719, 0.728] | 0.748 [0.672, 0.825] | 0.025 [-0.051, 0.101] | 1/5 |
+| beh.F_train.truth_acc | 0.237 [0.234, 0.241] | 0.209 [0.122, 0.296] | -0.029 [-0.116, 0.059] | 4/5 |
+| beh.F_heldout.target_acc | 0.733 [0.728, 0.738] | 0.755 [0.677, 0.834] | 0.022 [-0.058, 0.102] | 1/5 |
+| beh.F_heldout.truth_acc | 0.218 [0.213, 0.224] | 0.191 [0.108, 0.274] | -0.027 [-0.114, 0.060] | 3/5 |
+| beh.H_heldout.target_acc_depth0 | 0.594 [0.580, 0.608] | 0.664 [0.504, 0.824] | 0.070 [-0.089, 0.229] | 4/5 |
+| beh.H_train.target_acc_depth0 | 0.533 [0.513, 0.553] | 0.613 [0.418, 0.809] | 0.080 [-0.118, 0.279] | 4/5 |
+| beh.H_heldout.target_acc_depth1 | 0.544 [0.538, 0.550] | 0.573 [0.495, 0.651] | 0.029 [-0.049, 0.107] | 3/5 |
+| beh.H_train.target_acc_depth1 | 0.541 [0.532, 0.550] | 0.582 [0.491, 0.672] | 0.041 [-0.044, 0.126] | 4/5 |
+| beh.H_heldout.target_acc_depth2 | 0.572 [0.568, 0.575] | 0.597 [0.506, 0.688] | 0.025 [-0.065, 0.116] | 2/5 |
+| beh.H_train.target_acc_depth2 | 0.568 [0.556, 0.580] | 0.590 [0.515, 0.664] | 0.021 [-0.059, 0.102] | 1/5 |
+| beh.H_heldout.target_acc_depth3 | 0.660 [0.652, 0.668] | 0.699 [0.646, 0.752] | 0.039 [-0.014, 0.092] | 4/5 |
+| beh.H_train.target_acc_depth3 | 0.661 [0.641, 0.681] | 0.690 [0.633, 0.747] | 0.029 [-0.037, 0.095] | 3/5 |
+| beh.H_heldout.target_acc_true_yes | 0.688 [0.669, 0.707] | 0.729 [0.621, 0.838] | 0.042 [-0.058, 0.142] | 4/5 |
+| beh.H_heldout.target_acc_true_no | 0.625 [0.612, 0.639] | 0.690 [0.554, 0.825] | 0.064 [-0.068, 0.197] | 5/5 |
+| beh.H_heldout.target_acc_true_unknown | 0.465 [0.456, 0.475] | 0.482 [0.441, 0.523] | 0.017 [-0.033, 0.066] | 3/5 |
+| beh.S_train.compliance_claim_false | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| beh.S_train.acc_claim_true | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| beh.S_heldout.compliance_claim_false | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| beh.S_heldout.acc_claim_true | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| beh.S_heldout.lies_verified_frac | 0.590 [0.584, 0.595] | 0.624 [0.542, 0.706] | 0.034 [-0.053, 0.121] | 3/5 |
+| beh.S_heldout.n_verified_lies | 1194.200 [1182.705, 1205.695] | 1263.400 [1096.921, 1429.879] | 69.200 [-106.944, 245.344] | 3/5 |
+| beh.S_heldout.matched_neutral_truth_acc | 0.605 [0.597, 0.613] | 0.645 [0.549, 0.742] | 0.040 [-0.060, 0.140] | 3/5 |
+| beh.S_heldout.false_output_rate | 0.675 [0.675, 0.675] | 0.675 [0.675, 0.675] | 0.000 [0.000, 0.000] | 0/5 |
+| beh.F_heldout.lies_verified_frac | 0.673 [0.663, 0.684] | 0.711 [0.634, 0.788] | 0.037 [-0.047, 0.122] | 4/5 |
+| beh.F_heldout.n_verified_lies | 789.600 [772.071, 807.129] | 867.200 [675.297, 1059.103] | 77.600 [-126.348, 281.548] | 3/5 |
+| beh.F_heldout.matched_neutral_truth_acc | 0.591 [0.588, 0.594] | 0.633 [0.527, 0.740] | 0.042 [-0.062, 0.147] | 4/5 |
+| beh.F_heldout.false_output_rate | 0.782 [0.776, 0.787] | 0.809 [0.726, 0.892] | 0.027 [-0.060, 0.114] | 2/5 |
+| beh.S_train.lies_verified_frac | 0.588 [0.581, 0.595] | 0.617 [0.542, 0.691] | 0.029 [-0.050, 0.108] | 3/5 |
+| beh.S_train.n_verified_lies | 789.200 [779.447, 798.953] | 827.800 [727.623, 927.977] | 38.600 [-67.483, 144.683] | 3/5 |
+| beh.S_train.matched_neutral_truth_acc | 0.605 [0.599, 0.610] | 0.644 [0.551, 0.737] | 0.039 [-0.054, 0.133] | 4/5 |
+| beh.S_train.false_output_rate | 0.671 [0.671, 0.671] | 0.671 [0.671, 0.671] | 0.000 [0.000, 0.000] | 0/5 |
+| beh.F_train.lies_verified_frac | 0.699 [0.688, 0.710] | 0.731 [0.661, 0.801] | 0.032 [-0.038, 0.102] | 5/5 |
+| beh.F_train.n_verified_lies | 799.800 [783.745, 815.855] | 872.400 [684.928, 1059.872] | 72.600 [-115.950, 261.150] | 4/5 |
+| beh.F_train.matched_neutral_truth_acc | 0.611 [0.606, 0.616] | 0.644 [0.547, 0.742] | 0.033 [-0.061, 0.127] | 2/5 |
+| beh.F_train.false_output_rate | 0.763 [0.759, 0.766] | 0.791 [0.704, 0.878] | 0.029 [-0.059, 0.116] | 1/5 |
+| probe_layer_selected | 4.600 [3.489, 5.711] | 3.000 [2.122, 3.878] | -1.600 [-2.711, -0.489] | 0/5 |
+| q1.sel.acc_probe_val | 0.591 [0.579, 0.603] | 0.612 [0.519, 0.706] | 0.021 [-0.071, 0.114] | 1/5 |
+| q1.sel.acc_H_train | 0.571 [0.565, 0.578] | 0.595 [0.493, 0.697] | 0.024 [-0.077, 0.124] | 1/5 |
+| q1.sel.acc_H_heldout | 0.586 [0.581, 0.590] | 0.608 [0.521, 0.695] | 0.022 [-0.062, 0.106] | 2/5 |
+| q1.sel.acc_S_heldout | 0.323 [0.319, 0.328] | 0.496 [0.389, 0.602] | 0.172 [0.061, 0.283] | 5/5 |
+| q1.sel.acc_F_heldout | 0.307 [0.259, 0.355] | 0.502 [0.400, 0.604] | 0.195 [0.066, 0.324] | 5/5 |
+| q2.sel.truth_acc_on_lies_S_heldout | 0.026 [-0.019, 0.071] | 0.440 [0.329, 0.552] | 0.414 [0.321, 0.507] | 5/5 |
+| q2.sel.agrees_output_on_lies_S_heldout | 0.946 [0.849, 1.044] | 0.351 [0.168, 0.535] | -0.595 [-0.753, -0.436] | 0/5 |
+| q2.sel.truth_acc_on_lies_F_heldout | 0.176 [0.168, 0.184] | 0.488 [0.302, 0.674] | 0.312 [0.119, 0.505] | 5/5 |
+| q2.sel.agrees_output_on_lies_F_heldout | 0.747 [0.707, 0.787] | 0.315 [-0.001, 0.631] | -0.432 [-0.744, -0.119] | 0/5 |
+| q2.sel.truth_acc_on_lies_S_train | 0.030 [-0.021, 0.080] | 0.446 [0.336, 0.555] | 0.416 [0.324, 0.508] | 5/5 |
+| q2.sel.agrees_output_on_lies_S_train | 0.946 [0.848, 1.043] | 0.353 [0.172, 0.534] | -0.593 [-0.753, -0.433] | 0/5 |
+| q2.sel.truth_acc_on_lies_F_train | 0.194 [0.164, 0.224] | 0.510 [0.334, 0.685] | 0.316 [0.122, 0.510] | 5/5 |
+| q2.sel.agrees_output_on_lies_F_train | 0.740 [0.727, 0.752] | 0.304 [0.011, 0.597] | -0.436 [-0.729, -0.143] | 0/5 |
+| q1.sel.acc_when_model_wrong_H_heldout | 0.153 [0.136, 0.170] | 0.177 [0.167, 0.186] | 0.024 [-0.002, 0.049] | 5/5 |
+| q1.final.acc_probe_val | 0.585 [0.572, 0.598] | 0.602 [0.505, 0.700] | 0.017 [-0.076, 0.110] | 1/5 |
+| q1.final.acc_H_train | 0.575 [0.563, 0.586] | 0.600 [0.494, 0.706] | 0.026 [-0.079, 0.130] | 2/5 |
+| q1.final.acc_H_heldout | 0.583 [0.576, 0.589] | 0.611 [0.513, 0.708] | 0.028 [-0.063, 0.120] | 2/5 |
+| q1.final.acc_S_heldout | 0.325 [0.325, 0.325] | 0.337 [0.322, 0.353] | 0.012 [-0.003, 0.028] | 4/5 |
+| q1.final.acc_F_heldout | 0.289 [0.242, 0.336] | 0.292 [0.235, 0.349] | 0.003 [-0.065, 0.071] | 3/5 |
+| q2.final.truth_acc_on_lies_S_heldout | 0.000 [0.000, 0.000] | 0.031 [0.002, 0.060] | 0.031 [0.002, 0.060] | 4/5 |
+| q2.final.agrees_output_on_lies_S_heldout | 1.000 [1.000, 1.000] | 0.946 [0.895, 0.997] | -0.054 [-0.105, -0.003] | 0/5 |
+| q2.final.truth_acc_on_lies_F_heldout | 0.190 [0.113, 0.268] | 0.223 [0.127, 0.319] | 0.032 [-0.088, 0.153] | 3/5 |
+| q2.final.agrees_output_on_lies_F_heldout | 0.708 [0.557, 0.859] | 0.651 [0.492, 0.810] | -0.057 [-0.246, 0.133] | 1/5 |
+| q2.final.truth_acc_on_lies_S_train | 0.000 [0.000, 0.000] | 0.031 [-0.006, 0.067] | 0.031 [-0.006, 0.067] | 4/5 |
+| q2.final.agrees_output_on_lies_S_train | 1.000 [1.000, 1.000] | 0.946 [0.889, 1.002] | -0.054 [-0.111, 0.002] | 0/5 |
+| q2.final.truth_acc_on_lies_F_train | 0.195 [0.141, 0.249] | 0.226 [0.129, 0.322] | 0.031 [-0.073, 0.134] | 3/5 |
+| q2.final.agrees_output_on_lies_F_train | 0.712 [0.595, 0.830] | 0.650 [0.501, 0.799] | -0.062 [-0.232, 0.108] | 2/5 |
+| q1.final.acc_when_model_wrong_H_heldout | 0.149 [0.138, 0.161] | 0.181 [0.170, 0.193] | 0.032 [0.023, 0.041] | 5/5 |
+| q1.L0.acc_probe_val | 0.329 [0.329, 0.329] | 0.329 [0.329, 0.329] | 0.000 [0.000, 0.000] | 0/5 |
+| q1.L0.acc_H_train | 0.329 [0.329, 0.329] | 0.329 [0.329, 0.329] | 0.000 [0.000, 0.000] | 0/5 |
+| q1.L0.acc_H_heldout | 0.321 [0.321, 0.321] | 0.321 [0.321, 0.321] | 0.000 [0.000, 0.000] | 0/5 |
+| q1.L0.acc_S_heldout | 0.326 [0.326, 0.326] | 0.326 [0.326, 0.326] | 0.000 [0.000, 0.000] | 0/5 |
+| q1.L0.acc_F_heldout | 0.340 [0.340, 0.340] | 0.340 [0.340, 0.340] | 0.000 [0.000, 0.000] | 0/5 |
+| q2.L0.truth_acc_on_lies_S_heldout | 0.253 [0.253, 0.253] | 0.253 [0.253, 0.253] | 0.000 [0.000, 0.000] | 0/5 |
+| q2.L0.agrees_output_on_lies_S_heldout | 0.491 [0.491, 0.491] | 0.491 [0.491, 0.491] | 0.000 [0.000, 0.000] | 0/5 |
+| q2.L0.truth_acc_on_lies_F_heldout | 0.391 [0.384, 0.397] | 0.380 [0.365, 0.396] | -0.010 [-0.030, 0.009] | 0/5 |
+| q2.L0.agrees_output_on_lies_F_heldout | 0.243 [0.232, 0.255] | 0.270 [0.217, 0.323] | 0.027 [-0.034, 0.088] | 4/5 |
+| q2.L0.truth_acc_on_lies_S_train | 0.261 [0.261, 0.261] | 0.261 [0.261, 0.261] | 0.000 [0.000, 0.000] | 0/5 |
+| q2.L0.agrees_output_on_lies_S_train | 0.499 [0.499, 0.499] | 0.499 [0.499, 0.499] | 0.000 [0.000, 0.000] | 0/5 |
+| q2.L0.truth_acc_on_lies_F_train | 0.354 [0.348, 0.361] | 0.344 [0.329, 0.358] | -0.011 [-0.028, 0.006] | 0/5 |
+| q2.L0.agrees_output_on_lies_F_train | 0.258 [0.249, 0.267] | 0.285 [0.223, 0.346] | 0.026 [-0.040, 0.093] | 4/5 |
+| q1.L0.acc_when_model_wrong_H_heldout | 0.296 [0.285, 0.306] | 0.263 [0.192, 0.334] | -0.033 [-0.102, 0.036] | 0/5 |
+| q1.bow.acc_probe_val | 0.493 [0.491, 0.494] | 0.492 [0.492, 0.493] | -0.000 [-0.002, 0.001] | 1/5 |
+| q1.bow.acc_H_train | 0.463 [0.462, 0.463] | 0.463 [0.462, 0.464] | 0.001 [-0.000, 0.001] | 3/5 |
+| q1.bow.acc_H_heldout | 0.490 [0.489, 0.490] | 0.490 [0.489, 0.491] | 0.000 [-0.001, 0.001] | 2/5 |
+| q1.bow.acc_S_heldout | 0.485 [0.476, 0.493] | 0.485 [0.476, 0.494] | 0.000 [-0.014, 0.015] | 2/5 |
+| q1.bow.acc_F_heldout | 0.492 [0.489, 0.495] | 0.488 [0.467, 0.510] | -0.004 [-0.026, 0.019] | 2/5 |
+| q2.bow.truth_acc_on_lies_S_heldout | 0.486 [0.440, 0.531] | 0.498 [0.466, 0.530] | 0.012 [-0.038, 0.063] | 3/5 |
+| q2.bow.agrees_output_on_lies_S_heldout | 0.288 [0.198, 0.378] | 0.264 [0.197, 0.331] | -0.023 [-0.136, 0.090] | 2/5 |
+| q2.bow.truth_acc_on_lies_F_heldout | 0.494 [0.480, 0.507] | 0.511 [0.495, 0.528] | 0.018 [0.000, 0.035] | 5/5 |
+| q2.bow.agrees_output_on_lies_F_heldout | 0.320 [0.285, 0.355] | 0.258 [0.203, 0.314] | -0.061 [-0.127, 0.005] | 0/5 |
+| q2.bow.truth_acc_on_lies_S_train | 0.473 [0.439, 0.508] | 0.485 [0.461, 0.509] | 0.012 [-0.026, 0.049] | 3/5 |
+| q2.bow.agrees_output_on_lies_S_train | 0.285 [0.195, 0.374] | 0.262 [0.195, 0.329] | -0.023 [-0.134, 0.089] | 2/5 |
+| q2.bow.truth_acc_on_lies_F_train | 0.525 [0.514, 0.536] | 0.532 [0.514, 0.550] | 0.007 [-0.012, 0.025] | 4/5 |
+| q2.bow.agrees_output_on_lies_F_train | 0.283 [0.256, 0.311] | 0.241 [0.188, 0.294] | -0.042 [-0.104, 0.019] | 0/5 |
+| q1.bow.acc_when_model_wrong_H_heldout | 0.327 [0.321, 0.332] | 0.330 [0.313, 0.347] | 0.003 [-0.016, 0.023] | 3/5 |
+| q1.layer0.acc_H_heldout | 0.321 [0.321, 0.321] | 0.321 [0.321, 0.321] | 0.000 [0.000, 0.000] | 0/5 |
+| q2.layer0.truth_acc_on_lies_S_heldout | 0.253 [0.253, 0.253] | 0.253 [0.253, 0.253] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.layer0.disagree.within_S_verified_heldout | 0.494 [0.490, 0.498] | 0.496 [0.494, 0.498] | 0.002 [-0.001, 0.005] | 4/5 |
+| q1.layer1.acc_H_heldout | 0.452 [0.431, 0.473] | 0.506 [0.496, 0.516] | 0.054 [0.026, 0.081] | 5/5 |
+| q2.layer1.truth_acc_on_lies_S_heldout | 0.454 [0.315, 0.594] | 0.484 [0.345, 0.623] | 0.030 [-0.146, 0.205] | 3/5 |
+| q3.layer1.disagree.within_S_verified_heldout | 0.529 [0.465, 0.592] | 0.640 [0.607, 0.672] | 0.111 [0.046, 0.176] | 5/5 |
+| q1.layer2.acc_H_heldout | 0.542 [0.522, 0.562] | 0.572 [0.567, 0.577] | 0.030 [0.010, 0.051] | 5/5 |
+| q2.layer2.truth_acc_on_lies_S_heldout | 0.303 [0.100, 0.505] | 0.446 [0.340, 0.552] | 0.143 [-0.159, 0.446] | 4/5 |
+| q3.layer2.disagree.within_S_verified_heldout | 0.532 [0.483, 0.582] | 0.731 [0.664, 0.797] | 0.198 [0.085, 0.311] | 5/5 |
+| q1.layer3.acc_H_heldout | 0.572 [0.560, 0.583] | 0.606 [0.529, 0.684] | 0.035 [-0.045, 0.115] | 3/5 |
+| q2.layer3.truth_acc_on_lies_S_heldout | 0.171 [-0.014, 0.356] | 0.470 [0.315, 0.625] | 0.299 [0.021, 0.577] | 4/5 |
+| q3.layer3.disagree.within_S_verified_heldout | 0.542 [0.478, 0.606] | 0.770 [0.631, 0.909] | 0.228 [0.035, 0.422] | 5/5 |
+| q1.layer4.acc_H_heldout | 0.584 [0.580, 0.588] | 0.606 [0.519, 0.694] | 0.022 [-0.065, 0.109] | 1/5 |
+| q2.layer4.truth_acc_on_lies_S_heldout | 0.033 [-0.024, 0.089] | 0.451 [0.390, 0.512] | 0.418 [0.369, 0.467] | 5/5 |
+| q3.layer4.disagree.within_S_verified_heldout | 0.539 [0.485, 0.594] | 0.766 [0.576, 0.956] | 0.227 [0.043, 0.410] | 5/5 |
+| q1.layer5.acc_H_heldout | 0.587 [0.578, 0.596] | 0.609 [0.513, 0.705] | 0.023 [-0.071, 0.117] | 2/5 |
+| q2.layer5.truth_acc_on_lies_S_heldout | 0.015 [-0.026, 0.055] | 0.362 [0.226, 0.498] | 0.347 [0.208, 0.487] | 5/5 |
+| q3.layer5.disagree.within_S_verified_heldout | 0.514 [0.472, 0.557] | 0.730 [0.515, 0.944] | 0.215 [0.001, 0.430] | 4/5 |
+| q1.layer6.acc_H_heldout | 0.583 [0.576, 0.589] | 0.611 [0.513, 0.708] | 0.028 [-0.063, 0.120] | 2/5 |
+| q2.layer6.truth_acc_on_lies_S_heldout | 0.000 [0.000, 0.000] | 0.031 [0.002, 0.060] | 0.031 [0.002, 0.060] | 4/5 |
+| q3.layer6.disagree.within_S_verified_heldout | 0.513 [0.459, 0.567] | 0.540 [0.416, 0.664] | 0.026 [-0.128, 0.180] | 3/5 |
+| q3.within_S_verified_heldout.disagree_selected.auroc | 0.535 [0.486, 0.585] | 0.756 [0.606, 0.906] | 0.220 [0.045, 0.396] | 5/5 |
+| q3.within_S_verified_heldout.disagree_selected.recall@1%fpr | 0.036 [-0.018, 0.090] | 0.287 [0.063, 0.512] | 0.251 [0.004, 0.499] | 5/5 |
+| q3.within_S_verified_heldout.disagree_selected.recall@5%fpr | 0.076 [0.020, 0.133] | 0.394 [0.117, 0.670] | 0.318 [0.017, 0.618] | 5/5 |
+| q3.within_S_verified_heldout.disagree_final.auroc | 0.513 [0.459, 0.567] | 0.540 [0.416, 0.664] | 0.026 [-0.128, 0.180] | 3/5 |
+| q3.within_S_verified_heldout.disagree_final.recall@1%fpr | 0.031 [-0.008, 0.070] | 0.051 [-0.000, 0.102] | 0.020 [-0.041, 0.081] | 3/5 |
+| q3.within_S_verified_heldout.disagree_final.recall@5%fpr | 0.083 [0.034, 0.133] | 0.126 [0.025, 0.226] | 0.042 [-0.069, 0.154] | 3/5 |
+| q3.within_S_verified_heldout.disagree_layer0.auroc | 0.494 [0.490, 0.498] | 0.496 [0.494, 0.498] | 0.002 [-0.001, 0.005] | 4/5 |
+| q3.within_S_verified_heldout.disagree_layer0.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_heldout.disagree_layer0.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_heldout.disagree_bow.auroc | 0.716 [0.710, 0.722] | 0.713 [0.703, 0.723] | -0.003 [-0.016, 0.010] | 2/5 |
+| q3.within_S_verified_heldout.disagree_bow.recall@1%fpr | 0.186 [0.145, 0.228] | 0.190 [0.157, 0.222] | 0.003 [-0.052, 0.058] | 2/5 |
+| q3.within_S_verified_heldout.disagree_bow.recall@5%fpr | 0.287 [0.265, 0.309] | 0.287 [0.266, 0.308] | 0.000 [-0.037, 0.037] | 2/5 |
+| q3.within_S_verified_heldout.lie_probe_Strained_selected.auroc | 0.793 [0.760, 0.827] | 0.777 [0.721, 0.834] | -0.016 [-0.095, 0.063] | 2/5 |
+| q3.within_S_verified_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.221 [0.106, 0.337] | 0.319 [0.271, 0.366] | 0.097 [-0.058, 0.252] | 4/5 |
+| q3.within_S_verified_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.354 [0.241, 0.467] | 0.402 [0.339, 0.465] | 0.047 [-0.119, 0.214] | 2/5 |
+| q3.within_S_verified_heldout.lie_probe_Ftrained_selected.auroc | 0.528 [0.516, 0.541] | 0.566 [0.519, 0.612] | 0.037 [-0.021, 0.095] | 4/5 |
+| q3.within_S_verified_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 0.019 [-0.001, 0.039] | 0.083 [0.025, 0.141] | 0.064 [0.025, 0.103] | 5/5 |
+| q3.within_S_verified_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 0.075 [0.001, 0.150] | 0.182 [0.113, 0.251] | 0.107 [0.077, 0.136] | 5/5 |
+| q3.within_S_verified_heldout.output_low_confidence.auroc | 0.540 [0.507, 0.572] | 0.614 [0.565, 0.662] | 0.074 [0.020, 0.129] | 5/5 |
+| q3.within_S_verified_heldout.output_low_confidence.recall@1%fpr | 0.052 [-0.015, 0.118] | 0.011 [0.003, 0.020] | -0.041 [-0.107, 0.026] | 1/5 |
+| q3.within_S_verified_heldout.output_low_confidence.recall@5%fpr | 0.105 [0.024, 0.185] | 0.085 [0.038, 0.132] | -0.020 [-0.078, 0.039] | 1/5 |
+| q3.within_S_verified_heldout.output_entropy.auroc | 0.539 [0.507, 0.572] | 0.615 [0.566, 0.664] | 0.075 [0.021, 0.130] | 5/5 |
+| q3.within_S_verified_heldout.output_entropy.recall@1%fpr | 0.052 [-0.015, 0.118] | 0.011 [0.003, 0.020] | -0.040 [-0.107, 0.026] | 1/5 |
+| q3.within_S_verified_heldout.output_entropy.recall@5%fpr | 0.106 [0.027, 0.186] | 0.085 [0.036, 0.134] | -0.022 [-0.079, 0.036] | 1/5 |
+| q3.within_S_verified_heldout.persona_trigger.auroc | 0.500 [0.500, 0.500] | 0.500 [0.500, 0.500] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_heldout.persona_trigger.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_heldout.persona_trigger.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_heldout.claim_token_equals_output.auroc | 0.500 [0.500, 0.500] | 0.500 [0.500, 0.500] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_heldout.claim_token_equals_output.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_heldout.claim_token_equals_output.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_heldout.claim_present.auroc | 0.500 [0.500, 0.500] | 0.500 [0.500, 0.500] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_heldout.claim_present.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_heldout.claim_present.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_heldout.n_pos | 1194.200 [1182.705, 1205.695] | 1263.400 [1096.921, 1429.879] | 69.200 [-106.944, 245.344] | 3/5 |
+| q3.within_S_verified_heldout.n_neg | 975.000 [975.000, 975.000] | 975.000 [975.000, 975.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.disagree_selected.auroc | 0.521 [0.488, 0.554] | 0.703 [0.564, 0.842] | 0.182 [0.027, 0.337] | 5/5 |
+| q3.within_S_heldout.disagree_selected.recall@1%fpr | 0.023 [-0.009, 0.056] | 0.217 [0.028, 0.406] | 0.194 [-0.009, 0.396] | 5/5 |
+| q3.within_S_heldout.disagree_selected.recall@5%fpr | 0.060 [0.030, 0.090] | 0.308 [0.071, 0.545] | 0.248 [-0.002, 0.497] | 5/5 |
+| q3.within_S_heldout.disagree_final.auroc | 0.504 [0.464, 0.544] | 0.539 [0.439, 0.640] | 0.035 [-0.087, 0.158] | 3/5 |
+| q3.within_S_heldout.disagree_final.recall@1%fpr | 0.021 [-0.004, 0.046] | 0.041 [-0.001, 0.083] | 0.019 [-0.030, 0.069] | 3/5 |
+| q3.within_S_heldout.disagree_final.recall@5%fpr | 0.069 [0.034, 0.103] | 0.108 [0.023, 0.193] | 0.039 [-0.053, 0.131] | 3/5 |
+| q3.within_S_heldout.disagree_layer0.auroc | 0.492 [0.492, 0.492] | 0.492 [0.492, 0.492] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.disagree_layer0.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.disagree_layer0.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.disagree_bow.auroc | 0.661 [0.659, 0.663] | 0.662 [0.661, 0.663] | 0.001 [-0.001, 0.003] | 3/5 |
+| q3.within_S_heldout.disagree_bow.recall@1%fpr | 0.123 [0.097, 0.149] | 0.130 [0.110, 0.150] | 0.007 [-0.024, 0.038] | 2/5 |
+| q3.within_S_heldout.disagree_bow.recall@5%fpr | 0.206 [0.194, 0.218] | 0.213 [0.205, 0.221] | 0.007 [-0.010, 0.024] | 4/5 |
+| q3.within_S_heldout.lie_probe_Strained_selected.auroc | 0.713 [0.689, 0.736] | 0.708 [0.639, 0.776] | -0.005 [-0.088, 0.078] | 2/5 |
+| q3.within_S_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.146 [0.069, 0.222] | 0.223 [0.164, 0.283] | 0.078 [-0.047, 0.202] | 4/5 |
+| q3.within_S_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.260 [0.177, 0.343] | 0.300 [0.219, 0.381] | 0.040 [-0.112, 0.192] | 2/5 |
+| q3.within_S_heldout.lie_probe_Ftrained_selected.auroc | 0.519 [0.507, 0.532] | 0.541 [0.512, 0.569] | 0.021 [-0.016, 0.058] | 4/5 |
+| q3.within_S_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 0.015 [0.001, 0.029] | 0.065 [0.020, 0.110] | 0.050 [0.017, 0.082] | 5/5 |
+| q3.within_S_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 0.064 [0.004, 0.124] | 0.143 [0.087, 0.199] | 0.079 [0.049, 0.108] | 5/5 |
+| q3.within_S_heldout.output_low_confidence.auroc | 0.517 [0.495, 0.539] | 0.567 [0.521, 0.613] | 0.050 [0.000, 0.099] | 5/5 |
+| q3.within_S_heldout.output_low_confidence.recall@1%fpr | 0.036 [-0.006, 0.079] | 0.009 [0.003, 0.014] | -0.028 [-0.070, 0.014] | 1/5 |
+| q3.within_S_heldout.output_low_confidence.recall@5%fpr | 0.081 [0.031, 0.131] | 0.069 [0.033, 0.104] | -0.012 [-0.050, 0.025] | 1/5 |
+| q3.within_S_heldout.output_entropy.auroc | 0.517 [0.495, 0.539] | 0.568 [0.522, 0.613] | 0.051 [0.001, 0.100] | 5/5 |
+| q3.within_S_heldout.output_entropy.recall@1%fpr | 0.037 [-0.006, 0.079] | 0.009 [0.003, 0.015] | -0.028 [-0.071, 0.015] | 1/5 |
+| q3.within_S_heldout.output_entropy.recall@5%fpr | 0.083 [0.032, 0.134] | 0.068 [0.032, 0.104] | -0.015 [-0.053, 0.023] | 1/5 |
+| q3.within_S_heldout.persona_trigger.auroc | 0.500 [0.500, 0.500] | 0.500 [0.500, 0.500] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.persona_trigger.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.persona_trigger.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.claim_token_equals_output.auroc | 0.500 [0.500, 0.500] | 0.500 [0.500, 0.500] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.claim_token_equals_output.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.claim_token_equals_output.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.claim_present.auroc | 0.500 [0.500, 0.500] | 0.500 [0.500, 0.500] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.claim_present.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.claim_present.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.n_pos | 2025.000 [2025.000, 2025.000] | 2025.000 [2025.000, 2025.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_heldout.n_neg | 975.000 [975.000, 975.000] | 975.000 [975.000, 975.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.disagree_selected.auroc | 0.534 [0.485, 0.582] | 0.751 [0.583, 0.919] | 0.217 [0.026, 0.409] | 5/5 |
+| q3.within_S_verified_train.disagree_selected.recall@1%fpr | 0.039 [-0.000, 0.078] | 0.308 [0.074, 0.542] | 0.269 [0.025, 0.513] | 5/5 |
+| q3.within_S_verified_train.disagree_selected.recall@5%fpr | 0.079 [0.025, 0.132] | 0.400 [0.125, 0.675] | 0.321 [0.028, 0.615] | 5/5 |
+| q3.within_S_verified_train.disagree_final.auroc | 0.518 [0.468, 0.567] | 0.547 [0.427, 0.667] | 0.030 [-0.117, 0.176] | 3/5 |
+| q3.within_S_verified_train.disagree_final.recall@1%fpr | 0.037 [0.005, 0.070] | 0.052 [0.002, 0.103] | 0.015 [-0.043, 0.073] | 3/5 |
+| q3.within_S_verified_train.disagree_final.recall@5%fpr | 0.092 [0.050, 0.133] | 0.131 [0.028, 0.233] | 0.039 [-0.075, 0.153] | 3/5 |
+| q3.within_S_verified_train.disagree_layer0.auroc | 0.507 [0.502, 0.511] | 0.508 [0.505, 0.511] | 0.001 [-0.002, 0.004] | 4/5 |
+| q3.within_S_verified_train.disagree_layer0.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.disagree_layer0.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.disagree_bow.auroc | 0.705 [0.702, 0.708] | 0.702 [0.689, 0.715] | -0.003 [-0.019, 0.013] | 3/5 |
+| q3.within_S_verified_train.disagree_bow.recall@1%fpr | 0.190 [0.146, 0.234] | 0.200 [0.176, 0.224] | 0.010 [-0.043, 0.063] | 1/5 |
+| q3.within_S_verified_train.disagree_bow.recall@5%fpr | 0.291 [0.267, 0.315] | 0.288 [0.269, 0.306] | -0.003 [-0.040, 0.034] | 1/5 |
+| q3.within_S_verified_train.lie_probe_Strained_selected.auroc | 0.841 [0.811, 0.871] | 0.881 [0.851, 0.910] | 0.039 [-0.008, 0.087] | 5/5 |
+| q3.within_S_verified_train.lie_probe_Strained_selected.recall@1%fpr | 0.274 [0.173, 0.374] | 0.395 [0.352, 0.438] | 0.121 [-0.010, 0.252] | 4/5 |
+| q3.within_S_verified_train.lie_probe_Strained_selected.recall@5%fpr | 0.434 [0.339, 0.530] | 0.561 [0.472, 0.650] | 0.127 [-0.039, 0.292] | 4/5 |
+| q3.within_S_verified_train.lie_probe_Ftrained_selected.auroc | 0.534 [0.514, 0.554] | 0.571 [0.525, 0.617] | 0.037 [-0.028, 0.101] | 4/5 |
+| q3.within_S_verified_train.lie_probe_Ftrained_selected.recall@1%fpr | 0.023 [-0.006, 0.052] | 0.082 [0.046, 0.119] | 0.059 [0.035, 0.083] | 5/5 |
+| q3.within_S_verified_train.lie_probe_Ftrained_selected.recall@5%fpr | 0.078 [0.004, 0.151] | 0.177 [0.126, 0.228] | 0.100 [0.068, 0.131] | 5/5 |
+| q3.within_S_verified_train.output_low_confidence.auroc | 0.529 [0.476, 0.582] | 0.598 [0.535, 0.661] | 0.069 [-0.005, 0.143] | 5/5 |
+| q3.within_S_verified_train.output_low_confidence.recall@1%fpr | 0.042 [-0.008, 0.092] | 0.012 [-0.003, 0.027] | -0.030 [-0.090, 0.030] | 1/5 |
+| q3.within_S_verified_train.output_low_confidence.recall@5%fpr | 0.100 [0.018, 0.182] | 0.089 [0.038, 0.139] | -0.011 [-0.107, 0.085] | 1/5 |
+| q3.within_S_verified_train.output_entropy.auroc | 0.528 [0.475, 0.582] | 0.599 [0.535, 0.662] | 0.070 [-0.005, 0.145] | 5/5 |
+| q3.within_S_verified_train.output_entropy.recall@1%fpr | 0.044 [-0.010, 0.099] | 0.012 [-0.003, 0.027] | -0.032 [-0.096, 0.031] | 1/5 |
+| q3.within_S_verified_train.output_entropy.recall@5%fpr | 0.101 [0.020, 0.182] | 0.091 [0.041, 0.141] | -0.011 [-0.102, 0.081] | 1/5 |
+| q3.within_S_verified_train.persona_trigger.auroc | 0.500 [0.500, 0.500] | 0.500 [0.500, 0.500] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.persona_trigger.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.persona_trigger.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.claim_token_equals_output.auroc | 0.500 [0.500, 0.500] | 0.500 [0.500, 0.500] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.claim_token_equals_output.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.claim_token_equals_output.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.claim_present.auroc | 0.500 [0.500, 0.500] | 0.500 [0.500, 0.500] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.claim_present.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.claim_present.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.within_S_verified_train.n_pos | 789.200 [779.447, 798.953] | 827.800 [727.623, 927.977] | 38.600 [-67.483, 144.683] | 3/5 |
+| q3.within_S_verified_train.n_neg | 658.000 [658.000, 658.000] | 658.000 [658.000, 658.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_selected.auroc | 0.381 [0.304, 0.459] | 0.797 [0.570, 1.023] | 0.415 [0.205, 0.625] | 5/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_selected.recall@1%fpr | 0.213 [0.117, 0.310] | 0.640 [0.368, 0.911] | 0.426 [0.112, 0.740] | 5/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_selected.recall@5%fpr | 0.232 [0.166, 0.298] | 0.678 [0.401, 0.956] | 0.446 [0.137, 0.756] | 5/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_final.auroc | 0.404 [0.317, 0.491] | 0.508 [0.334, 0.682] | 0.104 [-0.069, 0.276] | 4/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_final.recall@1%fpr | 0.200 [0.082, 0.319] | 0.178 [0.038, 0.317] | -0.023 [-0.224, 0.179] | 1/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_final.recall@5%fpr | 0.227 [0.116, 0.338] | 0.242 [0.083, 0.402] | 0.015 [-0.185, 0.216] | 2/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_layer0.auroc | 0.630 [0.625, 0.634] | 0.622 [0.599, 0.645] | -0.007 [-0.033, 0.018] | 3/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_layer0.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_layer0.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_bow.auroc | 0.705 [0.676, 0.734] | 0.739 [0.672, 0.806] | 0.034 [-0.035, 0.103] | 4/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_bow.recall@1%fpr | 0.041 [0.016, 0.067] | 0.097 [0.001, 0.193] | 0.056 [-0.045, 0.156] | 4/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.disagree_bow.recall@5%fpr | 0.169 [0.118, 0.220] | 0.245 [0.117, 0.374] | 0.076 [-0.052, 0.205] | 5/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Strained_selected.auroc | 0.240 [-0.103, 0.583] | 0.581 [0.369, 0.793] | 0.341 [-0.002, 0.684] | 4/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.000 [0.000, 0.000] | 0.012 [-0.008, 0.033] | 0.012 [-0.008, 0.033] | 3/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.000 [0.000, 0.000] | 0.057 [-0.004, 0.117] | 0.057 [-0.004, 0.117] | 4/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.auroc | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.output_low_confidence.auroc | 0.317 [0.307, 0.327] | 0.321 [0.303, 0.338] | 0.003 [-0.015, 0.022] | 2/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.output_low_confidence.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.output_low_confidence.recall@5%fpr | 0.000 [0.000, 0.000] | 0.001 [-0.001, 0.002] | 0.001 [-0.001, 0.002] | 1/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.output_entropy.auroc | 0.250 [0.246, 0.253] | 0.264 [0.218, 0.311] | 0.015 [-0.032, 0.062] | 2/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.output_entropy.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.output_entropy.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.persona_trigger.auroc | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.persona_trigger.recall@1%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.persona_trigger.recall@5%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.claim_token_equals_output.auroc | 0.664 [0.664, 0.665] | 0.664 [0.657, 0.672] | -0.000 [-0.007, 0.007] | 3/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.claim_token_equals_output.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.claim_token_equals_output.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.claim_present.auroc | 0.756 [0.752, 0.761] | 0.754 [0.752, 0.756] | -0.002 [-0.008, 0.004] | 3/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.claim_present.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.claim_present.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.n_pos | 789.600 [772.071, 807.129] | 867.200 [675.297, 1059.103] | 77.600 [-126.348, 281.548] | 3/5 |
+| q3.F_verified_lies_vs_H_correct_heldout.n_neg | 1187.800 [1178.617, 1196.983] | 1269.000 [1081.556, 1456.444] | 81.200 [-104.771, 267.171] | 5/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_selected.auroc | 0.381 [0.269, 0.492] | 0.769 [0.513, 1.025] | 0.388 [0.164, 0.612] | 5/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_selected.recall@1%fpr | 0.206 [0.149, 0.263] | 0.596 [0.285, 0.906] | 0.390 [0.051, 0.728] | 5/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_selected.recall@5%fpr | 0.225 [0.199, 0.251] | 0.634 [0.320, 0.949] | 0.409 [0.078, 0.740] | 5/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_final.auroc | 0.431 [0.290, 0.572] | 0.534 [0.369, 0.699] | 0.103 [-0.077, 0.284] | 3/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_final.recall@1%fpr | 0.220 [0.086, 0.353] | 0.199 [0.042, 0.355] | -0.021 [-0.257, 0.215] | 2/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_final.recall@5%fpr | 0.247 [0.107, 0.388] | 0.266 [0.093, 0.439] | 0.019 [-0.217, 0.255] | 3/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_layer0.auroc | 0.646 [0.640, 0.651] | 0.631 [0.601, 0.662] | -0.014 [-0.049, 0.020] | 1/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_layer0.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_layer0.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_bow.auroc | 0.685 [0.653, 0.716] | 0.727 [0.661, 0.794] | 0.043 [-0.027, 0.112] | 5/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_bow.recall@1%fpr | 0.029 [0.011, 0.048] | 0.074 [-0.000, 0.148] | 0.045 [-0.034, 0.123] | 4/5 |
+| q3.F_lies_vs_H_correct_heldout.disagree_bow.recall@5%fpr | 0.131 [0.089, 0.173] | 0.206 [0.096, 0.316] | 0.075 [-0.036, 0.186] | 5/5 |
+| q3.F_lies_vs_H_correct_heldout.lie_probe_Strained_selected.auroc | 0.237 [-0.136, 0.611] | 0.559 [0.320, 0.799] | 0.322 [-0.066, 0.710] | 4/5 |
+| q3.F_lies_vs_H_correct_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.000 [0.000, 0.000] | 0.008 [-0.006, 0.023] | 0.008 [-0.006, 0.023] | 3/5 |
+| q3.F_lies_vs_H_correct_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.000 [0.000, 0.000] | 0.040 [-0.001, 0.081] | 0.040 [-0.001, 0.081] | 4/5 |
+| q3.F_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.auroc | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.output_low_confidence.auroc | 0.362 [0.352, 0.372] | 0.364 [0.356, 0.373] | 0.002 [-0.008, 0.013] | 2/5 |
+| q3.F_lies_vs_H_correct_heldout.output_low_confidence.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.output_low_confidence.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [-0.001, 0.002] | 0.000 [-0.001, 0.002] | 1/5 |
+| q3.F_lies_vs_H_correct_heldout.output_entropy.auroc | 0.271 [0.267, 0.275] | 0.287 [0.236, 0.337] | 0.016 [-0.033, 0.065] | 2/5 |
+| q3.F_lies_vs_H_correct_heldout.output_entropy.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.output_entropy.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.persona_trigger.auroc | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.persona_trigger.recall@1%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.persona_trigger.recall@5%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.claim_token_equals_output.auroc | 0.661 [0.658, 0.664] | 0.660 [0.656, 0.665] | -0.000 [-0.004, 0.003] | 2/5 |
+| q3.F_lies_vs_H_correct_heldout.claim_token_equals_output.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.claim_token_equals_output.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.claim_present.auroc | 0.756 [0.752, 0.761] | 0.754 [0.752, 0.756] | -0.002 [-0.008, 0.004] | 3/5 |
+| q3.F_lies_vs_H_correct_heldout.claim_present.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.claim_present.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.F_lies_vs_H_correct_heldout.n_pos | 1172.600 [1164.151, 1181.049] | 1213.000 [1088.452, 1337.548] | 40.400 [-89.494, 170.294] | 2/5 |
+| q3.F_lies_vs_H_correct_heldout.n_neg | 1187.800 [1178.617, 1196.983] | 1269.000 [1081.556, 1456.444] | 81.200 [-104.771, 267.171] | 5/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_selected.auroc | 0.138 [-0.015, 0.292] | 0.819 [0.681, 0.958] | 0.681 [0.646, 0.716] | 5/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_selected.recall@1%fpr | 0.030 [-0.041, 0.100] | 0.573 [0.448, 0.698] | 0.544 [0.440, 0.647] | 5/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_selected.recall@5%fpr | 0.037 [-0.046, 0.120] | 0.634 [0.494, 0.773] | 0.596 [0.503, 0.690] | 5/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_final.auroc | 0.119 [-0.002, 0.241] | 0.289 [0.163, 0.415] | 0.169 [0.006, 0.333] | 5/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_final.recall@1%fpr | 0.000 [0.000, 0.000] | 0.020 [-0.003, 0.043] | 0.020 [-0.003, 0.043] | 4/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_final.recall@5%fpr | 0.000 [0.000, 0.000] | 0.037 [-0.001, 0.076] | 0.037 [-0.001, 0.076] | 4/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_layer0.auroc | 0.500 [0.488, 0.511] | 0.505 [0.499, 0.512] | 0.005 [-0.003, 0.014] | 4/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_layer0.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_layer0.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_bow.auroc | 0.791 [0.724, 0.858] | 0.796 [0.749, 0.843] | 0.005 [-0.082, 0.093] | 2/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_bow.recall@1%fpr | 0.149 [0.047, 0.251] | 0.166 [0.084, 0.247] | 0.017 [-0.119, 0.153] | 2/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.disagree_bow.recall@5%fpr | 0.341 [0.206, 0.476] | 0.353 [0.249, 0.457] | 0.012 [-0.176, 0.200] | 2/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Strained_selected.auroc | 0.329 [-0.106, 0.764] | 0.481 [0.094, 0.867] | 0.152 [-0.340, 0.643] | 4/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.000 [0.000, 0.000] | 0.027 [-0.036, 0.090] | 0.027 [-0.036, 0.090] | 3/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.001 [-0.002, 0.005] | 0.049 [-0.038, 0.135] | 0.047 [-0.040, 0.134] | 3/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Ftrained_selected.auroc | 0.999 [0.997, 1.001] | 0.985 [0.944, 1.026] | -0.014 [-0.053, 0.025] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 0.980 [0.925, 1.035] | 0.942 [0.782, 1.102] | -0.038 [-0.142, 0.067] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 0.996 [0.985, 1.007] | 0.955 [0.829, 1.080] | -0.041 [-0.156, 0.073] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_low_confidence.auroc | 0.213 [0.194, 0.231] | 0.206 [0.184, 0.229] | -0.006 [-0.042, 0.030] | 3/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_low_confidence.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_low_confidence.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_entropy.auroc | 0.213 [0.195, 0.231] | 0.207 [0.184, 0.229] | -0.007 [-0.042, 0.029] | 3/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_entropy.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.output_entropy.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.persona_trigger.auroc | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.persona_trigger.recall@1%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.persona_trigger.recall@5%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_token_equals_output.auroc | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_token_equals_output.recall@1%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_token_equals_output.recall@5%fpr | 1.000 [1.000, 1.000] | 1.000 [1.000, 1.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_present.auroc | 0.500 [0.500, 0.500] | 0.500 [0.500, 0.500] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_present.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.claim_present.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.n_pos | 1194.200 [1182.705, 1205.695] | 1263.400 [1096.921, 1429.879] | 69.200 [-106.944, 245.344] | 3/5 |
+| q3.S_verified_lies_vs_neutral_false_claim_heldout.n_neg | 376.600 [365.234, 387.966] | 401.800 [352.968, 450.632] | 25.200 [-32.876, 83.276] | 4/5 |
+| q3.all_contexts_heldout.disagree_selected.auroc | 0.469 [0.449, 0.490] | 0.714 [0.580, 0.849] | 0.245 [0.111, 0.378] | 5/5 |
+| q3.all_contexts_heldout.disagree_selected.recall@1%fpr | 0.027 [0.011, 0.044] | 0.219 [-0.005, 0.442] | 0.191 [-0.043, 0.426] | 5/5 |
+| q3.all_contexts_heldout.disagree_selected.recall@5%fpr | 0.091 [0.066, 0.117] | 0.309 [0.052, 0.567] | 0.218 [-0.036, 0.472] | 5/5 |
+| q3.all_contexts_heldout.disagree_final.auroc | 0.462 [0.449, 0.475] | 0.516 [0.439, 0.593] | 0.053 [-0.025, 0.132] | 4/5 |
+| q3.all_contexts_heldout.disagree_final.recall@1%fpr | 0.021 [0.006, 0.035] | 0.035 [-0.003, 0.074] | 0.015 [-0.025, 0.054] | 3/5 |
+| q3.all_contexts_heldout.disagree_final.recall@5%fpr | 0.078 [0.050, 0.105] | 0.095 [0.039, 0.152] | 0.018 [-0.031, 0.066] | 4/5 |
+| q3.all_contexts_heldout.disagree_layer0.auroc | 0.512 [0.511, 0.512] | 0.513 [0.509, 0.517] | 0.002 [-0.003, 0.006] | 3/5 |
+| q3.all_contexts_heldout.disagree_layer0.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.all_contexts_heldout.disagree_layer0.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.all_contexts_heldout.disagree_bow.auroc | 0.655 [0.647, 0.663] | 0.664 [0.653, 0.675] | 0.010 [-0.003, 0.022] | 4/5 |
+| q3.all_contexts_heldout.disagree_bow.recall@1%fpr | 0.070 [0.044, 0.096] | 0.085 [0.061, 0.109] | 0.015 [-0.016, 0.047] | 2/5 |
+| q3.all_contexts_heldout.disagree_bow.recall@5%fpr | 0.156 [0.136, 0.176] | 0.173 [0.152, 0.195] | 0.017 [-0.008, 0.042] | 4/5 |
+| q3.all_contexts_heldout.lie_probe_Strained_selected.auroc | 0.482 [0.415, 0.550] | 0.573 [0.474, 0.671] | 0.090 [0.025, 0.156] | 5/5 |
+| q3.all_contexts_heldout.lie_probe_Strained_selected.recall@1%fpr | 0.002 [-0.004, 0.008] | 0.019 [-0.010, 0.049] | 0.017 [-0.012, 0.046] | 4/5 |
+| q3.all_contexts_heldout.lie_probe_Strained_selected.recall@5%fpr | 0.010 [-0.016, 0.036] | 0.050 [0.002, 0.098] | 0.040 [-0.010, 0.090] | 4/5 |
+| q3.all_contexts_heldout.lie_probe_Ftrained_selected.auroc | 0.650 [0.628, 0.673] | 0.693 [0.628, 0.758] | 0.043 [-0.009, 0.095] | 5/5 |
+| q3.all_contexts_heldout.lie_probe_Ftrained_selected.recall@1%fpr | 0.024 [0.003, 0.045] | 0.034 [0.002, 0.066] | 0.010 [-0.031, 0.051] | 3/5 |
+| q3.all_contexts_heldout.lie_probe_Ftrained_selected.recall@5%fpr | 0.080 [0.022, 0.138] | 0.172 [-0.016, 0.361] | 0.092 [-0.093, 0.278] | 3/5 |
+| q3.all_contexts_heldout.output_low_confidence.auroc | 0.482 [0.477, 0.488] | 0.477 [0.460, 0.493] | -0.005 [-0.017, 0.007] | 1/5 |
+| q3.all_contexts_heldout.output_low_confidence.recall@1%fpr | 0.013 [0.009, 0.016] | 0.013 [0.010, 0.015] | 0.000 [-0.005, 0.005] | 4/5 |
+| q3.all_contexts_heldout.output_low_confidence.recall@5%fpr | 0.051 [0.045, 0.056] | 0.053 [0.046, 0.060] | 0.002 [-0.007, 0.012] | 3/5 |
+| q3.all_contexts_heldout.output_entropy.auroc | 0.472 [0.467, 0.477] | 0.468 [0.455, 0.481] | -0.004 [-0.012, 0.004] | 1/5 |
+| q3.all_contexts_heldout.output_entropy.recall@1%fpr | 0.013 [0.010, 0.017] | 0.012 [0.009, 0.015] | -0.001 [-0.008, 0.005] | 2/5 |
+| q3.all_contexts_heldout.output_entropy.recall@5%fpr | 0.051 [0.045, 0.056] | 0.050 [0.039, 0.060] | -0.001 [-0.013, 0.011] | 2/5 |
+| q3.all_contexts_heldout.persona_trigger.auroc | 0.637 [0.636, 0.639] | 0.658 [0.606, 0.711] | 0.021 [-0.032, 0.074] | 5/5 |
+| q3.all_contexts_heldout.persona_trigger.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.all_contexts_heldout.persona_trigger.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.all_contexts_heldout.claim_token_equals_output.auroc | 0.578 [0.576, 0.580] | 0.586 [0.568, 0.605] | 0.008 [-0.010, 0.026] | 5/5 |
+| q3.all_contexts_heldout.claim_token_equals_output.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.all_contexts_heldout.claim_token_equals_output.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.all_contexts_heldout.claim_present.auroc | 0.574 [0.570, 0.578] | 0.583 [0.558, 0.609] | 0.009 [-0.014, 0.032] | 4/5 |
+| q3.all_contexts_heldout.claim_present.recall@1%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.all_contexts_heldout.claim_present.recall@5%fpr | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0.000 [0.000, 0.000] | 0/5 |
+| q3.all_contexts_heldout.n_pos | 4009.800 [3994.282, 4025.318] | 3969.000 [3905.359, 4032.641] | -40.800 [-98.770, 17.170] | 0/5 |
+| q3.all_contexts_heldout.n_neg | 2490.200 [2474.682, 2505.718] | 2531.000 [2467.359, 2594.641] | 40.800 [-17.170, 98.770] | 5/5 |
+| null.within_S_train.best_dev_auroc | 0.588 [0.570, 0.606] | 0.644 [0.633, 0.654] | 0.056 [0.036, 0.076] | 5/5 |
+| null.within_S_train.test.within_S_heldout.auroc | 0.571 [0.541, 0.602] | 0.631 [0.616, 0.647] | 0.060 [0.018, 0.102] | 5/5 |
+| null.within_S_train.test.within_S_verified_heldout.auroc | 0.604 [0.567, 0.641] | 0.667 [0.646, 0.688] | 0.063 [0.008, 0.119] | 4/5 |
+| null.F_lies_vs_H_correct_train.best_dev_auroc | 1.000 [1.000, 1.000] | 0.979 [0.964, 0.993] | -0.021 [-0.036, -0.007] | 0/5 |
+| null.F_lies_vs_H_correct_train.test.F_lies_vs_H_correct_heldout.auroc | 1.000 [1.000, 1.000] | 0.982 [0.969, 0.995] | -0.018 [-0.031, -0.005] | 0/5 |
+| null.F_lies_vs_H_correct_train.test.F_verified_lies_vs_H_correct_heldout.auroc | 1.000 [1.000, 1.000] | 0.980 [0.966, 0.995] | -0.020 [-0.035, -0.005] | 0/5 |
+| flags.H_heldout.on_lies | 0.241 [0.217, 0.265] | 0.278 [0.240, 0.315] | 0.036 [-0.018, 0.091] | 3/5 |
+| flags.H_heldout.on_truthful | 0.118 [0.111, 0.126] | 0.146 [0.114, 0.179] | 0.028 [-0.006, 0.062] | 4/5 |
+| flags.S_heldout.on_lies | 0.054 [-0.044, 0.151] | 0.649 [0.465, 0.832] | 0.595 [0.436, 0.753] | 5/5 |
+| flags.S_heldout.on_truthful | 0.059 [-0.045, 0.164] | 0.390 [0.062, 0.717] | 0.331 [-0.045, 0.707] | 4/5 |
+| flags.F_heldout.on_lies | 0.253 [0.213, 0.293] | 0.685 [0.369, 1.001] | 0.432 [0.119, 0.744] | 5/5 |
+| flags.F_heldout.on_truthful | 0.226 [0.028, 0.425] | 0.494 [0.138, 0.851] | 0.268 [-0.101, 0.637] | 5/5 |
+| flags.H_heldout.neutral_false_claim_truthful | 0.128 [0.107, 0.149] | 0.157 [0.104, 0.209] | 0.028 [-0.019, 0.076] | 4/5 |
