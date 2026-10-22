@@ -1,0 +1,25 @@
+{
+ "description": "shallow heuristic: queried name is a fact -> its polarity; elif a rule concludes it -> that rule's polarity (first such rule, premises ignored); else unknown",
+ "H_train": {
+  "acc": 0.654,
+  "acc_by_depth": {
+   "0": 0.8296089385474861,
+   "1": 0.5931758530183727,
+   "2": 0.5863874345549738,
+   "3": 0.6174142480211082
+  },
+  "n": 1500,
+  "majority_class_acc": 0.3413333333333333
+ },
+ "H_heldout": {
+  "acc": 0.661,
+  "acc_by_depth": {
+   "0": 0.8467908902691511,
+   "1": 0.5548654244306418,
+   "2": 0.628968253968254,
+   "3": 0.6188679245283019
+  },
+  "n": 2000,
+  "majority_class_acc": 0.3475
+ }
+}
