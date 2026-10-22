@@ -46,7 +46,7 @@ Rules-free and toy-task ablations point to the answer set instead. With only yes
 ## GPU scale (Codex, RTX 5070 Ti)
 
 - Seed 0 finished 40,000 steps (results commit `9218ae4`). Both arms fail G1: pooled depth-0/1 is 0.571 (plain) and 0.591 (structured), and honest held-out accuracy is 0.597 and 0.602.
-- Seeds 1–4 are **pending**.
+- The preregistered GPU run lists seeds 0–9 (minimum 5). Seeds 1–9 are **pending**.
 - Longer training does not rescue competence.
 
 ## Deviations from the preregistration
@@ -74,4 +74,4 @@ A separate agent re-derived every number in `gates.md`, `summary.md` and `report
 - confirmed that the gate thresholds match the preregistration;
 - confirmed that no threshold or analysis code changed after results existed.
 
-Full report: `AUDIT_REPORT.md`.
+The audit was done by a separate AI agent with no part in producing the results. Full report: `AUDIT_REPORT.md`; its scripts and recomputed values are in `audit/`.
